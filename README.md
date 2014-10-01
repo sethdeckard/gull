@@ -1,6 +1,6 @@
 # Gull
 
-Client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
+Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
 
 ## Installation
 
