@@ -22,6 +22,37 @@ Or install it yourself as:
 
 	Gull::Alert.fetch
 
+### Urgency
+
+| Symbol        | Definition          
+| :------------- |:-------------
+| :immediate  | Responsive action should betaken immediately
+| :expected  | Responsive action should be taken soon (within next hour)
+| :future  | Responsive action should be taken in the near future
+| :past  | Responsive action is no longer required
+| :unknown  | Urgency not known
+
+### Severity
+
+| Symbol        | Definition          
+| :------------- |:-------------
+| :extreme  | Extraordinary threat to life or property
+| :severe  | Significant threat to life or property
+| :moderate  | Possible threat to life or property
+| :minor  | Minimal threat to life or property
+| :unknown  | Severity unknown
+
+### Certainty
+
+| Symbol        | Definition          
+| :------------- |:-------------
+| :very_likely  | Highly likely (p > ~ 85%) or certain
+| :likely  | Likely (p > ~50%)
+| :possible  | Possible but not likely (p <= ~50%)
+| :unlikely  | Not expected to occur (p ~ 0)
+| :unknown  | Certainty unknown
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/sethdeckard/gull/fork )

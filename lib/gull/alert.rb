@@ -6,9 +6,6 @@ module Gull
     attr_accessor :id, :title, :summary, :alert_type, :polygon, :area, :effective_at, :expires_at,
       :urgency, :severity, :certainty
 
-    def initialize(attributes = {})
-    end
-
     def self.fetch
       client = HTTPClient.new
       response = client.get_content "http://alerts.weather.gov/cap/us.php?x=0"
@@ -16,6 +13,8 @@ module Gull
       entries = doc.xpath('//cap:event').collect {|e| e.parent }
       self.process entries
     end
+
+    private
 
     def self.process entries
       alerts = []
@@ -29,14 +28,17 @@ module Gull
         alert.area = entry.xpath('cap:areaDesc').inner_text
         alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
         alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
-        alert.urgency = entry.xpath('cap:urgency').inner_text
-        alert.severity = entry.xpath('cap:severity').inner_text
-        alert.certainty = entry.xpath('cap:certainty').inner_text
+        alert.urgency = code_to_symbol entry.xpath('cap:urgency').inner_text
+        alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
+        alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
         alerts.push alert
       end
 
       alerts
     end
-    
+
+    def self.code_to_symbol code
+      code.gsub(' ','_').downcase.to_sym
+    end
   end
 end

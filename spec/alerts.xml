@@ -46,7 +46,7 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<cap:category>Met</cap:category>
 	<cap:urgency>Expected</cap:urgency>
 	<cap:severity>Minor</cap:severity>
-	<cap:certainty>Likely</cap:certainty>
+	<cap:certainty>Very Likely</cap:certainty>
 	<cap:areaDesc>Southern Salinas Valley, Arroyo Seco and Lake San Antonio</cap:areaDesc>
 	<cap:polygon>27.35,-81.79 27.14,-81.89 27.04,-81.97 27.04,-82.02 27.14,-81.97 27.35,-81.86 27.35,-81.79</cap:polygon>
 	<cap:geocode>

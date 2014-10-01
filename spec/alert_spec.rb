@@ -23,8 +23,8 @@ describe Gull::Alert do
     expect(first.effective_at).to eq Time.parse("2014-10-01T08:40:00-07:00")
     expect(first.expires_at).to eq Time.parse("2014-10-03T21:00:00-07:00")
     expect(first.area).to eq "Southern Salinas Valley, Arroyo Seco and Lake San Antonio"
-    expect(first.urgency).to eq "Expected"
-    expect(first.severity).to eq "Minor"
-    expect(first.certainty).to eq "Likely"
+    expect(first.urgency).to eq :expected
+    expect(first.severity).to eq :minor
+    expect(first.certainty).to eq :very_likely
   end
 end
