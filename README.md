@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-Gull::Alert.fetch
+	require 'gull/alert'
+
+	Gull::Alert.fetch
 
 ## Contributing
 
@@ -27,3 +29,7 @@ Gull::Alert.fetch
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## License
+
+Gull is released under the [MIT License](http://www.opensource.org/licenses/MIT).
