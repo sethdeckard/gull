@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["seth@deckard.me"]
   spec.summary       = %q{Client for parsing NOAA/NWS alerts, warnings, and watches.}
   spec.description   = %q{Client for parsing NOAA/NWS alerts, warnings, and watches.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/sethdeckard/gull"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
