@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sethdeckard/gull.png)](https://travis-ci.org/sethdeckard/gull)
+[![Build Status](https://travis-ci.org/sethdeckard/gull.svg?branch=master)](https://travis-ci.org/sethdeckard/gull)
 
 # Gull
 
