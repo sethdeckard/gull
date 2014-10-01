@@ -1,6 +1,6 @@
 # Gull
 
-TODO: Write a gem description
+Client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
 
 ## Installation
 
@@ -18,11 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Gull::Alert.fetch
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/gull/fork )
+1. Fork it ( https://github.com/sethdeckard/gull/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
