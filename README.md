@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/sethdeckard/gull.svg?branch=master)](https://travis-ci.org/sethdeckard/gull)
-
 # Gull
 
 Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
