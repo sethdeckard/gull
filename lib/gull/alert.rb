@@ -24,7 +24,12 @@ module Gull
         alert.alert_type = entry.xpath('cap:event').inner_text
         alert.title = entry.css('title').inner_text
         alert.summary = entry.css('summary').inner_text
-        alert.polygon = entry.xpath('cap:polygon').inner_text
+
+        polygon = entry.xpath('cap:polygon').inner_text
+        unless polygon.nil?
+          alert.polygon = polygon.split(" ").collect {|coords| coords.split(",").collect {|coord| coord.to_f} }
+        end
+        
         alert.area = entry.xpath('cap:areaDesc').inner_text
         alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
         alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
@@ -40,5 +45,6 @@ module Gull
     def self.code_to_symbol code
       code.gsub(' ','_').downcase.to_sym
     end
+
   end
 end
