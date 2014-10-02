@@ -9,9 +9,8 @@ module Gull
     def self.fetch
       client = HTTPClient.new
       response = client.get_content "http://alerts.weather.gov/cap/us.php?x=0"
-      doc = Nokogiri::XML response
-      entries = doc.xpath('//cap:event').collect {|e| e.parent }
-      self.process entries
+      document = Nokogiri::XML response
+      self.process document.css('feed/entry')
     end
 
     private
