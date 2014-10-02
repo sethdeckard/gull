@@ -2,6 +2,10 @@ module Gull
   class Polygon
     attr_accessor :coordinates
 
+    def initialize polygon
+      self.coordinates = polygon.split(" ").collect {|coords| coords.split(",").collect {|coord| coord.to_f} }
+    end
+
     def centroid
       low_x, low_y, high_x, high_y = 0, 0, 0, 0
 
