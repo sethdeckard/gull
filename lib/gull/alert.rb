@@ -25,8 +25,9 @@ module Gull
         alert.summary = entry.css('summary').inner_text
 
         polygon = entry.xpath('cap:polygon').inner_text
-        unless polygon.nil?
-          alert.polygon = polygon.split(" ").collect {|coords| coords.split(",").collect {|coord| coord.to_f} }
+        unless polygon.empty?
+          alert.polygon = Polygon.new
+          alert.polygon.coordinates = polygon.split(" ").collect {|coords| coords.split(",").collect {|coord| coord.to_f} }
         end
         
         alert.area = entry.xpath('cap:areaDesc').inner_text

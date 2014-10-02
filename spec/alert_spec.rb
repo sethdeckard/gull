@@ -17,9 +17,9 @@ describe Gull::Alert do
     expect(first.title).to eq "Heat Advisory issued October 01 at 8:40AM PDT until October 03 at 9:00PM PDT by NWS"
     expect(first.summary).to eq "SUMMARY TEXT"
     
-    polygon = [[27.35,-81.79], [27.14,-81.89], [27.04,-81.97], [27.04,-82.02], [27.14,-81.97], [27.35,-81.86],
+    coordinates = [[27.35,-81.79], [27.14,-81.89], [27.04,-81.97], [27.04,-82.02], [27.14,-81.97], [27.35,-81.86],
       [27.35,-81.79]]
-    expect(first.polygon).to eq polygon
+    expect(first.polygon.coordinates).to eq coordinates
     
     expect(first.effective_at).to eq Time.parse("2014-10-01T08:40:00-07:00")
     expect(first.expires_at).to eq Time.parse("2014-10-03T21:00:00-07:00")
@@ -27,5 +27,8 @@ describe Gull::Alert do
     expect(first.urgency).to eq :expected
     expect(first.severity).to eq :minor
     expect(first.certainty).to eq :very_likely
+
+    second = alerts[1]
+    expect(second.polygon).to be_nil
   end
 end
