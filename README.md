@@ -21,7 +21,22 @@ Or install it yourself as:
 
 	require 'gull/alert'
 
-	Gull::Alert.fetch
+	alerts = Gull::Alert.fetch
+	alert = alert.first
+	
+	#Generate map of polygon (if alert has one)
+	#requires Google Static Maps API Key
+	url = alert.polygon.image_url "your_api_key"
+	
+	puts url
+	=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=your_api_key"
+	
+	#options can be passed for map to override defaults
+	options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070" } 
+	
+	alert.polygon.image_url "your_api_key", options 
+
+    
 
 ### Urgency
 
