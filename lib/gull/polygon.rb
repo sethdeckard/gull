@@ -37,11 +37,12 @@ module Gull
         :height => 640, 
         :color => "0xff0000", 
         :weight => 3, 
-        :fillcolor => "0xff000060" 
+        :fillcolor => "0xff000060",
+        :maptype => "roadmap"
       }.merge(options)
 
       url_base = "http://maps.googleapis.com/maps/api/staticmap"
-      "#{url_base}?size=#{opts[:width]}x#{opts[:height]}&maptype=roadmap&path=color:#{opts[:color]}" +
+      "#{url_base}?size=#{opts[:width]}x#{opts[:height]}&maptype=#{opts[:maptype]}&path=color:#{opts[:color]}" +
       "|weight:#{opts[:weight]}|fillcolor:#{opts[:fillcolor]}|#{coordinates_piped}&key=#{api_key}"
     end
 

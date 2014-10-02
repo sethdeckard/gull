@@ -12,10 +12,11 @@ describe Gull::Polygon do
     polygon = Gull::Polygon.new "34.57,-97.56 34.77,-97.38 34.75,-97.17"
 
     api_key = "testkey"
-    options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070" } 
+    options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070",
+      :maptype => "hybrid" } 
     url = polygon.image_url api_key, options
     expected_url = "http://maps.googleapis.com/maps/api/staticmap?" +
-      "size=600x300&maptype=roadmap&path=color:0xfbf000" +
+      "size=600x300&maptype=hybrid&path=color:0xfbf000" +
       "|weight:4|fillcolor:0xfbf00070|34.57,-97.56|34.77,-97.38|34.75,-97.17&key=testkey"
     expect(url).to eq expected_url
 
