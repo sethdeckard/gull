@@ -17,6 +17,17 @@ module Gull
       self.process document.css('feed/entry')
     end
 
+    def parse_geocode element
+      self.geocode.fips6 = element.children.css('value').first.inner_text
+      self.geocode.ugc = element.children.css('value').last.inner_text
+    end
+
+    def parse_polygon text
+      unless text.empty?
+        self.polygon = Polygon.new text
+      end
+    end
+
     private
 
     def self.process entries
@@ -34,12 +45,6 @@ module Gull
       alert.alert_type = entry.xpath('cap:event').inner_text
       alert.title = entry.css('title').inner_text
       alert.summary = entry.css('summary').inner_text
-
-      polygon = entry.xpath('cap:polygon').inner_text
-      unless polygon.empty?
-        alert.polygon = Polygon.new polygon
-      end
-      
       alert.area = entry.xpath('cap:areaDesc').inner_text
       alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
       alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
@@ -47,9 +52,8 @@ module Gull
       alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
       alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
 
-      geocode = entry.xpath('cap:geocode')
-      alert.geocode.fips6 = geocode.children.css('value').first.inner_text
-      alert.geocode.ugc = geocode.children.css('value').last.inner_text
+      alert.parse_polygon entry.xpath('cap:polygon').inner_text
+      alert.parse_geocode entry.xpath('cap:geocode')
 
       alert  
     end
