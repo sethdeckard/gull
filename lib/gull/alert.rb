@@ -22,13 +22,7 @@ module Gull
       self.title = element.css('title').inner_text
       self.summary = element.css('summary').inner_text
 
-      self.alert_type = element.xpath('cap:event').inner_text
-      self.area = element.xpath('cap:areaDesc').inner_text
-      self.effective_at = Time.parse(element.xpath('cap:effective').inner_text).utc
-      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text).utc
-      self.urgency = code_to_symbol element.xpath('cap:urgency').inner_text
-      self.severity = code_to_symbol element.xpath('cap:severity').inner_text
-      self.certainty = code_to_symbol element.xpath('cap:certainty').inner_text
+      parse_cap element
 
       parse_polygon element.xpath('cap:polygon').inner_text
       parse_geocode element.xpath('cap:geocode')
@@ -49,6 +43,16 @@ module Gull
       alert = Alert.new
       alert.parse entry
       alert  
+    end
+
+    def parse_cap element
+      self.alert_type = element.xpath('cap:event').inner_text
+      self.area = element.xpath('cap:areaDesc').inner_text
+      self.effective_at = Time.parse(element.xpath('cap:effective').inner_text).utc
+      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text).utc
+      self.urgency = code_to_symbol element.xpath('cap:urgency').inner_text
+      self.severity = code_to_symbol element.xpath('cap:severity').inner_text
+      self.certainty = code_to_symbol element.xpath('cap:certainty').inner_text
     end
 
     def parse_geocode element
