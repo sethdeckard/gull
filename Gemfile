@@ -4,7 +4,3 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'coveralls', require: false
-
-platforms :rbx do
-  gem 'rubinius-coverage', require: false
-end
