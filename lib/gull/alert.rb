@@ -22,32 +22,36 @@ module Gull
     def self.process entries
       alerts = []
       entries.each do |entry|
-        alert = Alert.new
-        alert.id = entry.css('id').inner_text
-        alert.alert_type = entry.xpath('cap:event').inner_text
-        alert.title = entry.css('title').inner_text
-        alert.summary = entry.css('summary').inner_text
-
-        polygon = entry.xpath('cap:polygon').inner_text
-        unless polygon.empty?
-          alert.polygon = Polygon.new polygon
-        end
-        
-        alert.area = entry.xpath('cap:areaDesc').inner_text
-        alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
-        alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
-        alert.urgency = code_to_symbol entry.xpath('cap:urgency').inner_text
-        alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
-        alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
-
-        geocode = entry.xpath('cap:geocode')
-        alert.geocode.fips6 = geocode.children.css('value').first.inner_text
-        alert.geocode.ugc = geocode.children.css('value').last.inner_text
-
-        alerts.push alert
+        alerts.push create_instance entry
       end
 
       alerts
+    end
+
+    def self.create_instance entry
+      alert = Alert.new
+      alert.id = entry.css('id').inner_text
+      alert.alert_type = entry.xpath('cap:event').inner_text
+      alert.title = entry.css('title').inner_text
+      alert.summary = entry.css('summary').inner_text
+
+      polygon = entry.xpath('cap:polygon').inner_text
+      unless polygon.empty?
+        alert.polygon = Polygon.new polygon
+      end
+      
+      alert.area = entry.xpath('cap:areaDesc').inner_text
+      alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
+      alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
+      alert.urgency = code_to_symbol entry.xpath('cap:urgency').inner_text
+      alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
+      alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
+
+      geocode = entry.xpath('cap:geocode')
+      alert.geocode.fips6 = geocode.children.css('value').first.inner_text
+      alert.geocode.ugc = geocode.children.css('value').last.inner_text
+
+      alert  
     end
 
     def self.code_to_symbol code
