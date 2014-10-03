@@ -17,15 +17,21 @@ module Gull
       self.process document.css('feed/entry')
     end
 
-    def parse_geocode element
-      self.geocode.fips6 = element.children.css('value').first.inner_text
-      self.geocode.ugc = element.children.css('value').last.inner_text
-    end
+    def parse element
+      self.id = element.css('id').inner_text
+      self.title = element.css('title').inner_text
+      self.summary = element.css('summary').inner_text
 
-    def parse_polygon text
-      unless text.empty?
-        self.polygon = Polygon.new text
-      end
+      self.alert_type = element.xpath('cap:event').inner_text
+      self.area = element.xpath('cap:areaDesc').inner_text
+      self.effective_at = Time.parse(element.xpath('cap:effective').inner_text).utc
+      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text).utc
+      self.urgency = code_to_symbol element.xpath('cap:urgency').inner_text
+      self.severity = code_to_symbol element.xpath('cap:severity').inner_text
+      self.certainty = code_to_symbol element.xpath('cap:certainty').inner_text
+
+      parse_polygon element.xpath('cap:polygon').inner_text
+      parse_geocode element.xpath('cap:geocode')
     end
 
     private
@@ -41,24 +47,22 @@ module Gull
 
     def self.create_instance entry
       alert = Alert.new
-      alert.id = entry.css('id').inner_text
-      alert.alert_type = entry.xpath('cap:event').inner_text
-      alert.title = entry.css('title').inner_text
-      alert.summary = entry.css('summary').inner_text
-      alert.area = entry.xpath('cap:areaDesc').inner_text
-      alert.effective_at = Time.parse(entry.xpath('cap:effective').inner_text).utc
-      alert.expires_at = Time.parse(entry.xpath('cap:expires').inner_text).utc
-      alert.urgency = code_to_symbol entry.xpath('cap:urgency').inner_text
-      alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
-      alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
-
-      alert.parse_polygon entry.xpath('cap:polygon').inner_text
-      alert.parse_geocode entry.xpath('cap:geocode')
-
+      alert.parse entry
       alert  
     end
 
-    def self.code_to_symbol code
+    def parse_geocode element
+      self.geocode.fips6 = element.children.css('value').first.inner_text
+      self.geocode.ugc = element.children.css('value').last.inner_text
+    end
+
+    def parse_polygon text
+      unless text.empty?
+        self.polygon = Polygon.new text
+      end
+    end
+
+    def code_to_symbol code
       code.gsub(' ','_').downcase.to_sym
     end
 
