@@ -7,22 +7,19 @@ module Gull
     end
 
     def centroid
-      low_x, low_y, high_x, high_y = 0, 0, 0, 0
+      low_x = 0 
+      low_y = 0
+      high_x = 0 
+      high_y = 0
 
       coordinates.each do |pair|
-        latitude = pair.first
-        if latitude < low_x or low_x == 0
-          low_x = latitude
-        elsif latitude > high_x or high_x == 0
-          high_x = latitude
-        end
+        x_bounds = bounds pair.first, low_x, high_x
+        low_x = x_bounds.first
+        high_x = x_bounds.last
 
-        longitude = pair.last
-        if longitude < low_y or low_y == 0
-          low_y = longitude
-        elsif longitude > high_y or high_y == 0
-          high_y = longitude
-        end
+        y_bounds = bounds pair.last, low_y, high_y
+        low_y = y_bounds.first
+        high_y = y_bounds.last
       end
 
       center_x = low_x + ((high_x - low_x) / 2)
@@ -47,6 +44,16 @@ module Gull
     end
 
     private 
+
+    def bounds point, low, high
+      if point < low or low == 0
+        low = point
+      elsif point > high or high == 0
+        high = point
+      end
+
+      [low, high]
+    end
 
     def coordinates_piped
       coordinates.collect {|pair| pair.join "," }.join "|"
