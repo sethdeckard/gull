@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/gull.svg)](http://badge.fury.io/rb/gull)
 [![Build Status](https://travis-ci.org/sethdeckard/gull.svg?branch=master)](https://travis-ci.org/sethdeckard/gull)
 # Gull
 
@@ -23,24 +24,36 @@ Or install it yourself as:
 
 	alerts = Gull::Alert.fetch
 	alert = alert.first
+
+	#access details of alert
+	alert.id
+    alert.alert_type
+    alert.title
+    alert.summary
+    alert.effective_at
+    alert.expires_at
+    alert.area
+	alert.geocode.fips6
+	alert.geocode.ugc
+	alert.urgency
+	alert.severity
+	alert.certainty
+	#etc...
 	
-	#Generate map of polygon (if alert has one)
-	#requires Google Static Maps API Key
+	#You can also generate a map of the polygon if alert has one (requires Google Static Maps API Key)
 	alert.polygon.image_url "your_api_key"
 	
 	=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=your_api_key"
 	
 	#options can be passed for map to override defaults
 	options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070", :maptype => "hybrid" } 
-	
 	alert.polygon.image_url "your_api_key", options 
 	
-	#returns the centroid of the polygon
+	#get the centroid of the polygon (to display a map pin, etc.)
 	alert.polygon.centroid
 	
 	=> [34.835, -91.205]
 
-    
 
 ### Urgency
 

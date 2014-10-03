@@ -28,6 +28,9 @@ describe Gull::Alert do
     expect(first.severity).to eq :minor
     expect(first.certainty).to eq :very_likely
 
+    expect(first.geocode.fips6).to eq "006001 006013 006041 006053 006055 006069 006075 006081 006085 006087 006097"
+    expect(first.geocode.ugc).to eq "CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512"
+
     second = alerts[1]
     expect(second.polygon).to be_nil
   end

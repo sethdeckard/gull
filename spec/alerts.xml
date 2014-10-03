@@ -53,7 +53,7 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<valueName>FIPS6</valueName>
 	<value>006001 006013 006041 006053 006055 006069 006075 006081 006085 006087 006097</value>
 	<valueName>UGC</valueName>
-	<value>CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512 CAZ513 CAZ516 CAZ517 CAZ518 CAZ528 CAZ529 CAZ530</value>
+	<value>CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512</value>
 	</cap:geocode>
 	<cap:parameter>
 	<valueName>VTEC</valueName>

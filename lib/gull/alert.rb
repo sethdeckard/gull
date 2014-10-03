@@ -4,7 +4,11 @@ require 'nokogiri'
 module Gull
   class Alert
     attr_accessor :id, :title, :summary, :alert_type, :polygon, :area, :effective_at, :expires_at,
-      :urgency, :severity, :certainty
+      :urgency, :severity, :certainty, :geocode
+
+    def initialize
+      self.geocode = Geocode.new
+    end
 
     def self.fetch
       client = HTTPClient.new
@@ -35,6 +39,11 @@ module Gull
         alert.urgency = code_to_symbol entry.xpath('cap:urgency').inner_text
         alert.severity = code_to_symbol entry.xpath('cap:severity').inner_text
         alert.certainty = code_to_symbol entry.xpath('cap:certainty').inner_text
+
+        geocode = entry.xpath('cap:geocode')
+        alert.geocode.fips6 = geocode.children.css('value').first.inner_text
+        alert.geocode.ugc = geocode.children.css('value').last.inner_text
+
         alerts.push alert
       end
 
