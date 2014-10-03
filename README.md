@@ -1,6 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/gull.svg)](http://badge.fury.io/rb/gull)
 [![Build Status](https://travis-ci.org/sethdeckard/gull.svg?branch=master)](https://travis-ci.org/sethdeckard/gull)
 [![Coverage Status](https://coveralls.io/repos/sethdeckard/gull/badge.png)](https://coveralls.io/r/sethdeckard/gull)
+[![Code Climate](https://codeclimate.com/github/sethdeckard/gull/badges/gpa.svg)](https://codeclimate.com/github/sethdeckard/gull)
 # Gull
 
 Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
