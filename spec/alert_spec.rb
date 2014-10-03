@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe Gull::Alert do
+  it "should initialize with geocode" do
+    alert = Gull::Alert.new
+    expect(alert.geocode).not_to be_nil
+  end
+
   it "should fetch parsed alerts" do
     xml = File.read "spec/alerts.xml"
 
