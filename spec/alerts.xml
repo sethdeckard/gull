@@ -30,13 +30,13 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 
 	<entry>
 	<id>http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory</id>
-	<updated>2014-10-01T08:40:00-07:00</updated>
-	<published>2014-10-01T08:40:00-07:00</published>
+	<updated>2014-10-01T08:40:00-07:05</updated>
+	<published>2014-10-01T08:40:00-07:06</published>
 	<author>
 	<name>w-nws.webmaster@noaa.gov</name>
 	</author>
 	<title>Heat Advisory issued October 01 at 8:40AM PDT until October 03 at 9:00PM PDT by NWS</title>
-	<link href='http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory.125171642740CA.MTRNPWMTR.64d60221994d798a87b4862623e0d63c'/>
+	<link href='http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory'/>
 	<summary>SUMMARY TEXT</summary>
 	<cap:event>Heat Advisory</cap:event>
 	<cap:effective>2014-10-01T08:40:00-07:00</cap:effective>
@@ -61,7 +61,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	</cap:parameter>
 	</entry>
 	
-
 		<entry>
 	<id>http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory.125171642740CA.MTRNPWMTR.64d60221994d798a87b4862623e0d63c</id>
 	<updated>2014-10-01T08:40:00-07:00</updated>
@@ -90,8 +89,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<value>CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512 CAZ513 CAZ516 CAZ517 CAZ518 CAZ528 CAZ529 CAZ530</value>
 	</cap:geocode>
 	<cap:parameter>
-	<valueName>VTEC</valueName>
-	<value>/O.NEW.KMTR.HT.Y.0002.141002T1900Z-141004T0400Z/</value>
 	</cap:parameter>
 	</entry>
 
@@ -122,9 +119,5 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<valueName>UGC</valueName>
 	<value>CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512 CAZ513 CAZ516 CAZ517 CAZ518 CAZ528 CAZ529 CAZ530</value>
 	</cap:geocode>
-	<cap:parameter>
-	<valueName>VTEC</valueName>
-	<value>/O.NEW.KMTR.HT.Y.0002.141002T1900Z-141004T0400Z/</value>
-	</cap:parameter>
 	</entry>
 </feed>
