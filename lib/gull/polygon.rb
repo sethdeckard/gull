@@ -3,7 +3,9 @@ module Gull
     attr_accessor :coordinates
 
     def initialize polygon
-      self.coordinates = polygon.split(" ").collect {|coords| coords.split(",").collect {|coord| coord.to_f} }
+      self.coordinates = polygon.split(" ")
+        .collect {|coords| coords.split(",")
+        .collect {|coord| coord.to_f } }
     end
 
     def centroid
@@ -29,7 +31,7 @@ module Gull
     end
 
     def image_url api_key, options={}
-      opts = { 
+      options = { 
         :width => 640, 
         :height => 640, 
         :color => "0xff0000", 
@@ -39,8 +41,9 @@ module Gull
       }.merge(options)
 
       url_base = "http://maps.googleapis.com/maps/api/staticmap"
-      "#{url_base}?size=#{opts[:width]}x#{opts[:height]}&maptype=#{opts[:maptype]}&path=color:#{opts[:color]}" +
-      "|weight:#{opts[:weight]}|fillcolor:#{opts[:fillcolor]}|#{coordinates_piped}&key=#{api_key}"
+      "#{url_base}?size=#{options[:width]}x#{options[:height]}&maptype=#{options[:maptype]}&" +
+      "path=color:#{options[:color]}|weight:#{options[:weight]}|fillcolor:#{options[:fillcolor]}" +
+      "|#{coordinates_piped}&key=#{api_key}"
     end
 
     private 
