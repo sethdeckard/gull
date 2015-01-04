@@ -57,6 +57,9 @@ Or install it yourself as:
 	alert.polygon.centroid
 	
 	=> [34.835, -91.205]
+	
+##Notes
+The NWS will sometimes expire warnings before their expiration date/time, for example if they are reissuing a tornado warning by redefining the polygon area. This new warning will have it's own unique ID and the warning that it replaced will no longer exist in the results. So it's important when fetching new warnings to compare the active warnings from your previous call to fetch and if any active warnings are missing in the new results you should consider them expired. Otherwise you could end up with extra active warnings where perhaps just the warning text or polygon varies a little.
 
 
 ### Urgency
