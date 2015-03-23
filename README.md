@@ -64,7 +64,8 @@ alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
 
 Options can be passed for map to override defaults
 ```ruby
-options = { width: 600, height: 300, color: '0xfbf000', weight: 4,  			fillcolor: '0xfbf00070', maptype: 'hybrid' } 
+options = { width: 600, height: 300, color: '0xfbf000', weight: 4,
+            fillcolor: '0xfbf00070', maptype: 'hybrid' } 
 alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options 
 ```
 
