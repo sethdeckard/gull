@@ -11,9 +11,13 @@ module Gull
       self.geocode = Geocode.new
     end
 
-    def self.fetch
+    def self.fetch(options = {})
+      options = {
+        url: 'http://alerts.weather.gov/cap/us.php?x=0'
+      }.merge options
+      
       client = HTTPClient.new
-      response = client.get_content 'http://alerts.weather.gov/cap/us.php?x=0'
+      response = client.get_content options[:url]
       document = Nokogiri::XML response
       process document.css('feed/entry')
     end
