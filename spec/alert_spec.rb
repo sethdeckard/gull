@@ -62,7 +62,7 @@ describe Gull::Alert do
       .with(headers: { 'Accept' => '*/*' })
       .to_return(status: 200, body: xml, headers: {})
 
-    alerts = Gull::Alert.fetch({url: 'http://alerts.weather.gov/cap/ok.php?x=1'})
+    alerts = Gull::Alert.fetch(url: 'http://alerts.weather.gov/cap/ok.php?x=1')
     expect(alerts.size).to eq(3)
   end
 

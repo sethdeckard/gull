@@ -38,7 +38,7 @@ module Gull
       begin
         return client.get_content options[:url]
       rescue HTTPClient::TimeoutError
-        fail TimeoutError, 'Timeout while connecting to NWS web service'
+        raise TimeoutError, 'Timeout while connecting to NWS web service'
       end
     end
 
