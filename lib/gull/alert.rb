@@ -13,9 +13,9 @@ module Gull
 
     def self.fetch(options = {})
       options = {
-        url: 'http://alerts.weather.gov/cap/us.php?x=0'
+        url: 'http://alerts.weather.gov/cap/us.php?x=1'
       }.merge options
-      
+
       client = HTTPClient.new
       response = client.get_content options[:url]
       document = Nokogiri::XML response

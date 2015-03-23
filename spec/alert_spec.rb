@@ -9,7 +9,7 @@ describe Gull::Alert do
   it 'should fetch parsed alerts' do
     xml = File.read 'spec/fixtures/alerts.xml'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=0')
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
       .with(headers: { 'Accept' => '*/*' })
       .to_return(status: 200, body: xml, headers: {})
 
@@ -69,7 +69,7 @@ describe Gull::Alert do
   it 'should handle empty alerts' do
     xml = File.read 'spec/fixtures/empty.xml'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=0')
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
       .with(headers: { 'Accept' => '*/*' })
       .to_return(status: 200, body: xml, headers: {})
 
@@ -80,7 +80,7 @@ describe Gull::Alert do
   it 'should handle bad response' do
     xml = File.read 'spec/fixtures/bad.xml'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=0')
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
       .with(headers: { 'Accept' => '*/*' })
       .to_return(status: 200, body: xml, headers: {})
 
