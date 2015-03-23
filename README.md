@@ -55,17 +55,17 @@ oklahoma_url = 'http://alerts.weather.gov/cap/ok.php?x=1'
 alerts = Gull::Alert.fetch(url: oklahoma_url)
 ```
 
-You can also generate a map of the polygon if alert has one (requires Google Static Maps API Key)
+You can also generate a map (a really long URL pointing to a map) of the polygon if alert has one (requires Google Static Maps API Key)
 ```ruby
-alert.polygon.image_url 'your_api_key'
+alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
 
-=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=your_api_key"
+=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=YOUR_GOOGLE_API_KEY"
 ```
 
 Options can be passed for map to override defaults
 ```ruby
-options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070", :maptype => "hybrid" } 
-alert.polygon.image_url "your_api_key", options 
+options = { width: 600, height: 300, color: '0xfbf000', weight: 4,  			fillcolor: '0xfbf00070', maptype: 'hybrid' } 
+alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options 
 ```
 
 Get the centroid of the polygon (to display a map pin, etc.)
