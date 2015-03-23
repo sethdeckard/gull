@@ -16,9 +16,8 @@ module Gull
         url: 'http://alerts.weather.gov/cap/us.php?x=1'
       }.merge options
 
-      client = HTTPClient.new
-      response = client.get_content options[:url]
-      document = Nokogiri::XML response
+      content = response options
+      document = Nokogiri::XML content
       process document.css('feed/entry')
     end
 
@@ -33,6 +32,15 @@ module Gull
     end
 
     private
+
+    def self.response(options)
+      client = HTTPClient.new
+      begin
+        return client.get_content options[:url]
+      rescue HTTPClient::TimeoutError
+        fail TimeoutError, 'Timeout while connecting to NWS web service'
+      end
+    end
 
     def self.process(entries)
       alerts = []

@@ -1,6 +1,4 @@
-require 'gull/alert'
-require 'gull/polygon'
-require 'gull/geocode'
+require 'gull'
 require 'webmock/rspec'
 
 require 'coveralls'
