@@ -12,7 +12,9 @@ Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes f
 
 Add this line to your application's Gemfile:
 
-    gem 'gull'
+```ruby
+gem 'gull'
+```
 
 And then execute:
 
@@ -24,39 +26,54 @@ Or install it yourself as:
 
 ## Usage
 
-	require 'gull'
+```ruby
+require 'gull'
 
-	alerts = Gull::Alert.fetch
-	alert = alert.first
+alerts = Gull::Alert.fetch
+alert = alerts.first
 
-	#access details of alert
-	alert.id
-    alert.alert_type
-    alert.title
-    alert.summary
-    alert.effective_at
-    alert.expires_at
-    alert.area
-	alert.geocode.fips6
-	alert.geocode.ugc
-	alert.urgency
-	alert.severity
-	alert.certainty
-	#etc...
-	
-	#You can also generate a map of the polygon if alert has one (requires Google Static Maps API Key)
-	alert.polygon.image_url "your_api_key"
-	
-	=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=your_api_key"
-	
-	#options can be passed for map to override defaults
-	options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070", :maptype => "hybrid" } 
-	alert.polygon.image_url "your_api_key", options 
-	
-	#get the centroid of the polygon (to display a map pin, etc.)
-	alert.polygon.centroid
-	
-	=> [34.835, -91.205]
+alert.id
+alert.alert_type
+alert.title
+alert.summary
+alert.effective_at
+alert.expires_at
+alert.published_at
+alert.area
+alert.polygon
+alert.geocode.fips6
+alert.geocode.ugc
+alert.urgency
+alert.severity
+alert.certainty
+alert.vtec
+```
+
+To get alerts for a single state, territory, or marine zone just pass an optional URL
+```ruby
+oklahoma_url = 'http://alerts.weather.gov/cap/ok.php?x=1'
+alerts = Gull::Alert.fetch(url: oklahoma_url)
+```
+
+You can also generate a map of the polygon if alert has one (requires Google Static Maps API Key)
+```ruby
+alert.polygon.image_url 'your_api_key'
+
+=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=your_api_key"
+```
+
+Options can be passed for map to override defaults
+```ruby
+options = { :width => 600, :height => 300, :color => "0xfbf000", :weight => 4, :fillcolor => "0xfbf00070", :maptype => "hybrid" } 
+alert.polygon.image_url "your_api_key", options 
+```
+
+Get the centroid of the polygon (to display a map pin, etc.)
+```ruby
+alert.polygon.centroid
+
+=> [34.835, -91.205]
+```
 	
 ##Notes
 The NWS will sometimes expire warnings before their expiration date/time, for example if they are reissuing a tornado warning by redefining the polygon area. This new warning will have it's own unique ID and the warning that it replaced will no longer exist in the results. So it's important when fetching new warnings to compare the active warnings from your previous call to fetch and if any active warnings are missing in the new results you should consider them expired. Otherwise you could end up with extra active warnings where perhaps just the warning text or polygon varies a little.
