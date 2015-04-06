@@ -67,11 +67,10 @@ module Gull
     end
 
     def parse_times(element)
-      self.updated_at = Time.parse(element.css('updated').inner_text).utc
-      self.published_at = Time.parse(element.css('published').inner_text).utc
+      self.updated_at = Time.parse(element.css('updated').inner_text)
+      self.published_at = Time.parse(element.css('published').inner_text)
       self.effective_at = Time.parse(element.xpath('cap:effective').inner_text)
-        .utc
-      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text).utc
+      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text)
     end
 
     def parse_categories(element)
