@@ -40,4 +40,12 @@ describe Gull::Polygon do
       '&key=testkey'
     expect(url).to eq expected_url
   end
+
+  it 'should return original string representation' do
+    text = '34.57,-97.56 34.77,-97.38 34.75,-97.17 ' \
+      '34.64,-97.11 34.64,-97.14 34.62,-97.14 34.62,-97.2 34.6,-97.19 34.59,' \
+      '-97.17 34.57,-97.17 34.5,-97.3 34.51,-97.56 34.57,-97.56'
+    polygon = Gull::Polygon.new text
+    expect(polygon.to_s).to eq text
+  end
 end

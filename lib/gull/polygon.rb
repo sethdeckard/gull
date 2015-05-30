@@ -47,6 +47,10 @@ module Gull
       "|#{coordinates_piped}&key=#{api_key}"
     end
 
+    def to_s
+      coordinates.map { |pair| pair.join(',') }.join(' ')
+    end
+
     private
 
     def bounds(point, low, high)
