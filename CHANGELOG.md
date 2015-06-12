@@ -1,3 +1,6 @@
+### 0.2.12 (6/12/2015) - Fix issue with missing link elements
+***
+### 0.2.11 (5/29/2015) - Added method to get original polygon string
 ***
 ### 0.2.10 (3/23/2015) - Added option to override default alert service URI.
 ***
