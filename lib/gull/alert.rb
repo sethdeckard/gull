@@ -61,9 +61,14 @@ module Gull
       self.id = element.css('id').inner_text
       self.title = element.css('title').inner_text
       self.summary = element.css('summary').inner_text
-      self.link = element.css('link').first.attributes['href'].value
+      self.link = parse_link element
       self.alert_type = element.xpath('cap:event').inner_text
       self.area = element.xpath('cap:areaDesc').inner_text
+    end
+
+    def parse_link(element)
+      link = element.css('link').first
+      link.attributes['href'].value unless link.nil?
     end
 
     def parse_times(element)

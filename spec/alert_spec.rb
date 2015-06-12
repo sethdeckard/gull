@@ -53,6 +53,7 @@ describe Gull::Alert do
 
     third = alerts[2]
     expect(third.vtec).to be_nil
+    expect(third.link).to be_nil
   end
 
   it 'should fetch from url in options' do

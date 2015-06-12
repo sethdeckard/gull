@@ -100,7 +100,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<name>w-nws.webmaster@noaa.gov</name>
 	</author>
 	<title>Heat Advisory issued October 01 at 8:40AM PDT until October 03 at 9:00PM PDT by NWS</title>
-	<link href='http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory.125171642740CA.MTRNPWMTR.64d60221994d798a87b4862623e0d63c'/>
 	<summary>...VERY WARM WEATHER EXPECTED ACROSS OUR ENTIRE AREA STARTING ON THURSDAY... .A RIDGE OF HIGH PRESSURE COMBINED WITH OFFSHORE WINDS AND WARM TEMPERATURES WILL LEAD TO MUCH ABOVE NORMAL TEMPERATURES ACROSS OUR AREA.. ...HEAT ADVISORY IN EFFECT FROM NOON THURSDAY TO 9 PM PDT FRIDAY...</summary>
 	<cap:event>Tornado Warning</cap:event>
 	<cap:effective>2014-10-01T08:40:00-07:00</cap:effective>
