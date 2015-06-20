@@ -97,4 +97,15 @@ describe Gull::Alert do
     expect { Gull::Alert.fetch }
       .to raise_error(Gull::TimeoutError, message)
   end
+
+  it 'should handle missing cap section' do
+    xml = File.read 'spec/fixtures/missing_cap.xml'
+
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
+      .with(headers: { 'Accept' => '*/*' })
+      .to_return(status: 200, body: xml, headers: {})
+
+    alerts = Gull::Alert.fetch
+    expect(alerts.size).to eq 0
+  end
 end

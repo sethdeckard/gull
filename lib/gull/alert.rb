@@ -18,7 +18,7 @@ module Gull
 
       content = response options
       document = Nokogiri::XML content
-      process document.css('feed/entry')
+      process document.xpath('//xmlns:feed/xmlns:entry', namespaces)
     end
 
     def parse(element)
@@ -33,6 +33,16 @@ module Gull
 
     private
 
+    def self.namespaces
+      { 'xmlns' => 'http://www.w3.org/2005/Atom',
+        'cap' => 'urn:oasis:names:tc:emergency:cap:1.1',
+        'ha' => 'http://www.alerting.net/namespace/index_1.0' }
+    end
+
+    def namespaces
+      Alert.namespaces
+    end
+
     def self.response(options)
       client = HTTPClient.new
       begin
@@ -45,13 +55,16 @@ module Gull
     def self.process(entries)
       alerts = []
       entries.each do |entry|
-        alerts.push create_instance entry
+        alert = create_instance entry
+        alerts.push alert unless alert.nil?
       end
 
       alerts
     end
 
     def self.create_instance(entry)
+      return if entry.xpath('cap:event').empty?
+
       alert = Alert.new
       alert.parse entry
       alert

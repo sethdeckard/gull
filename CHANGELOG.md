@@ -1,3 +1,5 @@
+### 0.2.13 (6/20/2015) - Handle missing cap section
+***
 ### 0.2.12 (6/12/2015) - Fix issue with missing link elements
 ***
 ### 0.2.11 (5/29/2015) - Added method to get original polygon string

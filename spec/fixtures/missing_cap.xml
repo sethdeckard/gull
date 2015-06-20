@@ -1,0 +1,56 @@
+
+<?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
+<?xml-stylesheet href='http://alerts.weather.gov/cap/capatom.xsl' type='text/xsl'?>
+
+<!--
+This atom/xml feed is an index to active advisories, watches and warnings 
+issued by the National Weather Service.  This index file is not the complete 
+Common Alerting Protocol (CAP) alert message.  To obtain the complete CAP 
+alert, please follow the links for each entry in this index.  Also note the 
+CAP message uses a style sheet to convey the information in a human readable 
+format.  Please view the source of the CAP message to see the complete data 
+set.  Not all information in the CAP message is contained in this index of 
+active alerts.
+-->
+
+
+<feed
+xmlns = 'http://www.w3.org/2005/Atom'
+xmlns:cap = 'urn:oasis:names:tc:emergency:cap:1.1'
+xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
+>
+<!-- http-date = Sat, 20 Jun 2015 01:23:00 GMT -->
+
+<id>http://alerts.weather.gov/cap/us.atom</id>
+<logo>http://alerts.weather.gov/images/xml_logo.gif</logo>
+<generator>NWS CAP Server</generator>
+<updated>2015-06-20T08:23:00-05:00</updated>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Current Watches, Warnings and Advisories for the United States Issued by the National Weather Service</title>
+<link href='http://alerts.weather.gov/cap/us.atom'/>
+
+    <entry>
+    <id>http://alerts.weather.gov/cap/wwacapget.php?x=LA1253AE8E0B98.FloodWarning.1253AEBAFBE4LA.SHVFLSSHV.3908c4d415c0ed7efa65ce2f6eea425e</id>
+    <updated>2015-06-20T08:02:00-05:00</updated>
+    <published>2015-06-20T08:02:00-05:00</published>
+    <author>
+    <name>w-nws.webmaster@noaa.gov</name>
+    </author>
+    <title>Flood Warning issued June 20 at 8:02AM CDT until June 23 at 2:53AM CDT by NWS</title>
+    <link href='http://alerts.weather.gov/cap/wwacapget.php?x=LA1253AE8E0B98.FloodWarning.1253AEBAFBE4LA.SHVFLSSHV.3908c4d415c0ed7efa65ce2f6eea425e'/>
+    <summary>The flood warning continues for the Red Chute Bayou At Sligo, Louisiana. * until late Monday night...or until the warning is cancelled. * At 70 AM Saturday the stage was 32.0 feet. * Minor flooding is occurring and minor flooding is forecast. * Flood stage is 31 feet.</summary>
+    <valueName>FIPS6</valueName>
+    <value>022013 022015</value>
+    <valueName>UGC</valueName>
+    <value>LAC013 LAC015</value>
+    </cap:geocode>
+    <cap:parameter>
+    <valueName>VTEC</valueName>
+    <value>/O.EXT.KSHV.FL.W.0168.000000T0000Z-150623T0753Z/
+/SLGL1.1.ER.150618T1228Z.150619T1330Z.150622T1353Z.NO/</value>
+    </cap:parameter>
+    </entry>
+    
+</feed>
