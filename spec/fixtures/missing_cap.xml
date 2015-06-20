@@ -41,16 +41,6 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
     <title>Flood Warning issued June 20 at 8:02AM CDT until June 23 at 2:53AM CDT by NWS</title>
     <link href='http://alerts.weather.gov/cap/wwacapget.php?x=LA1253AE8E0B98.FloodWarning.1253AEBAFBE4LA.SHVFLSSHV.3908c4d415c0ed7efa65ce2f6eea425e'/>
     <summary>The flood warning continues for the Red Chute Bayou At Sligo, Louisiana. * until late Monday night...or until the warning is cancelled. * At 70 AM Saturday the stage was 32.0 feet. * Minor flooding is occurring and minor flooding is forecast. * Flood stage is 31 feet.</summary>
-    <valueName>FIPS6</valueName>
-    <value>022013 022015</value>
-    <valueName>UGC</valueName>
-    <value>LAC013 LAC015</value>
-    </cap:geocode>
-    <cap:parameter>
-    <valueName>VTEC</valueName>
-    <value>/O.EXT.KSHV.FL.W.0168.000000T0000Z-150623T0753Z/
-/SLGL1.1.ER.150618T1228Z.150619T1330Z.150622T1353Z.NO/</value>
-    </cap:parameter>
     </entry>
     
 </feed>
