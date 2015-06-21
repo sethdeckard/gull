@@ -2,7 +2,7 @@ require 'httpclient'
 require 'nokogiri'
 
 module Gull
-  # ByteRange represents an NWS/NOAA alert and provides the ability to fetch
+  # Gull represents an NWS/NOAA alert and provides the ability to fetch
   # them from the public web service
   class Alert
     attr_accessor :id, :title, :summary, :link, :alert_type, :polygon, :area,
@@ -14,16 +14,8 @@ module Gull
     end
 
     def self.fetch(options = {})
-      options = {
-        url: 'http://alerts.weather.gov/cap/us.php?x=1',
-        strict: false
-      }.merge options
-
-      content = response options
-      document = Nokogiri::XML content do |config|
-        config.strict if options[:strict]
-      end
-      process document.xpath('//xmlns:feed/xmlns:entry', namespaces)
+      client = Client.new options
+      client.fetch
     end
 
     def parse(element)
@@ -37,43 +29,6 @@ module Gull
     end
 
     private
-
-    def self.namespaces
-      { 'xmlns' => 'http://www.w3.org/2005/Atom',
-        'cap' => 'urn:oasis:names:tc:emergency:cap:1.1',
-        'ha' => 'http://www.alerting.net/namespace/index_1.0' }
-    end
-
-    def namespaces
-      Alert.namespaces
-    end
-
-    def self.response(options)
-      client = HTTPClient.new
-      begin
-        return client.get_content options[:url]
-      rescue HTTPClient::TimeoutError
-        raise TimeoutError, 'Timeout while connecting to NWS web service'
-      end
-    end
-
-    def self.process(entries)
-      alerts = []
-      entries.each do |entry|
-        alert = create_instance entry
-        alerts.push alert unless alert.nil?
-      end
-
-      alerts
-    end
-
-    def self.create_instance(entry)
-      return if entry.xpath('cap:event').empty?
-
-      alert = Alert.new
-      alert.parse entry
-      alert
-    end
 
     def parse_core_attributes(element)
       self.id = element.css('id').inner_text
