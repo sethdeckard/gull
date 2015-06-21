@@ -59,12 +59,23 @@ describe Gull::Alert do
   it 'should fetch from url in options' do
     xml = File.read 'spec/fixtures/alerts.xml'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/ok.php?x=1')
+    stub_request(:get, 'http://test.url')
       .with(headers: { 'Accept' => '*/*' })
       .to_return(status: 200, body: xml, headers: {})
 
-    alerts = Gull::Alert.fetch(url: 'http://alerts.weather.gov/cap/ok.php?x=1')
+    alerts = Gull::Alert.fetch(url: 'http://test.url')
     expect(alerts.size).to eq(3)
+  end
+
+  it 'should enable strict xml parsing via option' do
+    xml = File.read 'spec/fixtures/bad.xml'
+
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
+      .with(headers: { 'Accept' => '*/*' })
+      .to_return(status: 200, body: xml, headers: {})
+
+    expect { Gull::Alert.fetch(strict: true) }
+      .to raise_error(Nokogiri::XML::SyntaxError)
   end
 
   it 'should handle empty alerts' do

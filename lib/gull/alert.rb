@@ -2,6 +2,8 @@ require 'httpclient'
 require 'nokogiri'
 
 module Gull
+  # ByteRange represents an NWS/NOAA alert and provides the ability to fetch
+  # them from the public web service
   class Alert
     attr_accessor :id, :title, :summary, :link, :alert_type, :polygon, :area,
                   :effective_at, :expires_at, :updated_at, :published_at,
@@ -13,11 +15,14 @@ module Gull
 
     def self.fetch(options = {})
       options = {
-        url: 'http://alerts.weather.gov/cap/us.php?x=1'
+        url: 'http://alerts.weather.gov/cap/us.php?x=1',
+        strict: false
       }.merge options
 
       content = response options
-      document = Nokogiri::XML content
+      document = Nokogiri::XML content do |config|
+        config.strict if options[:strict]
+      end
       process document.xpath('//xmlns:feed/xmlns:entry', namespaces)
     end
 
