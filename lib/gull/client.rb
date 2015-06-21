@@ -5,6 +5,8 @@ module Gull
   # Client exposes methods and options for fetching alerts from the NWS/NOAA
   # web service
   class Client
+    attr_accessor :errors
+
     def initialize(options = {})
       @options = {
         url: 'http://alerts.weather.gov/cap/us.php?x=1',
@@ -13,6 +15,7 @@ module Gull
     end
 
     def fetch
+      self.errors = []
       content = response
       document = Nokogiri::XML content do |config|
         config.strict if @options[:strict]
@@ -36,6 +39,7 @@ module Gull
       entries.each do |entry|
         alert = create_instance entry
         alerts.push alert unless alert.nil?
+        errors.push entry if alert.nil?
       end
 
       alerts
