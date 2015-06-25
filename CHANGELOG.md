@@ -1,3 +1,5 @@
+#### 0.3.1 (6/25/2015)
+Added nested exception handling for other HTTPClient errors. HttpError has original attribute exposing the root exception.
 #### 0.3.0 (6/23/2015)
 Added Client class for error handling (bad entries accessed via errors array). Exposed option to turn on strict XML parsing for debugging. Alert.fetch uses new Client but is backwards compatible, however it doesn't give you access to errors array.
 *** 
