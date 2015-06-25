@@ -67,5 +67,15 @@ describe Gull::Client do
     expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
       expect(error.original).to be_a(HTTPClient::KeepAliveDisconnected)
     end
+
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
+      .with(headers: { 'Accept' => '*/*' })
+      .to_raise(SocketError)
+
+    message = 'HTTP error while connecting to NWS web service'
+    client = Gull::Client.new
+    expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
+      expect(error.original).to be_a(SocketError)
+    end
   end
 end
