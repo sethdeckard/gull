@@ -100,15 +100,6 @@ describe Gull::Alert do
     expect(alerts.size).to eq(0)
   end
 
-  it 'should raise own error if timeout occurs' do
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' }).to_timeout
-
-    message = 'Timeout while connecting to NWS web service'
-    expect { Gull::Alert.fetch }
-      .to raise_error(Gull::TimeoutError, message)
-  end
-
   it 'should handle missing cap section' do
     xml = File.read 'spec/fixtures/missing_cap.xml'
 
