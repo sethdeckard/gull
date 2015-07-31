@@ -62,7 +62,7 @@ describe Gull::Client do
       .with(headers: { 'Accept' => '*/*' })
       .to_raise(HTTPClient::KeepAliveDisconnected)
 
-    message = 'HTTP error while connecting to NWS web service'
+    message = 'Could not connect to NWS web service'
     client = Gull::Client.new
     expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
       expect(error.original).to be_a(HTTPClient::KeepAliveDisconnected)
@@ -72,10 +72,20 @@ describe Gull::Client do
       .with(headers: { 'Accept' => '*/*' })
       .to_raise(SocketError)
 
-    message = 'HTTP error while connecting to NWS web service'
+    message = 'Could not connect to NWS web service'
     client = Gull::Client.new
     expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
       expect(error.original).to be_a(SocketError)
+    end
+
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
+      .with(headers: { 'Accept' => '*/*' })
+      .to_raise(Errno::ECONNREFUSED)
+
+    message = 'Could not connect to NWS web service'
+    client = Gull::Client.new
+    expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
+      expect(error.original).to be_a(Errno::ECONNREFUSED)
     end
   end
 end
