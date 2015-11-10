@@ -57,7 +57,7 @@ describe Gull::Client do
     expect { client.fetch }.to raise_error(Gull::TimeoutError, message)
   end
 
-  it 'should raise own error if http error occurs' do
+  it 'should raise own error if http errors occur' do
     stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
       .with(headers: { 'Accept' => '*/*' })
       .to_raise(HTTPClient::KeepAliveDisconnected)
@@ -68,6 +68,18 @@ describe Gull::Client do
       expect(error.original).to be_a(HTTPClient::KeepAliveDisconnected)
     end
 
+    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
+      .with(headers: { 'Accept' => '*/*' })
+      .to_raise(HTTPClient::BadResponseError)
+
+    message = 'Could not connect to NWS web service'
+    client = Gull::Client.new
+    expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
+      expect(error.original).to be_a(HTTPClient::BadResponseError)
+    end
+  end
+
+  it 'should raise own error if connection errors occur' do
     stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
       .with(headers: { 'Accept' => '*/*' })
       .to_raise(SocketError)
