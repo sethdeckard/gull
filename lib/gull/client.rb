@@ -32,7 +32,7 @@ module Gull
       rescue HTTPClient::TimeoutError
         raise TimeoutError, 'Timeout while connecting to NWS web service'
       rescue HTTPClient::KeepAliveDisconnected, HTTPClient::BadResponseError,
-             SocketError, Errno::ECONNREFUSED
+             SocketError, Errno::ECONNREFUSED, Errno::ECONNRESET
         raise HttpError, 'Could not connect to NWS web service'
       end
     end
