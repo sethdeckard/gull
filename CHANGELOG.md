@@ -1,3 +1,6 @@
+#### 0.3.3 (11/25/2015)
+Handle additional service failure scenarios.
+***
 #### 0.3.2 (11/10/2015)
 Added BadResponseError to client error handling.
 ***
