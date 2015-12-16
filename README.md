@@ -50,12 +50,14 @@ alert.vtec
 ```
 
 To get alerts for a single state, territory, or marine zone just pass an optional URL
+
 ```ruby
 oklahoma_url = 'http://alerts.weather.gov/cap/ok.php?x=1'
 alerts = Gull::Alert.fetch(url: oklahoma_url)
 ```
 
 You can also generate a map (a really long URL pointing to a map) of the polygon if alert has one (requires Google Static Maps API Key)
+
 ```ruby
 alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
 
@@ -63,6 +65,7 @@ alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
 ```
 
 Options can be passed for map to override defaults
+
 ```ruby
 options = { width: 600, height: 300, color: '0xfbf000', weight: 4,
             fillcolor: '0xfbf00070', maptype: 'hybrid' } 
@@ -70,15 +73,19 @@ alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options
 ```
 
 Get the centroid of the polygon (to display a map pin, etc.)
+
 ```ruby
 alert.polygon.centroid
 
 => [34.835, -91.205]
 ```
 	
-##Notes
-The NWS will sometimes expire warnings before their expiration date/time, for example if they are reissuing a tornado warning by redefining the polygon area. This new warning will have it's own unique ID and the warning that it replaced will no longer exist in the results. So it's important when fetching new warnings to compare the active warnings from your previous call to fetch and if any active warnings are missing in the new results you should consider them expired. Otherwise you could end up with extra active warnings where perhaps just the warning text or polygon varies a little.
+##Notes, Caveats
+This library provides a simplified/flattened model of the [Common Alerting Protocol](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) based only on the elements NWS utilizes in their public RSS feeds. If you need a complete CAP parser I suggest looking at [RCAP](https://github.com/farrel/RCAP).
 
+The NWS will often cancel or update alerts before their expiration time. The public alert feed only provides current active alerts and does not include these separate update and cancellation CAP messages. If you're persisting these alerts you need to design for this scenario.
+
+The public RSS feeds are not always reliable, if you are using this for critical purposes then you should explore other options.
 
 ### Urgency
 
@@ -115,7 +122,7 @@ The NWS will sometimes expire warnings before their expiration date/time, for ex
 
 1. Fork it ( https://github.com/sethdeckard/gull/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Run the specs, make sure they pass and that new features are covered
+3. Run the specs, make sure they pass and that new features are covered. Code coverage should be 100%.
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
