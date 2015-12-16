@@ -1,4 +1,4 @@
-#### 0.3.4 (unreleased)
+#### 0.3.4 (12/16/2015)
 Fixed parser to handle empty geocode.
 
 #### 0.3.3 (11/25/2015)
