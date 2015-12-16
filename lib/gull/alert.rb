@@ -63,6 +63,8 @@ module Gull
     end
 
     def parse_geocode(element)
+      return if element.children.css('value').first.nil?
+
       geocode.fips6 = element.children.css('value').first.inner_text
       geocode.ugc = element.children.css('value').last.inner_text
     end
@@ -73,7 +75,7 @@ module Gull
     end
 
     def code_to_symbol(code)
-      code.gsub(' ', '_').downcase.to_sym
+      code.tr(' ', '_').downcase.to_sym
     end
   end
 end

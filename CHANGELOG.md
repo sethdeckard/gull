@@ -1,3 +1,6 @@
+#### 0.3.4 (unreleased)
+Fixed parser to handle empty geocode.
+
 #### 0.3.3 (11/25/2015)
 Handle additional service failure scenarios.
 ***

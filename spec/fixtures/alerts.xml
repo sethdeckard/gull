@@ -1,13 +1,13 @@
 <?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
 
 <!--
-This atom/xml feed is an index to active advisories, watches and warnings 
-issued by the National Weather Service.  This index file is not the complete 
-Common Alerting Protocol (CAP) alert message.  To obtain the complete CAP 
-alert, please follow the links for each entry in this index.  Also note the 
-CAP message uses a style sheet to convey the information in a human readable 
-format.  Please view the source of the CAP message to see the complete data 
-set.  Not all information in the CAP message is contained in this index of 
+This atom/xml feed is an index to active advisories, watches and warnings
+issued by the National Weather Service.  This index file is not the complete
+Common Alerting Protocol (CAP) alert message.  To obtain the complete CAP
+alert, please follow the links for each entry in this index.  Also note the
+CAP message uses a style sheet to convey the information in a human readable
+format.  Please view the source of the CAP message to see the complete data
+set.  Not all information in the CAP message is contained in this index of
 active alerts.
 -->
 
@@ -50,17 +50,13 @@ xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
 	<cap:areaDesc>Southern Salinas Valley, Arroyo Seco and Lake San Antonio</cap:areaDesc>
 	<cap:polygon>27.35,-81.79 27.14,-81.89 27.04,-81.97 27.04,-82.02 27.14,-81.97 27.35,-81.86 27.35,-81.79</cap:polygon>
 	<cap:geocode>
-	<valueName>FIPS6</valueName>
-	<value>006001 006013 006041 006053 006055 006069 006075 006081 006085 006087 006097</value>
-	<valueName>UGC</valueName>
-	<value>CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 CAZ509 CAZ510 CAZ511 CAZ512</value>
 	</cap:geocode>
 	<cap:parameter>
 	<valueName>VTEC</valueName>
 	<value>/O.NEW.KMTR.HT.Y.0002.141002T1900Z-141004T0400Z/</value>
 	</cap:parameter>
 	</entry>
-	
+
 		<entry>
 	<id>http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory.125171642740CA.MTRNPWMTR.64d60221994d798a87b4862623e0d63c</id>
 	<updated>2014-10-01T08:40:00-07:00</updated>
