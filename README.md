@@ -6,7 +6,7 @@
 [![security](https://hakiri.io/github/sethdeckard/gull/master.svg)](https://hakiri.io/github/sethdeckard/gull/master)
 # Gull
 
-Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo.
+Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo. Please read the Notes/Caveats section for limitations.
 
 ## Installation
 
@@ -81,11 +81,11 @@ alert.polygon.centroid
 ```
 	
 ##Notes, Caveats
-This library provides a simplified/flattened model of the [Common Alerting Protocol](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) based only on the elements NWS utilizes in their public RSS feeds. If you need a complete CAP parser I suggest looking at [RCAP](https://github.com/farrel/RCAP).
+This library provides a simplified/flattened model of the [Common Alerting Protocol](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) based only on the elements NWS utilizes in their public Atom feeds. If you need a complete CAP parser I suggest looking at [RCAP](https://github.com/farrel/RCAP).
 
-The NWS will often cancel or update alerts before their expiration time. The public alert feed only provides current active alerts and does not include these separate update and cancellation CAP messages. If you're persisting these alerts you need to design for this scenario.
+The NWS will often cancel or update alerts before their expiration time. The public alert feed only provides current active alerts and does not include these separate update and cancellation CAP messages. 
 
-The public RSS feeds are not always reliable, if you are using this for critical purposes then you should explore other options.
+The [public Atom feeds](http://alerts.weather.gov/) are not always reliable in terms of uptime and are often delayed by 2-3 minutes. If you are considering using this (or another gem/library that accesses the public Atom feeds) for mission critical purposes then you should explore other options.
 
 ### Urgency
 
