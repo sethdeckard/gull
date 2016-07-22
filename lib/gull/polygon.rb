@@ -9,8 +9,10 @@ module Gull
     end
 
     def centroid
+      low_lat = 0
       low_x = 0
       low_y = 0
+      high_lat = 0
       high_x = 0
       high_y = 0
 
@@ -28,6 +30,29 @@ module Gull
       center_y = low_y + ((high_y - low_y) / 2)
 
       [center_x, center_y]
+    end
+
+    def contains?(coordinate)
+      # Source: http://jakescruggs.blogspot.com/2009/07/point-inside-polygon-in-ruby.html
+      return false if outside_bounding_box?(coordinate)
+
+      # Note: does NOT take into account straddling the international date line 
+      # (+/- 180 degrees longitude)
+
+      contains = false
+      i = -1
+      j = coordinates.size - 1
+      while (i += 1) < coordinates.size
+        if ((coordinates[i][0] <= coordinate[0] && coordinate[0] < coordinates[j][0]) || 
+           (coordinates[j][0] <= coordinate[0] && coordinate[0] < coordinates[i][0]))
+          if (coordinate[1] < (coordinates[j][1] - coordinates[i][1]) * (coordinate[0] - coordinates[i][0]) / 
+                        (coordinates[j][0] - coordinates[i][0]) + coordinates[i][1])
+            contains = !contains
+          end
+        end
+        j = i
+      end
+      return contains
     end
 
     def image_url(api_key, options = {})
@@ -65,6 +90,12 @@ module Gull
 
     def coordinates_piped
       coordinates.collect { |pair| pair.join ',' }.join '|'
+    end
+
+    def outside_bounding_box?(coordinate)
+      min_lat, max_lat = coordinates.map { |c| c[0] }.minmax
+      min_lon, max_lon = coordinates.map { |c| c[1] }.minmax
+      coordinate[0] < min_lat || coordinate[0] > max_lat || coordinate[1] < min_lon || coordinate[1] > max_lon
     end
   end
 end
