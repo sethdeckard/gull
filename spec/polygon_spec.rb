@@ -20,6 +20,18 @@ describe Gull::Polygon do
     expect(polygon.centroid).to eq [30.58, -86.59]
   end
 
+  it 'should determine if polygon contains coordinates' do
+    polygon = Gull::Polygon.new '34.57,-97.56 34.77,-97.38 34.75,-97.17 ' \
+      '34.64,-97.11 34.64,-97.14 34.62,-97.14 34.62,-97.2 34.6,-97.19 34.59,' \
+      '-97.17 34.57,-97.17 34.5,-97.3 34.51,-97.56 34.57,-97.56'
+
+    expect(polygon.contains?(polygon.centroid)).to eq true
+    expect(polygon.contains?([34.54, -97.3])).to eq true
+
+    expect(polygon.contains?([35, -98])).to eq false
+    expect(polygon.contains?([0, 0])).to eq false
+  end
+
   it 'should return static map image url' do
     polygon = Gull::Polygon.new '34.57,-97.56 34.77,-97.38 34.75,-97.17'
 
