@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'httpclient'
-  spec.add_runtime_dependency 'nokogiri', '>= 1.6.7.2'
+  spec.add_runtime_dependency 'nokogiri', '>= 1.6.8'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
