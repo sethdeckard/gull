@@ -68,22 +68,14 @@ Options can be passed for map to override defaults
 
 ```ruby
 options = { width: 600, height: 300, color: '0xfbf000', weight: 4,
-            fillcolor: '0xfbf00070', maptype: 'hybrid' } 
-alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options 
+            fillcolor: '0xfbf00070', maptype: 'hybrid' }
+alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options
 ```
 
-Get the centroid of the polygon (to display a map pin, etc.)
-
-```ruby
-alert.polygon.centroid
-
-=> [34.835, -91.205]
-```
-	
 ##Notes, Caveats
 This library provides a simplified/flattened model of the [Common Alerting Protocol](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) based only on the elements NWS utilizes in their [public Atom feeds](http://alerts.weather.gov/). If you need a complete CAP parser I suggest looking at [RCAP](https://github.com/farrel/RCAP).
 
-The NWS will often cancel or update alerts before their expiration time. The public Atom feeds only provide current active alerts and do not include these separate update and cancellation CAP messages. 
+The NWS will often cancel or update alerts before their expiration time. The public Atom feeds only provide current active alerts and do not include these separate update and cancellation CAP messages.
 
 The public Atom feeds have not always been reliable in terms of uptime and are often delayed by 2-3 minutes. If you are considering using this (or another gem/library that accesses the public Atom feeds) for mission critical purposes then you should explore other options.
 
