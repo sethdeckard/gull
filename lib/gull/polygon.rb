@@ -51,10 +51,11 @@ module Gull
       coordinates.map { |pair| pair.join(',') }.join(' ')
     end
 
+    # Returns well-known text (WKT) formatted polygon
     def to_wkt
-      # WKT pairs are (x, y), so put longitude first
-      pairs_wkt = coordinates.map { |pair| "#{pair.last} #{pair.first}" }.join(', ')
-      "POLYGON((#{pairs_wkt}))"
+      pairs = coordinates.map { |pair| "#{pair.last} #{pair.first}" }
+                         .join(', ')
+      "POLYGON((#{pairs}))"
     end
 
     private
