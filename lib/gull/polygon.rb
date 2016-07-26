@@ -51,6 +51,12 @@ module Gull
       coordinates.map { |pair| pair.join(',') }.join(' ')
     end
 
+    def to_wkt
+      # WKT pairs are (x, y), so put longitude first
+      pairs_wkt = coordinates.map { |pair| "#{pair.last} #{pair.first}" }.join(', ')
+      "POLYGON((#{pairs_wkt}))"
+    end
+
     private
 
     def bounds(point, low, high)
