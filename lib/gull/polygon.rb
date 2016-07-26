@@ -3,9 +3,8 @@ module Gull
     attr_accessor :coordinates
 
     def initialize(polygon)
-      self.coordinates = polygon.split(' ').collect do |coords|
-        coords.split(',').collect(&:to_f)
-      end
+      self.coordinates = polygon.split(' ')
+                                .map { |point| point.split(',').map(&:to_f) }
     end
 
     def image_url(api_key, options = {})
@@ -39,7 +38,7 @@ module Gull
     private
 
     def coordinates_piped
-      coordinates.collect { |pair| pair.join ',' }.join '|'
+      coordinates.map { |pair| pair.join ',' }.join '|'
     end
   end
 end
