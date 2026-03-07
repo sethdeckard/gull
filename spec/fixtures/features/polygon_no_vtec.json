@@ -1,0 +1,165 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -93.93,
+          34.21
+        ],
+        [
+          -93.93,
+          34.19
+        ],
+        [
+          -93.82,
+          34.18
+        ],
+        [
+          -93.82,
+          34.01
+        ],
+        [
+          -93.75,
+          34.01
+        ],
+        [
+          -93.68,
+          33.98
+        ],
+        [
+          -93.65,
+          33.98
+        ],
+        [
+          -93.62,
+          33.96
+        ],
+        [
+          -93.59,
+          33.96
+        ],
+        [
+          -93.54,
+          33.95
+        ],
+        [
+          -93.53,
+          33.95
+        ],
+        [
+          -93.53,
+          33.94
+        ],
+        [
+          -93.47,
+          33.96
+        ],
+        [
+          -93.46,
+          33.96
+        ],
+        [
+          -93.46,
+          33.95
+        ],
+        [
+          -94,
+          33.85
+        ],
+        [
+          -94.13,
+          33.99
+        ],
+        [
+          -93.93,
+          34.21
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
+    "areaDesc": "Sevier; Howard; Hempstead",
+    "geocode": {
+      "SAME": [
+        "005133",
+        "005061",
+        "005057"
+      ],
+      "UGC": [
+        "ARZ050",
+        "ARZ051",
+        "ARZ060"
+      ]
+    },
+    "affectedZones": [
+      "https://api.weather.gov/zones/forecast/ARZ050",
+      "https://api.weather.gov/zones/forecast/ARZ051",
+      "https://api.weather.gov/zones/forecast/ARZ060"
+    ],
+    "references": [],
+    "sent": "2026-03-07T07:48:00-06:00",
+    "effective": "2026-03-07T07:48:00-06:00",
+    "onset": "2026-03-07T07:48:00-06:00",
+    "expires": "2026-03-07T08:15:00-06:00",
+    "ends": null,
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Moderate",
+    "certainty": "Observed",
+    "urgency": "Expected",
+    "event": "Special Weather Statement",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Shreveport LA",
+    "headline": "Special Weather Statement issued March 7 at 7:48AM CST by NWS Shreveport LA",
+    "description": "At 748 AM CST, Doppler radar was tracking a strong thunderstorm 8\nmiles southwest of Center Point, or 7 miles northwest of Mineral\nSprings, moving northeast at 40 mph.\n\nHAZARD...Wind gusts up to 40 mph and half inch size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nNashville, Mineral Springs, Dierks, Corinth, Center Point,\nMcCaskill, Muddy Fork and Silver Ridge.",
+    "instruction": "Monitor the weather situation closely and be alert for threatening\nweather conditions.",
+    "response": "Execute",
+    "parameters": {
+      "AWIPSidentifier": [
+        "SPSSHV"
+      ],
+      "WMOidentifier": [
+        "WWUS84 KSHV 071348"
+      ],
+      "NWSheadline": [
+        "A STRONG THUNDERSTORM WILL IMPACT NORTHEASTERN HEMPSTEAD... SOUTHEASTERN HOWARD AND EAST CENTRAL SEVIER COUNTIES UNTIL 815 AM CST"
+      ],
+      "eventMotionDescription": [
+        "2026-03-07T13:48:00-00:00...storm...233DEG...33KT...33.95,-94.02"
+      ],
+      "maxWindGust": [
+        "40 MPH"
+      ],
+      "maxHailSize": [
+        "0.50"
+      ],
+      "BLOCKCHANNEL": [
+        "EAS",
+        "NWEM",
+        "CMAS"
+      ],
+      "EAS-ORG": [
+        "WXR"
+      ]
+    },
+    "scope": "Public",
+    "code": "IPAWSv1.0",
+    "language": "en-US",
+    "web": "http://www.weather.gov",
+    "eventCode": {
+      "SAME": [
+        "SPS"
+      ],
+      "NationalWeatherService": [
+        "SPS"
+      ]
+    }
+  }
+}

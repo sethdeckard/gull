@@ -1,0 +1,93 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+  "type": "Feature",
+  "geometry": null,
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+    "areaDesc": "Shishmaref; Bering Strait Coast",
+    "geocode": {
+      "SAME": [
+        "002180"
+      ],
+      "UGC": [
+        "AKZ820",
+        "AKZ821"
+      ]
+    },
+    "affectedZones": [
+      "https://api.weather.gov/zones/forecast/AKZ820",
+      "https://api.weather.gov/zones/forecast/AKZ821"
+    ],
+    "references": [
+      {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.001.2",
+        "identifier": "urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.001.2",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "sent": "2026-03-05T14:48:00-09:00"
+      },
+      {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.001.1",
+        "identifier": "urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.001.1",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "sent": "2026-03-06T09:38:00-09:00"
+      }
+    ],
+    "sent": "2026-03-06T11:11:00-09:00",
+    "effective": "2026-03-06T11:11:00-09:00",
+    "onset": "2026-03-06T11:11:00-09:00",
+    "expires": "2026-03-07T16:00:00-09:00",
+    "ends": "2026-03-07T21:00:00-09:00",
+    "status": "Actual",
+    "messageType": "Update",
+    "category": "Met",
+    "severity": "Extreme",
+    "certainty": "Likely",
+    "urgency": "Expected",
+    "event": "Blizzard Warning",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Fairbanks AK",
+    "headline": "Blizzard Warning issued March 6 at 11:11AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+    "description": "* WHAT...Blizzard conditions. Winds gusting as high as 50 mph.\n\n* WHERE...Bering Strait Coast and Diomede.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/4 mile or less at times.",
+    "instruction": "Travel should be restricted to emergencies only. If you must travel,\nhave a winter survival kit with you. If you get stranded, stay with\nyour vehicle.",
+    "response": "Prepare",
+    "parameters": {
+      "AWIPSidentifier": [
+        "WSWWCZ"
+      ],
+      "WMOidentifier": [
+        "WWAK42 PAFG 062011"
+      ],
+      "NWSheadline": [
+        "BLIZZARD WARNING REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+      ],
+      "BLOCKCHANNEL": [
+        "EAS",
+        "NWEM",
+        "CMAS"
+      ],
+      "EAS-ORG": [
+        "WXR"
+      ],
+      "VTEC": [
+        "/O.CON.PAFG.BZ.W.0021.000000T0000Z-260308T0600Z/"
+      ],
+      "eventEndingTime": [
+        "2026-03-07T21:00:00-09:00"
+      ]
+    },
+    "scope": "Public",
+    "code": "IPAWSv1.0",
+    "language": "en-US",
+    "web": "http://www.weather.gov",
+    "eventCode": {
+      "SAME": [
+        "BZW"
+      ],
+      "NationalWeatherService": [
+        "BZW"
+      ]
+    }
+  }
+}

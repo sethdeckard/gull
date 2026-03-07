@@ -9,61 +9,1983 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
       "type": "Feature",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [-81.79, 27.35],
-            [-81.89, 27.14],
-            [-81.97, 27.04],
-            [-82.02, 27.04],
-            [-81.97, 27.14],
-            [-81.86, 27.35],
-            [-81.79, 27.35]
+            [
+              -93.93,
+              34.21
+            ],
+            [
+              -93.93,
+              34.19
+            ],
+            [
+              -93.82,
+              34.18
+            ],
+            [
+              -93.82,
+              34.01
+            ],
+            [
+              -93.75,
+              34.01
+            ],
+            [
+              -93.68,
+              33.98
+            ],
+            [
+              -93.65,
+              33.98
+            ],
+            [
+              -93.62,
+              33.96
+            ],
+            [
+              -93.59,
+              33.96
+            ],
+            [
+              -93.54,
+              33.95
+            ],
+            [
+              -93.53,
+              33.95
+            ],
+            [
+              -93.53,
+              33.94
+            ],
+            [
+              -93.47,
+              33.96
+            ],
+            [
+              -93.46,
+              33.96
+            ],
+            [
+              -93.46,
+              33.95
+            ],
+            [
+              -94,
+              33.85
+            ],
+            [
+              -94.13,
+              33.99
+            ],
+            [
+              -93.93,
+              34.21
+            ]
           ]
         ]
       },
       "properties": {
-        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111",
-        "id": "urn:oid:2.49.0.1.840.0.1111",
-        "areaDesc": "Southern Salinas Valley, Arroyo Seco and Lake San Antonio",
-        "geocode": {},
-        "sent": "2014-10-01T08:40:00-07:06",
-        "effective": "2014-10-01T08:40:00-07:00",
-        "onset": "2014-10-01T08:40:00-07:05",
-        "expires": "2014-10-03T21:00:00-07:00",
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.116c03c45241f7d902fc876c32d9077690f39444.001.1",
+        "areaDesc": "Sevier; Howard; Hempstead",
+        "geocode": {
+          "SAME": [
+            "005133",
+            "005061",
+            "005057"
+          ],
+          "UGC": [
+            "ARZ050",
+            "ARZ051",
+            "ARZ060"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/ARZ050",
+          "https://api.weather.gov/zones/forecast/ARZ051",
+          "https://api.weather.gov/zones/forecast/ARZ060"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:48:00-06:00",
+        "effective": "2026-03-07T07:48:00-06:00",
+        "onset": "2026-03-07T07:48:00-06:00",
+        "expires": "2026-03-07T08:15:00-06:00",
+        "ends": null,
         "status": "Actual",
         "messageType": "Alert",
         "category": "Met",
-        "severity": "Minor",
-        "certainty": "Very Likely",
+        "severity": "Moderate",
+        "certainty": "Observed",
         "urgency": "Expected",
-        "event": "Heat Advisory",
-        "headline": "Heat Advisory issued October 01 at 8:40AM PDT until October 03 at 9:00PM PDT by NWS",
-        "description": "SUMMARY TEXT",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Shreveport LA",
+        "headline": "Special Weather Statement issued March 7 at 7:48AM CST by NWS Shreveport LA",
+        "description": "At 748 AM CST, Doppler radar was tracking a strong thunderstorm 8\nmiles southwest of Center Point, or 7 miles northwest of Mineral\nSprings, moving northeast at 40 mph.\n\nHAZARD...Wind gusts up to 40 mph and half inch size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor damage to outdoor objects is\npossible.\n\nLocations impacted include...\nNashville, Mineral Springs, Dierks, Corinth, Center Point,\nMcCaskill, Muddy Fork and Silver Ridge.",
+        "instruction": "Monitor the weather situation closely and be alert for threatening\nweather conditions.",
+        "response": "Execute",
         "parameters": {
-          "VTEC": ["/O.NEW.KMTR.HT.Y.0002.141002T1900Z-141004T0400Z/"]
+          "AWIPSidentifier": [
+            "SPSSHV"
+          ],
+          "WMOidentifier": [
+            "WWUS84 KSHV 071348"
+          ],
+          "NWSheadline": [
+            "A STRONG THUNDERSTORM WILL IMPACT NORTHEASTERN HEMPSTEAD... SOUTHEASTERN HOWARD AND EAST CENTRAL SEVIER COUNTIES UNTIL 815 AM CST"
+          ],
+          "eventMotionDescription": [
+            "2026-03-07T13:48:00-00:00...storm...233DEG...33KT...33.95,-94.02"
+          ],
+          "maxWindGust": [
+            "40 MPH"
+          ],
+          "maxHailSize": [
+            "0.50"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SPS"
+          ],
+          "NationalWeatherService": [
+            "SPS"
+          ]
         }
       }
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2222",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.911c59ace6c95d63179d533ef87aabfc3fa71733.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.51,
+              35.02
+            ],
+            [
+              -91.61,
+              34.64
+            ],
+            [
+              -91.86,
+              34.39
+            ],
+            [
+              -92.53,
+              34.63
+            ],
+            [
+              -92.25,
+              34.84
+            ],
+            [
+              -92.15,
+              35.12
+            ],
+            [
+              -91.51,
+              35.02
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.911c59ace6c95d63179d533ef87aabfc3fa71733.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.911c59ace6c95d63179d533ef87aabfc3fa71733.001.1",
+        "areaDesc": "Faulkner; White; Saline; Pulaski; Lonoke; Prairie; Jefferson",
+        "geocode": {
+          "SAME": [
+            "005045",
+            "005145",
+            "005125",
+            "005119",
+            "005085",
+            "005117",
+            "005069"
+          ],
+          "UGC": [
+            "ARZ032",
+            "ARZ033",
+            "ARZ043",
+            "ARZ044",
+            "ARZ045",
+            "ARZ046",
+            "ARZ056"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/ARZ032",
+          "https://api.weather.gov/zones/forecast/ARZ033",
+          "https://api.weather.gov/zones/forecast/ARZ043",
+          "https://api.weather.gov/zones/forecast/ARZ044",
+          "https://api.weather.gov/zones/forecast/ARZ045",
+          "https://api.weather.gov/zones/forecast/ARZ046",
+          "https://api.weather.gov/zones/forecast/ARZ056"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:48:00-06:00",
+        "effective": "2026-03-07T07:48:00-06:00",
+        "onset": "2026-03-07T07:48:00-06:00",
+        "expires": "2026-03-07T08:30:00-06:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Little Rock AR",
+        "headline": "Special Weather Statement issued March 7 at 7:48AM CST by NWS Little Rock AR",
+        "description": "At 747 AM CST, Doppler radar was tracking strong thunderstorms along\na line extending from near Austin in Lonoke County to near McAlmont\nto Mabelvale. Movement was east at 60 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nLittle Rock...                    North Little Rock...\nSherwood...                       Jacksonville...\nCabot...                          Bryant...\nDowntown Little Rock...           Lonoke...\nDes Arc...                        Hazen...\nNorth Little Rock Airport...      Little Rock AFB...\nSouthwest Little Rock...          Beebe...\nWard...                           Shannon Hills...\nEngland...                        Carlisle...\nWrightsville...                   Austin in Lonoke County...",
+        "instruction": "If outdoors, consider seeking shelter inside a building.\n\nA Tornado Watch remains in effect until 800 AM CST for central\nArkansas.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSLZK"
+          ],
+          "WMOidentifier": [
+            "WWUS84 KLZK 071348"
+          ],
+          "NWSheadline": [
+            "Strong thunderstorms will impact portions of western Prairie, Lonoke, east central Faulkner, southwestern White, north central Jefferson, east central Saline and eastern Pulaski Counties through 830 AM CST"
+          ],
+          "eventMotionDescription": [
+            "2026-03-07T13:47:00-00:00...storm...286DEG...51KT...35.06,-92.05 34.82,-92.16 34.66,-92.37"
+          ],
+          "maxWindGust": [
+            "50 MPH"
+          ],
+          "maxHailSize": [
+            "0.00"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SPS"
+          ],
+          "NationalWeatherService": [
+            "SPS"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.75,
+              35.85
+            ],
+            [
+              -91.82,
+              35.99
+            ],
+            [
+              -91.25,
+              36.29
+            ],
+            [
+              -91.03,
+              36.05
+            ],
+            [
+              -91.75,
+              35.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+        "areaDesc": "Independence, AR; Izard, AR; Lawrence, AR; Randolph, AR; Sharp, AR",
+        "geocode": {
+          "SAME": [
+            "005063",
+            "005065",
+            "005075",
+            "005121",
+            "005135"
+          ],
+          "UGC": [
+            "ARC063",
+            "ARC065",
+            "ARC075",
+            "ARC121",
+            "ARC135"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/ARC063",
+          "https://api.weather.gov/zones/county/ARC065",
+          "https://api.weather.gov/zones/county/ARC075",
+          "https://api.weather.gov/zones/county/ARC121",
+          "https://api.weather.gov/zones/county/ARC135"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:28:00-06:00",
+        "effective": "2026-03-07T07:28:00-06:00",
+        "onset": "2026-03-07T07:28:00-06:00",
+        "expires": "2026-03-07T08:15:00-06:00",
+        "ends": "2026-03-07T08:15:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Observed",
+        "urgency": "Immediate",
+        "event": "Severe Thunderstorm Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Little Rock AR",
+        "headline": "Severe Thunderstorm Warning issued March 7 at 7:28AM CST until March 7 at 8:15AM CST by NWS Little Rock AR",
+        "description": "SVRLZK\n\nThe National Weather Service in Little Rock has issued a\n\n* Severe Thunderstorm Warning for...\nNorthwestern Independence County in north central Arkansas...\nSouth central Randolph County in eastern Arkansas...\nSoutheastern Izard County in north central Arkansas...\nNorthwestern Lawrence County in eastern Arkansas...\nSouthern Sharp County in north central Arkansas...\n\n* Until 815 AM CST.\n\n* At 728 AM CST, a severe thunderstorm was located over Sidney, or 12\nmiles southeast of Melbourne, moving east at 50 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\n* Locations impacted include...\nBlack Rock...                     Lake Charles State Park...\nCave City...                      Imboden...\nRavenden...                       Cushman...\nPortia...                         Mount Pleasant...\nStrawberry...                     Lynn...\nSidney...                         Annieville...\nStella...                         Evening Shade...\nSmithville...                     Powhatan...\nAetna...                          Calamine...\nNelsonville...                    Sitka...",
+        "instruction": "A Tornado Watch remains in effect until 800 AM CST for north central\nArkansas.\n\nFor your protection move to an interior room on the lowest floor of a\nbuilding.\n\nA Tornado Watch remains in effect until 800 AM CST for north central\nArkansas.",
+        "response": "Shelter",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SVRLZK"
+          ],
+          "WMOidentifier": [
+            "WUUS54 KLZK 071328"
+          ],
+          "eventMotionDescription": [
+            "2026-03-07T13:28:00-00:00...storm...248DEG...42KT...35.97,-91.69"
+          ],
+          "windThreat": [
+            "RADAR INDICATED"
+          ],
+          "maxWindGust": [
+            "60 MPH"
+          ],
+          "hailThreat": [
+            "RADAR INDICATED"
+          ],
+          "maxHailSize": [
+            "Up to .75"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KLZK.SV.W.0013.260307T1328Z-260307T1415Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T08:15:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SVR"
+          ],
+          "NationalWeatherService": [
+            "SVW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.844fc5d9640e41ee571aeedfd9fd1796d7c590e3.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.3,
+              34.57
+            ],
+            [
+              -92.96,
+              34.57
+            ],
+            [
+              -92.96,
+              34.38
+            ],
+            [
+              -93.34,
+              34.16
+            ],
+            [
+              -93.76,
+              34.01
+            ],
+            [
+              -93.82,
+              34.01
+            ],
+            [
+              -93.82,
+              34.18
+            ],
+            [
+              -93.93,
+              34.19
+            ],
+            [
+              -93.92,
+              34.26
+            ],
+            [
+              -93.94,
+              34.26
+            ],
+            [
+              -93.94,
+              34.34
+            ],
+            [
+              -93.54,
+              34.52
+            ],
+            [
+              -93.3,
+              34.57
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.844fc5d9640e41ee571aeedfd9fd1796d7c590e3.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.844fc5d9640e41ee571aeedfd9fd1796d7c590e3.001.1",
+        "areaDesc": "Clark, AR; Garland, AR; Hot Spring, AR; Montgomery, AR; Pike, AR",
+        "geocode": {
+          "SAME": [
+            "005019",
+            "005051",
+            "005059",
+            "005097",
+            "005109"
+          ],
+          "UGC": [
+            "ARC019",
+            "ARC051",
+            "ARC059",
+            "ARC097",
+            "ARC109"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/ARC019",
+          "https://api.weather.gov/zones/county/ARC051",
+          "https://api.weather.gov/zones/county/ARC059",
+          "https://api.weather.gov/zones/county/ARC097",
+          "https://api.weather.gov/zones/county/ARC109"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:27:00-06:00",
+        "effective": "2026-03-07T07:27:00-06:00",
+        "onset": "2026-03-07T07:27:00-06:00",
+        "expires": "2026-03-07T10:30:00-06:00",
+        "ends": "2026-03-07T10:30:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Immediate",
+        "event": "Flash Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Little Rock AR",
+        "headline": "Flash Flood Warning issued March 7 at 7:27AM CST until March 7 at 10:30AM CST by NWS Little Rock AR",
+        "description": "FFWLZK\n\nThe National Weather Service in Little Rock has issued a\n\n* Flash Flood Warning for...\nSouthwestern Garland County in central Arkansas...\nNorthwestern Clark County in southwestern Arkansas...\nWest Central Hot Spring County in southwestern Arkansas...\nPike County in southwestern Arkansas...\nSoutheastern Montgomery County in western Arkansas...\n\n* Until 1030 AM CST.\n\n* At 727 AM CST, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 1 and 3 inches of rain\nhave fallen. The expected rainfall rate is 1 to 2 inches in 1\nhour. Flash flooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar.\n\nIMPACT...Flash flooding of small creeks and streams, urban\nareas, highways, streets and underpasses as well as\nother poor drainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nHot Springs...                     Murfreesboro...\nGlenwood...                        Mountain Pine...\nAmity...                           Norman...\nDaisy...                           Meyers...\nLofton...                          Daisy State Park...\nNarrows Dam...                     Rockwell...\nCrater Of Diamonds State Park...   Hot Springs Memorial Field...\nAlbert Pike Recreation Area...     Hot Springs National Park...\nBismarck...                        Alpine...\nWelsh...                           Rosboro...",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FFWLZK"
+          ],
+          "WMOidentifier": [
+            "WGUS54 KLZK 071327"
+          ],
+          "flashFloodDetection": [
+            "RADAR INDICATED"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KLZK.FF.W.0002.260307T1327Z-260307T1630Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T10:30:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FFW"
+          ],
+          "NationalWeatherService": [
+            "FFW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed2edf2ff61c7ebc5b6bf0a7a9a28b6c4198f135.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.6,
+              36.04
+            ],
+            [
+              -91.53,
+              35.53
+            ],
+            [
+              -91.58,
+              35.53
+            ],
+            [
+              -91.58,
+              35.5
+            ],
+            [
+              -92.22,
+              35.54
+            ],
+            [
+              -92.24,
+              35.64
+            ],
+            [
+              -92.24,
+              35.71
+            ],
+            [
+              -92.26,
+              35.71
+            ],
+            [
+              -92.29,
+              35.82
+            ],
+            [
+              -91.6,
+              36.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ed2edf2ff61c7ebc5b6bf0a7a9a28b6c4198f135.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.ed2edf2ff61c7ebc5b6bf0a7a9a28b6c4198f135.001.1",
+        "areaDesc": "Sharp; Stone; Izard; Independence; Cleburne; White",
+        "geocode": {
+          "SAME": [
+            "005135",
+            "005137",
+            "005065",
+            "005063",
+            "005023",
+            "005145"
+          ],
+          "UGC": [
+            "ARZ007",
+            "ARZ014",
+            "ARZ015",
+            "ARZ016",
+            "ARZ024",
+            "ARZ033"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/ARZ007",
+          "https://api.weather.gov/zones/forecast/ARZ014",
+          "https://api.weather.gov/zones/forecast/ARZ015",
+          "https://api.weather.gov/zones/forecast/ARZ016",
+          "https://api.weather.gov/zones/forecast/ARZ024",
+          "https://api.weather.gov/zones/forecast/ARZ033"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:12:00-06:00",
+        "effective": "2026-03-07T07:12:00-06:00",
+        "onset": "2026-03-07T07:12:00-06:00",
+        "expires": "2026-03-07T08:00:00-06:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Little Rock AR",
+        "headline": "Special Weather Statement issued March 7 at 7:12AM CST by NWS Little Rock AR",
+        "description": "At 711 AM CST, Doppler radar was tracking a strong thunderstorm near\nGreers Ferry, or 7 miles northeast of Fairfield Bay, moving east at\n55 mph.\n\nHAZARD...Wind gusts up to 50 mph.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects.\n\nLocations impacted include...\nBatesville...                     Heber Springs...\nMountain View...                  Fairfield Bay...\nGreers Ferry...                   Cushman...\nMount Pleasant...                 Pleasant Plains...\nConcord...                        Sidney...\nMoorefield...                     Higden...\nSalado...                         Croker...\nSouthside in Independence Count...Bethesda...\nGuion...                          Ben...\nAlmond...                         Hanover...",
+        "instruction": "If outdoors, consider seeking shelter inside a building.\n\nA Tornado Watch remains in effect until 800 AM CST for central and\nnorth central Arkansas.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSLZK"
+          ],
+          "WMOidentifier": [
+            "WWUS84 KLZK 071312"
+          ],
+          "NWSheadline": [
+            "A strong thunderstorm will impact portions of southern Stone, western Independence, southeastern Izard, northern Cleburne, north central White and southwestern Sharp Counties through 800 AM CST"
+          ],
+          "eventMotionDescription": [
+            "2026-03-07T13:11:00-00:00...storm...256DEG...48KT...35.65,-92.14"
+          ],
+          "maxWindGust": [
+            "50 MPH"
+          ],
+          "maxHailSize": [
+            "0.00"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SPS"
+          ],
+          "NationalWeatherService": [
+            "SPS"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
       "type": "Feature",
       "geometry": null,
       "properties": {
-        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2222",
-        "id": "urn:oid:2.49.0.1.840.0.2222",
-        "areaDesc": "Coastal North Bay Including Point Reyes National Seashore",
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
+        "areaDesc": "Clark, AR; Cleburne, AR; Conway, AR; Dallas, AR; Faulkner, AR; Garland, AR; Grant, AR; Hot Spring, AR; Independence, AR; Lonoke, AR; Montgomery, AR; Ouachita, AR; Perry, AR; Pike, AR; Pope, AR; Pulaski, AR; Saline, AR; Searcy, AR; Stone, AR; Van Buren, AR; White, AR; Yell, AR",
         "geocode": {
-          "SAME": ["006001", "006013", "006041", "006053", "006055", "006069", "006075", "006081", "006085", "006087", "006097"],
-          "UGC": ["CAZ006", "CAZ505", "CAZ506", "CAZ507", "CAZ508", "CAZ509", "CAZ510", "CAZ511", "CAZ512", "CAZ513", "CAZ516", "CAZ517", "CAZ518", "CAZ528", "CAZ529", "CAZ530"]
+          "SAME": [
+            "005019",
+            "005023",
+            "005029",
+            "005039",
+            "005045",
+            "005051",
+            "005053",
+            "005059",
+            "005063",
+            "005085",
+            "005097",
+            "005103",
+            "005105",
+            "005109",
+            "005115",
+            "005119",
+            "005125",
+            "005129",
+            "005137",
+            "005141",
+            "005145",
+            "005149"
+          ],
+          "UGC": [
+            "ARC019",
+            "ARC023",
+            "ARC029",
+            "ARC039",
+            "ARC045",
+            "ARC051",
+            "ARC053",
+            "ARC059",
+            "ARC063",
+            "ARC085",
+            "ARC097",
+            "ARC103",
+            "ARC105",
+            "ARC109",
+            "ARC115",
+            "ARC119",
+            "ARC125",
+            "ARC129",
+            "ARC137",
+            "ARC141",
+            "ARC145",
+            "ARC149"
+          ]
         },
-        "sent": "2014-10-01T08:40:00-07:00",
-        "effective": "2014-10-01T08:40:00-07:00",
-        "onset": "2014-10-01T08:40:00-07:00",
-        "expires": "2014-10-03T21:00:00-07:00",
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/ARC019",
+          "https://api.weather.gov/zones/county/ARC023",
+          "https://api.weather.gov/zones/county/ARC029",
+          "https://api.weather.gov/zones/county/ARC039",
+          "https://api.weather.gov/zones/county/ARC045",
+          "https://api.weather.gov/zones/county/ARC051",
+          "https://api.weather.gov/zones/county/ARC053",
+          "https://api.weather.gov/zones/county/ARC059",
+          "https://api.weather.gov/zones/county/ARC063",
+          "https://api.weather.gov/zones/county/ARC085",
+          "https://api.weather.gov/zones/county/ARC097",
+          "https://api.weather.gov/zones/county/ARC103",
+          "https://api.weather.gov/zones/county/ARC105",
+          "https://api.weather.gov/zones/county/ARC109",
+          "https://api.weather.gov/zones/county/ARC115",
+          "https://api.weather.gov/zones/county/ARC119",
+          "https://api.weather.gov/zones/county/ARC125",
+          "https://api.weather.gov/zones/county/ARC129",
+          "https://api.weather.gov/zones/county/ARC137",
+          "https://api.weather.gov/zones/county/ARC141",
+          "https://api.weather.gov/zones/county/ARC145",
+          "https://api.weather.gov/zones/county/ARC149"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d9b39fd6e1ceb202a2a70cd92c68d4d9fb84e21.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.6d9b39fd6e1ceb202a2a70cd92c68d4d9fb84e21.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-07T03:19:00-06:00"
+          }
+        ],
+        "sent": "2026-03-07T06:45:00-06:00",
+        "effective": "2026-03-07T06:45:00-06:00",
+        "onset": "2026-03-07T06:45:00-06:00",
+        "expires": "2026-03-07T08:00:00-06:00",
+        "ends": "2026-03-07T08:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Extreme",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "event": "Tornado Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Little Rock AR",
+        "headline": "Tornado Watch issued March 7 at 6:45AM CST until March 7 at 8:00AM CST by NWS Little Rock AR",
+        "description": "TORNADO WATCH 22 REMAINS VALID UNTIL 8 AM CST THIS MORNING FOR\nTHE FOLLOWING AREAS\n\nIN ARKANSAS THIS WATCH INCLUDES 22 COUNTIES\n\nIN CENTRAL ARKANSAS\n\nCONWAY                FAULKNER              GARLAND\nGRANT                 LONOKE                PERRY\nPOPE                  PULASKI               SALINE\nWHITE                 YELL\n\nIN NORTH CENTRAL ARKANSAS\n\nCLEBURNE              INDEPENDENCE          SEARCY\nSTONE                 VAN BUREN\n\nIN SOUTHWEST ARKANSAS\n\nCLARK                 DALLAS                HOT SPRING\nOUACHITA              PIKE\n\nIN WESTERN ARKANSAS\n\nMONTGOMERY\n\nTHIS INCLUDES THE CITIES OF ARKADELPHIA, BATESVILLE, BEEBE,\nBENTON, BRYANT, CABOT, CAMDEN, CLINTON, CONWAY, DANVILLE,\nDARDANELLE, FAIRFIELD BAY, FORDYCE, GLENWOOD, HEBER SPRINGS,\nHOT SPRINGS, LESLIE, LITTLE ROCK, LONOKE, MALVERN, MARSHALL,\nMORRILTON, MOUNT IDA, MOUNTAIN VIEW, MURFREESBORO, NORMAN,\nNORTH LITTLE ROCK, OLA, PERRYVILLE, RUSSELLVILLE, SEARCY,\nAND SHERIDAN.",
+        "instruction": null,
+        "response": "Monitor",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WCNLZK"
+          ],
+          "WMOidentifier": [
+            "WWUS64 KLZK 071245"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CON.KLZK.TO.A.0022.000000T0000Z-260307T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T08:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "TOA"
+          ],
+          "NationalWeatherService": [
+            "TOA"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d8375794418e9dc7603c1e9f865bf58581a366c.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d8375794418e9dc7603c1e9f865bf58581a366c.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.6d8375794418e9dc7603c1e9f865bf58581a366c.001.1",
+        "areaDesc": "Columbia, AR; Hempstead, AR; Howard, AR; Lafayette, AR; Little River, AR; Miller, AR; Nevada, AR; Sevier, AR; Bossier, LA; Caddo, LA; Webster, LA; Bowie, TX; Cass, TX; Harrison, TX; Marion, TX; Morris, TX",
+        "geocode": {
+          "SAME": [
+            "005027",
+            "005057",
+            "005061",
+            "005073",
+            "005081",
+            "005091",
+            "005099",
+            "005133",
+            "022015",
+            "022017",
+            "022119",
+            "048037",
+            "048067",
+            "048203",
+            "048315",
+            "048343"
+          ],
+          "UGC": [
+            "ARC027",
+            "ARC057",
+            "ARC061",
+            "ARC073",
+            "ARC081",
+            "ARC091",
+            "ARC099",
+            "ARC133",
+            "LAC015",
+            "LAC017",
+            "LAC119",
+            "TXC037",
+            "TXC067",
+            "TXC203",
+            "TXC315",
+            "TXC343"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/ARC027",
+          "https://api.weather.gov/zones/county/ARC057",
+          "https://api.weather.gov/zones/county/ARC061",
+          "https://api.weather.gov/zones/county/ARC073",
+          "https://api.weather.gov/zones/county/ARC081",
+          "https://api.weather.gov/zones/county/ARC091",
+          "https://api.weather.gov/zones/county/ARC099",
+          "https://api.weather.gov/zones/county/ARC133",
+          "https://api.weather.gov/zones/county/LAC015",
+          "https://api.weather.gov/zones/county/LAC017",
+          "https://api.weather.gov/zones/county/LAC119",
+          "https://api.weather.gov/zones/county/TXC037",
+          "https://api.weather.gov/zones/county/TXC067",
+          "https://api.weather.gov/zones/county/TXC203",
+          "https://api.weather.gov/zones/county/TXC315",
+          "https://api.weather.gov/zones/county/TXC343"
+        ],
+        "references": [],
+        "sent": "2026-03-07T03:24:00-06:00",
+        "effective": "2026-03-07T03:24:00-06:00",
+        "onset": "2026-03-07T03:24:00-06:00",
+        "expires": "2026-03-07T08:00:00-06:00",
+        "ends": "2026-03-07T08:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Extreme",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "event": "Tornado Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Shreveport LA",
+        "headline": "Tornado Watch issued March 7 at 3:24AM CST until March 7 at 8:00AM CST by NWS Shreveport LA",
+        "description": "THE NATIONAL WEATHER SERVICE HAS ISSUED TORNADO WATCH 22 IN\nEFFECT UNTIL 8 AM CST THIS MORNING FOR THE FOLLOWING AREAS\n\nIN ARKANSAS THIS WATCH INCLUDES 8 COUNTIES\n\nIN SOUTHWEST ARKANSAS\n\nCOLUMBIA              HEMPSTEAD             HOWARD\nLAFAYETTE             LITTLE RIVER          MILLER\nNEVADA                SEVIER\n\nIN LOUISIANA THIS WATCH INCLUDES 3 PARISHES\n\nIN NORTHWEST LOUISIANA\n\nBOSSIER               CADDO                 WEBSTER\n\nIN TEXAS THIS WATCH INCLUDES 5 COUNTIES\n\nIN NORTHEAST TEXAS\n\nBOWIE                 CASS                  HARRISON\nMARION                MORRIS\n\nTHIS INCLUDES THE CITIES OF ASHDOWN, ATLANTA, BOSSIER CITY,\nBRADLEY, DAINGERFIELD, DE QUEEN, DIERKS, HOPE, HUGHES SPRINGS,\nJEFFERSON, LEWISVILLE, LINDEN, LONE STAR, MAGNOLIA, MARSHALL,\nMINDEN, MINERAL SPRINGS, NAPLES, NASHVILLE, OMAHA, PRESCOTT,\nQUEEN CITY, SHREVEPORT, SPRINGHILL, STAMPS, TEXARKANA,\nAND TEXARKANA.",
+        "instruction": null,
+        "response": "Monitor",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WCNSHV"
+          ],
+          "WMOidentifier": [
+            "WWUS64 KSHV 070924"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSHV.TO.A.0022.260307T0924Z-260307T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T08:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "TOA"
+          ],
+          "NationalWeatherService": [
+            "TOA"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -92.8,
+              38.92
+            ],
+            [
+              -92.64,
+              38.94
+            ],
+            [
+              -92.5,
+              38.92
+            ],
+            [
+              -92.52,
+              38.88
+            ],
+            [
+              -92.79,
+              38.87
+            ],
+            [
+              -92.8,
+              38.92
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+        "areaDesc": "Cooper, MO",
+        "geocode": {
+          "SAME": [
+            "029053"
+          ],
+          "UGC": [
+            "MOC053"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC053"
+        ],
+        "references": [],
+        "sent": "2026-03-07T08:40:00-05:00",
+        "effective": "2026-03-07T08:40:00-05:00",
+        "onset": "2026-03-07T10:40:00-05:00",
+        "expires": "2026-03-08T08:45:00-05:00",
+        "ends": "2026-03-08T14:43:00-05:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Kansas City/Pleasant Hill MO",
+        "headline": "Flood Warning issued March 7 at 7:40AM CST until March 8 at 2:43PM CDT by NWS Kansas City/Pleasant Hill MO",
+        "description": "...The National Weather Service in Pleasant Hill MO has issued a\nFlood Warning for the following rivers in Missouri...\n\nPetite Saline Creek near Boonville affecting Cooper County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Petite Saline Creek near Boonville.\n\n* WHEN...Until early tomorrow afternoon.\n\n* IMPACTS...At 16.0 feet, Low lying woodlands and fields near the\ncreek flood.\nAt 19.5 feet, The creek floods U Highway about 4 miles southeast\nof Boonville.\n\n* ADDITIONAL DETAILS...\n- At 6:30 AM CST Saturday the stage was 14.1 feet.\n- Forecast...The river is expected to rise above flood stage\nlate this morning to a crest of 17.7 feet this evening. It\nwill then fall below flood stage just after midnight tonight.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWEAX"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KEAX 071340"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT UNTIL EARLY TOMORROW AFTERNOON"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KEAX.FL.W.0003.260307T1540Z-260308T1943Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T14:43:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ebd487516ef387e36991766dad75aed2854c454b.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.58,
+              36.5
+            ],
+            [
+              -90.59,
+              36.68
+            ],
+            [
+              -90.63,
+              36.68
+            ],
+            [
+              -90.63,
+              36.81
+            ],
+            [
+              -90.25,
+              36.9
+            ],
+            [
+              -90.26,
+              36.88
+            ],
+            [
+              -90.2,
+              36.81
+            ],
+            [
+              -90.2,
+              36.77
+            ],
+            [
+              -90.14,
+              36.68
+            ],
+            [
+              -90.15,
+              36.68
+            ],
+            [
+              -90.15,
+              36.62
+            ],
+            [
+              -90.19,
+              36.59
+            ],
+            [
+              -90.18,
+              36.55
+            ],
+            [
+              -90.21,
+              36.54
+            ],
+            [
+              -90.22,
+              36.5
+            ],
+            [
+              -90.58,
+              36.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ebd487516ef387e36991766dad75aed2854c454b.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.ebd487516ef387e36991766dad75aed2854c454b.001.1",
+        "areaDesc": "Butler",
+        "geocode": {
+          "SAME": [
+            "029023"
+          ],
+          "UGC": [
+            "MOZ109"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/MOZ109"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:33:00-06:00",
+        "effective": "2026-03-07T07:33:00-06:00",
+        "onset": "2026-03-07T07:33:00-06:00",
+        "expires": "2026-03-07T08:15:00-06:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Paducah KY",
+        "headline": "Special Weather Statement issued March 7 at 7:33AM CST by NWS Paducah KY",
+        "description": "At 732 AM CST, Doppler radar was tracking a strong thunderstorm over\nFairdealing, or 12 miles east of Doniphan, moving east at 50 mph.\n\nHAZARD...Wind gusts up to 50 mph and pea size hail.\n\nSOURCE...Radar indicated.\n\nIMPACT...Gusty winds could knock down tree limbs and blow around\nunsecured objects. Minor hail damage to vegetation is\npossible.\n\nLocations impacted include...\nPoplar Bluff, Neelyville, Qulin, Fisk, Harviell, Milltown, and\nRombauer.",
+        "instruction": "If outdoors, consider seeking shelter inside a building.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSPAH"
+          ],
+          "WMOidentifier": [
+            "WWUS83 KPAH 071333"
+          ],
+          "NWSheadline": [
+            "A STRONG THUNDERSTORM WILL IMPACT BUTLER COUNTY THROUGH 815 AM CST"
+          ],
+          "eventMotionDescription": [
+            "2026-03-07T13:32:00-00:00...storm...261DEG...44KT...36.65,-90.61"
+          ],
+          "maxWindGust": [
+            "50 MPH"
+          ],
+          "maxHailSize": [
+            "0.25"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SPS"
+          ],
+          "NationalWeatherService": [
+            "SPS"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6c55297bcd484c6850db4bd09ae0d90b85ecd95.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.77,
+              36.76
+            ],
+            [
+              -93.64,
+              36.83
+            ],
+            [
+              -93.61,
+              36.84
+            ],
+            [
+              -93.46,
+              36.77
+            ],
+            [
+              -93.48,
+              36.71
+            ],
+            [
+              -93.69,
+              36.69
+            ],
+            [
+              -93.77,
+              36.76
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6c55297bcd484c6850db4bd09ae0d90b85ecd95.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.f6c55297bcd484c6850db4bd09ae0d90b85ecd95.001.1",
+        "areaDesc": "Barry, MO; Stone, MO",
+        "geocode": {
+          "SAME": [
+            "029009",
+            "029209"
+          ],
+          "UGC": [
+            "MOC009",
+            "MOC209"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC009",
+          "https://api.weather.gov/zones/county/MOC209"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:32:00-06:00",
+        "effective": "2026-03-07T07:32:00-06:00",
+        "onset": "2026-03-07T07:32:00-06:00",
+        "expires": "2026-03-07T18:00:00-06:00",
+        "ends": "2026-03-07T18:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Springfield MO",
+        "headline": "Flood Warning issued March 7 at 7:32AM CST until March 7 at 6:00PM CST by NWS Springfield MO",
+        "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of southwest Missouri, including the following\ncounties, Barry and Stone.\n\n* WHEN...Until 600 PM CST Saturday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 732 AM CST, Doppler radar and automated rain gauges\nindicated heavy rain due to thunderstorms. Flooding is\nalready occurring in the warned area. Between 1 and 3 inches\nof rain have fallen.\n- This includes the following low water crossings...\nRockhouse Creek at Farm Road 2145.\nFlooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nMccord Bend, Jenkins, Cape Fair and Table Rock Lake.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Many flood\ndeaths occur in vehicles.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWSGF"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KSGF 071332"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT UNTIL 6 PM CST THIS EVENING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGF.FA.W.0005.260307T1332Z-260308T0000Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T18:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FAW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a93ddbf0bd2b7058198dce1554ab77c5f913fdb.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.53,
+              37.79
+            ],
+            [
+              -91.31,
+              37.79
+            ],
+            [
+              -91.31,
+              37.7
+            ],
+            [
+              -91.15,
+              37.7
+            ],
+            [
+              -91.16,
+              37.59
+            ],
+            [
+              -91.31,
+              37.59
+            ],
+            [
+              -91.65,
+              37.42
+            ],
+            [
+              -91.72,
+              37.36
+            ],
+            [
+              -92.25,
+              37.06
+            ],
+            [
+              -92.25,
+              37.38
+            ],
+            [
+              -91.81,
+              37.6
+            ],
+            [
+              -91.53,
+              37.79
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a93ddbf0bd2b7058198dce1554ab77c5f913fdb.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.3a93ddbf0bd2b7058198dce1554ab77c5f913fdb.001.1",
+        "areaDesc": "Dent, MO; Texas, MO",
+        "geocode": {
+          "SAME": [
+            "029065",
+            "029215"
+          ],
+          "UGC": [
+            "MOC065",
+            "MOC215"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC065",
+          "https://api.weather.gov/zones/county/MOC215"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:28:00-06:00",
+        "effective": "2026-03-07T07:28:00-06:00",
+        "onset": "2026-03-07T07:28:00-06:00",
+        "expires": "2026-03-07T15:00:00-06:00",
+        "ends": "2026-03-07T15:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Springfield MO",
+        "headline": "Flood Warning issued March 7 at 7:28AM CST until March 7 at 3:00PM CST by NWS Springfield MO",
+        "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of south central Missouri, including the\nfollowing counties, Dent and Texas.\n\n* WHEN...Until 300 PM CST Saturday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 728 AM CST, Doppler radar and automated rain gauges\nindicated heavy rain due to thunderstorms. Flooding is\nongoing or expected to begin shortly in the warned area.\nBetween 2 and 3 inches of rain have fallen.\n- This includes the following low water crossings...\nMeramec River at Spur Road, Big Piney River at Cleveland\nRoad, Gladden Creek at County Road 624, Boone Creek at Boone\nCreek Road, Crooked Creek at Highway TT, Little Piney River\nat Union Road and Dry Fork Creek at County Road 2430.\nAdditional rainfall amounts up to 0.5 inches are possible in\nthe warned area.\n- Some locations that will experience flooding include...\nSalem, Mountain Grove, Houston, Licking, Cabool,\nRaymondville, Huggins, Montauk, Prescott, Darien, Jadwin,\nBucyrus, Solo, Success, Howes, Simmons, Bangert, Stone Hill,\nBendavis, Sligo, Howes Mill, Boss, Montauk State Park and\nOzark National Scenic Riverways.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Many flood\ndeaths occur in vehicles.\n\nFlooding is occurring or is imminent. It is important to know where\nyou are relative to streams, rivers, or creeks which can become\nkillers in heavy rains. Campers and hikers should avoid streams or\ncreeks.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWSGF"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KSGF 071328"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT UNTIL 3 PM CST THIS AFTERNOON... ...REPLACES FLOOD ADVISORY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGF.FA.W.0004.260307T1328Z-260307T2100Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T15:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FAW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4ea79457a2a4f5b7808927bd1afae07ba6a19770.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.89,
+              36.96
+            ],
+            [
+              -93.61,
+              37.1
+            ],
+            [
+              -93.22,
+              37.09
+            ],
+            [
+              -93.49,
+              36.9
+            ],
+            [
+              -94.26,
+              36.5
+            ],
+            [
+              -94.32,
+              36.84
+            ],
+            [
+              -93.89,
+              36.96
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4ea79457a2a4f5b7808927bd1afae07ba6a19770.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4ea79457a2a4f5b7808927bd1afae07ba6a19770.001.1",
+        "areaDesc": "Barry, MO; Christian, MO; Lawrence, MO; McDonald, MO; Newton, MO; Stone, MO",
+        "geocode": {
+          "SAME": [
+            "029009",
+            "029043",
+            "029109",
+            "029119",
+            "029145",
+            "029209"
+          ],
+          "UGC": [
+            "MOC009",
+            "MOC043",
+            "MOC109",
+            "MOC119",
+            "MOC145",
+            "MOC209"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC009",
+          "https://api.weather.gov/zones/county/MOC043",
+          "https://api.weather.gov/zones/county/MOC109",
+          "https://api.weather.gov/zones/county/MOC119",
+          "https://api.weather.gov/zones/county/MOC145",
+          "https://api.weather.gov/zones/county/MOC209"
+        ],
+        "references": [],
+        "sent": "2026-03-07T06:56:00-06:00",
+        "effective": "2026-03-07T06:56:00-06:00",
+        "onset": "2026-03-07T06:56:00-06:00",
+        "expires": "2026-03-07T18:00:00-06:00",
+        "ends": "2026-03-07T18:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Springfield MO",
+        "headline": "Flood Warning issued March 7 at 6:56AM CST until March 7 at 6:00PM CST by NWS Springfield MO",
+        "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of southwest Missouri, including the following\ncounties, Barry, Christian, Lawrence, McDonald, Newton and Stone.\n\n* WHEN...Until 600 PM CST Saturday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 655 AM CST, Doppler radar and automated rain gauges\nindicated heavy rain due to thunderstorms. Flooding is\nongoing or expected to begin shortly in the warned area.\nBetween 2 and 3 inches of rain have fallen.\n- This includes the following low water crossings...\nNorth Indian Creek at Orchid Drive, Green Valley Creek at\nHolder RD, Wilson's Creek at Old Limey Road, Little Crane\nCreek at Old Wire Road, Flat Creek at Highway U, Flat Creek\nat Highway C and Shoal Creek at Farm Road 2110.\nFlooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nSouthern Springfield, Nixa, Ozark, Monett, Aurora, Cassville,\nMarionville, Clever, Crane, Purdy, Billings, Exeter, Wheaton,\nVerona, Fairview, Fremont Hills, Butterfield, Newtonia,\nPioneer, Hurley, Stella, Stark City, Mcdowell, Pleasant\nRidge, Madry, Ridgley, Wheelerville, Rocky Comfort, Powell,\nBoaz and Big Sugar Creek State Park.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Many flood\ndeaths occur in vehicles.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWSGF"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KSGF 071256"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT UNTIL 6 PM CST THIS EVENING... ...REPLACES FLASH FLOOD WARNING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGF.FA.W.0003.260307T1256Z-260308T0000Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T18:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FAW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a67b2070f166bea088b320fe19e9bbd814479285.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.48,
+              37.22
+            ],
+            [
+              -90.22,
+              37.23
+            ],
+            [
+              -90.22,
+              37.1
+            ],
+            [
+              -90.21,
+              37.08
+            ],
+            [
+              -90.3,
+              36.93
+            ],
+            [
+              -90.46,
+              36.8
+            ],
+            [
+              -90.93,
+              36.81
+            ],
+            [
+              -90.73,
+              37.02
+            ],
+            [
+              -90.48,
+              37.22
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a67b2070f166bea088b320fe19e9bbd814479285.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.a67b2070f166bea088b320fe19e9bbd814479285.001.1",
+        "areaDesc": "Butler, MO; Carter, MO; Wayne, MO",
+        "geocode": {
+          "SAME": [
+            "029023",
+            "029035",
+            "029223"
+          ],
+          "UGC": [
+            "MOC023",
+            "MOC035",
+            "MOC223"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC023",
+          "https://api.weather.gov/zones/county/MOC035",
+          "https://api.weather.gov/zones/county/MOC223"
+        ],
+        "references": [],
+        "sent": "2026-03-07T06:38:00-06:00",
+        "effective": "2026-03-07T06:38:00-06:00",
+        "onset": "2026-03-07T06:38:00-06:00",
+        "expires": "2026-03-07T12:45:00-06:00",
+        "ends": "2026-03-07T12:45:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Immediate",
+        "event": "Flash Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Paducah KY",
+        "headline": "Flash Flood Warning issued March 7 at 6:38AM CST until March 7 at 12:45PM CST by NWS Paducah KY",
+        "description": "FFWPAH\n\nThe National Weather Service in Paducah has issued a\n\n* Flash Flood Warning for...\nNorthwestern Butler County in southeastern Missouri...\nSoutheastern Carter County in southeastern Missouri...\nSouthern Wayne County in southeastern Missouri...\n\n* Until 1245 PM CST Saturday.\n\n* At 638 AM CST, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 1 and 2 inches of rain\nhave fallen. Additional rainfall amounts in excess of 1 inch are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar.\n\nIMPACT...Flash flooding of small creeks and streams, urban\nareas, highways, streets and underpasses as well as\nother poor drainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nGreenville, Lake Wappapello State Park, Ellsinore, Williamsville,\nHendrickson, Brush Arbor, Shook, Hunter and Grandin.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FFWPAH"
+          ],
+          "WMOidentifier": [
+            "WGUS53 KPAH 071238"
+          ],
+          "flashFloodDetection": [
+            "RADAR INDICATED"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KPAH.FF.W.0003.260307T1238Z-260307T1845Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T12:45:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FFW"
+          ],
+          "NationalWeatherService": [
+            "FFW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eada962fa1a41fa1f2056715c5846b262eaef597.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -92.07,
+              37.88
+            ],
+            [
+              -92.04,
+              37.87
+            ],
+            [
+              -92.05,
+              37.82
+            ],
+            [
+              -92.03,
+              37.81
+            ],
+            [
+              -92,
+              37.77
+            ],
+            [
+              -92.03,
+              37.67
+            ],
+            [
+              -92.1,
+              37.67
+            ],
+            [
+              -92.09,
+              37.77
+            ],
+            [
+              -92.1,
+              37.83
+            ],
+            [
+              -92.09,
+              37.86
+            ],
+            [
+              -92.07,
+              37.88
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.eada962fa1a41fa1f2056715c5846b262eaef597.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.eada962fa1a41fa1f2056715c5846b262eaef597.001.1",
+        "areaDesc": "Pulaski, MO",
+        "geocode": {
+          "SAME": [
+            "029169"
+          ],
+          "UGC": [
+            "MOC169"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC169"
+        ],
+        "references": [],
+        "sent": "2026-03-07T07:07:00-05:00",
+        "effective": "2026-03-07T07:07:00-05:00",
+        "onset": "2026-03-07T07:07:00-05:00",
+        "expires": "2026-03-08T07:15:00-05:00",
+        "ends": "2026-03-08T14:40:00-05:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Springfield MO",
+        "headline": "Flood Warning issued March 7 at 6:07AM CST until March 8 at 2:40PM CDT by NWS Springfield MO",
+        "description": "...The National Weather Service in Springfield MO has issued a Flood\nWarning for the following rivers in Missouri...\n\nBig Piney below Fort Leonard Wood  -East Gate affecting Pulaski\nCounty.\n\nFor the Big Piney River...including Fort Leonard Wood - East Gate...\nMinor flooding is forecast.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Big Piney  below Fort Leonard Wood - East Gate.\n\n* WHEN...From this morning to early tomorrow afternoon.\n\n* IMPACTS...At 9.0 feet, the Happy Hollow Picnic Area floods.\n\n* ADDITIONAL DETAILS...\n- At 5:00 AM CST Saturday the stage was 5.5 feet.\n- Bankfull stage is 8.0 feet.\n- Forecast...The river will rise above flood stage this evening\nto 9.4 feet just after midnight tonight. It will then fall\nbelow flood stage tomorrow morning to 3.1 feet Tuesday\nmorning. It will rise to 3.5 feet Wednesday morning. It will\nthen fall again and remain below flood stage.\n- Flood stage is 8.0 feet.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Many flood\ndeaths occur in vehicles.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued Sunday morning at 715 AM CDT.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWSGF"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KSGF 071207"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT FROM THIS MORNING TO EARLY TOMORROW AFTERNOON"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGF.FL.W.0004.260307T1207Z-260308T1940Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T14:40:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.17f79d865c378671c28c0846ac087c5e8970f1e6.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.61,
+              38.07
+            ],
+            [
+              -90.61,
+              38.02
+            ],
+            [
+              -90.63,
+              38.01
+            ],
+            [
+              -90.58,
+              38
+            ],
+            [
+              -90.42,
+              38.04
+            ],
+            [
+              -90.34,
+              38.09
+            ],
+            [
+              -90.28,
+              38.09
+            ],
+            [
+              -90.25,
+              38.12
+            ],
+            [
+              -90.25,
+              38.13
+            ],
+            [
+              -90.22,
+              38.09
+            ],
+            [
+              -90,
+              37.96
+            ],
+            [
+              -89.93,
+              37.96
+            ],
+            [
+              -89.97,
+              37.93
+            ],
+            [
+              -89.94,
+              37.87
+            ],
+            [
+              -90.15,
+              37.64
+            ],
+            [
+              -90.65,
+              37.64
+            ],
+            [
+              -90.64,
+              38.08
+            ],
+            [
+              -90.61,
+              38.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.17f79d865c378671c28c0846ac087c5e8970f1e6.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.17f79d865c378671c28c0846ac087c5e8970f1e6.001.1",
+        "areaDesc": "Ste. Genevieve, MO; St. Francois, MO",
+        "geocode": {
+          "SAME": [
+            "029186",
+            "029187"
+          ],
+          "UGC": [
+            "MOC186",
+            "MOC187"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC186",
+          "https://api.weather.gov/zones/county/MOC187"
+        ],
+        "references": [],
+        "sent": "2026-03-07T05:05:00-06:00",
+        "effective": "2026-03-07T05:05:00-06:00",
+        "onset": "2026-03-07T05:05:00-06:00",
+        "expires": "2026-03-07T10:00:00-06:00",
+        "ends": "2026-03-07T10:00:00-06:00",
         "status": "Actual",
         "messageType": "Alert",
         "category": "Met",
@@ -71,38 +1993,2889 @@
         "certainty": "Likely",
         "urgency": "Expected",
         "event": "Flood Advisory",
-        "headline": "Flood Advisory issued October 01",
-        "description": "Flood advisory details",
-        "parameters": {}
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flood Advisory issued March 7 at 5:05AM CST until March 7 at 10:00AM CST by NWS St Louis MO",
+        "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Sainte Genevieve County in southeastern Missouri...\nSaint Francois County in southeastern Missouri...\n\n* WHEN...Until 1000 AM CST.\n\n* IMPACTS...Rises in small streams. Water over roadways.\n\n* ADDITIONAL DETAILS...\n- At 505 AM CST, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 1 and 2 inches of rain have\nfallen.\n- Additional rainfall amounts up to 1 inch are expected over the\narea. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nFarmington, Bonne Terre, Desloge, Ste. Genevieve, Bismarck,\nLeadwood, Park Hills, Iron Mountain Lake, Bloomsdale, St. Mary,\nWeingarten, Rocky Ridge, Coffman, Knob Lick, Womac, Iron\nMountain, Leadington, French Village, Libertyville and Doe Run.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLSLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS83 KLSX 071105"
+          ],
+          "NWSheadline": [
+            "FLOOD ADVISORY IN EFFECT UNTIL 10 AM CST THIS MORNING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.NEW.KLSX.FA.Y.0006.260307T1105Z-260307T1600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T10:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "FAY"
+          ]
+        }
       }
     },
     {
-      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3333",
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4925d19cd15570fba86dab06debbc76b69e2d381.001.1",
       "type": "Feature",
-      "geometry": null,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -94.61,
+              37.18
+            ],
+            [
+              -94.38,
+              37.36
+            ],
+            [
+              -94.09,
+              37.58
+            ],
+            [
+              -93.62,
+              37.57
+            ],
+            [
+              -94.07,
+              37.29
+            ],
+            [
+              -94.3,
+              37.15
+            ],
+            [
+              -94.59,
+              37.15
+            ],
+            [
+              -94.61,
+              37.18
+            ]
+          ]
+        ]
+      },
       "properties": {
-        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3333",
-        "id": "urn:oid:2.49.0.1.840.0.3333",
-        "areaDesc": "Some Area",
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4925d19cd15570fba86dab06debbc76b69e2d381.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4925d19cd15570fba86dab06debbc76b69e2d381.001.1",
+        "areaDesc": "Barton, MO; Dade, MO; Jasper, MO",
         "geocode": {
-          "SAME": ["006001"],
-          "UGC": ["CAZ006"]
+          "SAME": [
+            "029011",
+            "029057",
+            "029097"
+          ],
+          "UGC": [
+            "MOC011",
+            "MOC057",
+            "MOC097"
+          ]
         },
-        "sent": "2014-10-01T08:40:00-07:00",
-        "effective": "2014-10-01T08:40:00-07:00",
-        "onset": "2014-10-01T08:40:00-07:00",
-        "expires": "2014-10-03T21:00:00-07:00",
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC011",
+          "https://api.weather.gov/zones/county/MOC057",
+          "https://api.weather.gov/zones/county/MOC097"
+        ],
+        "references": [],
+        "sent": "2026-03-07T04:56:00-06:00",
+        "effective": "2026-03-07T04:56:00-06:00",
+        "onset": "2026-03-07T04:56:00-06:00",
+        "expires": "2026-03-07T12:00:00-06:00",
+        "ends": "2026-03-07T12:00:00-06:00",
         "status": "Actual",
         "messageType": "Alert",
         "category": "Met",
-        "severity": "Minor",
+        "severity": "Severe",
         "certainty": "Likely",
         "urgency": "Expected",
-        "event": "Tornado Warning",
-        "headline": "Tornado Warning issued October 01",
-        "description": "Tornado warning details",
-        "parameters": {}
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Springfield MO",
+        "headline": "Flood Warning issued March 7 at 4:56AM CST until March 7 at 12:00PM CST by NWS Springfield MO",
+        "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...A portion of southwest Missouri, including the following\ncounties, Barton, Dade and Jasper.\n\n* WHEN...Until noon CST Saturday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring.\n\n* ADDITIONAL DETAILS...\n- At 456 AM CST, Doppler radar and automated rain gauges\nindicated heavy rain due to thunderstorms. Flooding is\nalready occurring in the warned area. Between 2 and 3 inches\nof rain have fallen.\n- This includes the following low water crossings...\nSons Creek at County Road 113, Dry Fork at Pine Road, Lousy\nBranch at County Road 85 and Muddy Creek at Highway 126.\n- Some locations that will experience flooding include...\nNorthern Joplin, Carthage, Webb City, Carl Junction, Oronogo,\nCarterville, Lockwood, Jasper, Golden City, Alba, Purcell,\nAirport Drive, Carytown, Neck City, Brooklyn Heights, Arcola,\nKenoma, Dudenville, Boston, Sylvania, Cedarville, Neola, Bona\nand Stockton Lake.\n- http://www.weather.gov/safety/flood",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Many flood\ndeaths occur in vehicles.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWSGF"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KSGF 071056"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT UNTIL NOON CST TODAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGF.FA.W.0002.260307T1056Z-260307T1800Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T12:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FAW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a6c0a3429dab169abb74b7e6af6ca17542a9578.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.31,
+              37.71
+            ],
+            [
+              -91.31,
+              37.79
+            ],
+            [
+              -91.33,
+              37.79
+            ],
+            [
+              -91.11,
+              37.88
+            ],
+            [
+              -90.65,
+              37.95
+            ],
+            [
+              -90.65,
+              37.62
+            ],
+            [
+              -90.78,
+              37.59
+            ],
+            [
+              -91.16,
+              37.58
+            ],
+            [
+              -91.16,
+              37.59
+            ],
+            [
+              -91.15,
+              37.65
+            ],
+            [
+              -91.15,
+              37.7
+            ],
+            [
+              -91.22,
+              37.7
+            ],
+            [
+              -91.31,
+              37.71
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3a6c0a3429dab169abb74b7e6af6ca17542a9578.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.3a6c0a3429dab169abb74b7e6af6ca17542a9578.001.1",
+        "areaDesc": "Crawford, MO; Iron, MO; Reynolds, MO; Washington, MO",
+        "geocode": {
+          "SAME": [
+            "029055",
+            "029093",
+            "029179",
+            "029221"
+          ],
+          "UGC": [
+            "MOC055",
+            "MOC093",
+            "MOC179",
+            "MOC221"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC055",
+          "https://api.weather.gov/zones/county/MOC093",
+          "https://api.weather.gov/zones/county/MOC179",
+          "https://api.weather.gov/zones/county/MOC221"
+        ],
+        "references": [],
+        "sent": "2026-03-07T04:08:00-06:00",
+        "effective": "2026-03-07T04:08:00-06:00",
+        "onset": "2026-03-07T04:08:00-06:00",
+        "expires": "2026-03-07T09:00:00-06:00",
+        "ends": "2026-03-07T09:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Immediate",
+        "event": "Flash Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flash Flood Warning issued March 7 at 4:08AM CST until March 7 at 9:00AM CST by NWS St Louis MO",
+        "description": "FFWLSX\n\nThe National Weather Service in St Louis has issued a\n\n* Flash Flood Warning for...\nSoutheastern Crawford County in east central Missouri...\nSouthern Washington County in east central Missouri...\nNorthern Iron County in southeastern Missouri...\nNorth Central Reynolds County in southeastern Missouri...\n\n* Until 900 AM CST.\n\n* At 408 AM CST, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 2 and 3 inches of rain\nhave fallen. Additional rainfall amounts around 1 to two inches are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nPotosi, Pilot Knob, Viburnum, Irondale, Courtois, Bixby, Belleview,\nCaledonia, Belgrade, Davisville, Dillard and Granite.\n\nThis includes the following State Parks...\nElephant Rocks State Park and Dillard Mill Historic Site.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FFWLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS53 KLSX 071008"
+          ],
+          "flashFloodDetection": [
+            "RADAR INDICATED"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KLSX.FF.W.0002.260307T1008Z-260307T1500Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T09:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FFW"
+          ],
+          "NationalWeatherService": [
+            "FFW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.29a958639c12e28208249302378989a89ccf0ab7.002.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -91.22,
+              38.01
+            ],
+            [
+              -91.26,
+              38.07
+            ],
+            [
+              -91.16,
+              38.16
+            ],
+            [
+              -91.1,
+              38.28
+            ],
+            [
+              -90.97,
+              38.32
+            ],
+            [
+              -90.91,
+              38.39
+            ],
+            [
+              -90.82,
+              38.39
+            ],
+            [
+              -90.92,
+              38.25
+            ],
+            [
+              -91.05,
+              38.23
+            ],
+            [
+              -91.11,
+              38.08
+            ],
+            [
+              -91.22,
+              38.01
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.29a958639c12e28208249302378989a89ccf0ab7.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.29a958639c12e28208249302378989a89ccf0ab7.002.1",
+        "areaDesc": "Crawford, MO; Washington, MO",
+        "geocode": {
+          "SAME": [
+            "029055",
+            "029221"
+          ],
+          "UGC": [
+            "MOC055",
+            "MOC221"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC055",
+          "https://api.weather.gov/zones/county/MOC221"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.98fe972124704cfe1707b08b17bac9c0eb9bf007.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.98fe972124704cfe1707b08b17bac9c0eb9bf007.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T08:28:00-05:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.e84090d104768154fb69fbc389489a487f8586b3.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.e84090d104768154fb69fbc389489a487f8586b3.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T22:14:00-05:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b48437988e0c6c9abb4c8d63ce10e98580047c3.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.6b48437988e0c6c9abb4c8d63ce10e98580047c3.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T12:27:00-05:00"
+          }
+        ],
+        "sent": "2026-03-06T19:29:00-05:00",
+        "effective": "2026-03-06T19:29:00-05:00",
+        "onset": "2026-03-06T19:29:00-05:00",
+        "expires": "2026-03-08T07:30:00-05:00",
+        "ends": "2026-03-08T23:10:00-05:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Observed",
+        "urgency": "Immediate",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flood Warning issued March 6 at 6:29PM CST until March 8 at 11:10PM CDT by NWS St Louis MO",
+        "description": "...The Flood Warning continues for the following rivers in\nMissouri...\n\nMeramec River near Sullivan.\n\n...The Flood Warning is cancelled for the following rivers in\nMissouri...\n\nMeramec River near Steelville.\n\nRiver forecasts are based on observed precipitation and forecast\nprecipitation for the next 48 hours.\n\n* WHAT...Minor flooding is occurring and minor flooding is forecast.\n\n* WHERE...Meramec River near Sullivan.\n\n* WHEN...Until Sunday evening.\n\n* IMPACTS...At 15.6 feet, The basic loop of the Onondaga Cave State\nPark campground begins flooding near this height.\n\n* ADDITIONAL DETAILS...\n- At 5:29 PM CST Friday the stage was 16.3 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 5:29 PM CST Friday was 19.7 feet.\n- Forecast...The river is expected to fall below flood stage\ntomorrow afternoon and continue falling to 5.6 feet Thursday\nevening.\n- Flood stage is 11.0 feet.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product, along with additional weather and stream information,\nis available at https://water.noaa.gov/wfo/lsx",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLSLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS83 KLSX 070029"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING NOW IN EFFECT UNTIL SUNDAY EVENING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.EXT.KLSX.FL.W.0001.000000T0000Z-260309T0410Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T23:10:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLS"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.64,
+              38.44
+            ],
+            [
+              -90.66,
+              38.5
+            ],
+            [
+              -90.64,
+              38.55
+            ],
+            [
+              -90.56,
+              38.55
+            ],
+            [
+              -90.56,
+              38.5
+            ],
+            [
+              -90.64,
+              38.44
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.001.1",
+        "areaDesc": "Jefferson, MO; St. Louis, MO",
+        "geocode": {
+          "SAME": [
+            "029099",
+            "029189"
+          ],
+          "UGC": [
+            "MOC099",
+            "MOC189"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC099",
+          "https://api.weather.gov/zones/county/MOC189"
+        ],
+        "references": [],
+        "sent": "2026-03-06T19:27:00-05:00",
+        "effective": "2026-03-06T19:27:00-05:00",
+        "onset": "2026-03-07T11:07:00-05:00",
+        "expires": "2026-03-08T07:30:00-05:00",
+        "ends": "2026-03-10T05:00:00-05:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flood Warning issued March 6 at 6:27PM CST until March 10 at 5:00AM CDT by NWS St Louis MO",
+        "description": "...The National Weather Service in St Louis has issued a Flood\nWarning for the following rivers in Missouri...\n\nMeramec River near Eureka.\n\nMeramec River at Valley Park.\n\nRiver forecasts are based on observed precipitation and forecast\nprecipitation for the next 48 hours.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Meramec River near Eureka.\n\n* WHEN...From Saturday morning to late Monday night.\n\n* IMPACTS...At 22.0 feet, Willman Road near the Highway 109 bridge\nbecomes inundated and impassable.\n\n* ADDITIONAL DETAILS...\n- At 6:00 PM CST Friday the stage was 15.0 feet.\n- Forecast...The river is expected to rise above flood stage late\ntomorrow morning to a crest of 22.5 feet Sunday morning. It will\nthen fall below flood stage late Sunday evening.\n- Flood stage is 19.0 feet.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product, along with additional weather and stream information,\nis available at https://water.noaa.gov/wfo/lsx",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KLSX 070027"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT FROM SATURDAY MORNING TO LATE MONDAY NIGHT"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KLSX.FL.W.0005.260307T1607Z-260310T1000Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-10T05:00:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.002.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.56,
+              38.5
+            ],
+            [
+              -90.56,
+              38.55
+            ],
+            [
+              -90.47,
+              38.57
+            ],
+            [
+              -90.43,
+              38.56
+            ],
+            [
+              -90.42,
+              38.53
+            ],
+            [
+              -90.51,
+              38.53
+            ],
+            [
+              -90.56,
+              38.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.997f21ad16bc15cc3b9d884708a2664d39f6e9ad.002.1",
+        "areaDesc": "Jefferson, MO; St. Louis, MO",
+        "geocode": {
+          "SAME": [
+            "029099",
+            "029189"
+          ],
+          "UGC": [
+            "MOC099",
+            "MOC189"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC099",
+          "https://api.weather.gov/zones/county/MOC189"
+        ],
+        "references": [],
+        "sent": "2026-03-06T19:27:00-05:00",
+        "effective": "2026-03-06T19:27:00-05:00",
+        "onset": "2026-03-07T22:13:00-05:00",
+        "expires": "2026-03-08T07:30:00-05:00",
+        "ends": "2026-03-10T07:00:00-05:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flood Warning issued March 6 at 6:27PM CST until March 10 at 7:00AM CDT by NWS St Louis MO",
+        "description": "...The National Weather Service in St Louis has issued a Flood\nWarning for the following rivers in Missouri...\n\nMeramec River near Eureka.\n\nMeramec River at Valley Park.\n\nRiver forecasts are based on observed precipitation and forecast\nprecipitation for the next 48 hours.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Meramec River at Valley Park.\n\n* WHEN...From Saturday evening to Tuesday morning.\n\n* IMPACTS...At 19.5 feet, Buder Park and the recreation park at the\nwater plant floods.\n\n* ADDITIONAL DETAILS...\n- At 6:00 PM CST Friday the stage was 10.6 feet.\n- Forecast...The river is expected to rise above flood stage late\ntomorrow evening to a crest of 19.7 feet early Sunday afternoon.\nIt will then fall below flood stage early Monday morning.\n- Flood stage is 18.0 feet.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product, along with additional weather and stream information,\nis available at https://water.noaa.gov/wfo/lsx",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLWLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS43 KLSX 070027"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING IN EFFECT FROM SATURDAY EVENING TO TUESDAY MORNING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.KLSX.FL.W.0006.260308T0313Z-260310T1200Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-10T07:00:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLW"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c7d59a3a77d27f008822ae4c686095972e0dfab4.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -90.61,
+              38.33
+            ],
+            [
+              -90.67,
+              38.33
+            ],
+            [
+              -90.67,
+              38.39
+            ],
+            [
+              -90.62,
+              38.43
+            ],
+            [
+              -90.64,
+              38.47
+            ],
+            [
+              -90.59,
+              38.48
+            ],
+            [
+              -90.56,
+              38.46
+            ],
+            [
+              -90.57,
+              38.41
+            ],
+            [
+              -90.61,
+              38.4
+            ],
+            [
+              -90.62,
+              38.37
+            ],
+            [
+              -90.61,
+              38.33
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.c7d59a3a77d27f008822ae4c686095972e0dfab4.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.c7d59a3a77d27f008822ae4c686095972e0dfab4.001.1",
+        "areaDesc": "Jefferson, MO",
+        "geocode": {
+          "SAME": [
+            "029099"
+          ],
+          "UGC": [
+            "MOC099"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/MOC099"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4eb86323ba1b331e729c6b26b1ac912e1186d286.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.4eb86323ba1b331e729c6b26b1ac912e1186d286.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T10:41:00-05:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.ef68640f39d4297a02cf3f5ac6b4d69b6511ab28.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.ef68640f39d4297a02cf3f5ac6b4d69b6511ab28.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T22:12:00-05:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6b48437988e0c6c9abb4c8d63ce10e98580047c3.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.6b48437988e0c6c9abb4c8d63ce10e98580047c3.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T12:27:00-05:00"
+          }
+        ],
+        "sent": "2026-03-06T19:22:00-05:00",
+        "effective": "2026-03-06T19:22:00-05:00",
+        "onset": "2026-03-06T19:22:00-05:00",
+        "expires": "2026-03-08T07:30:00-05:00",
+        "ends": "2026-03-09T16:16:00-05:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Observed",
+        "urgency": "Immediate",
+        "event": "Flood Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS St Louis MO",
+        "headline": "Flood Warning issued March 6 at 6:22PM CST until March 9 at 4:16PM CDT by NWS St Louis MO",
+        "description": "...The Flood Warning is extended for the following rivers in\nMissouri...\n\nBig River at Byrnesville.\n\nRiver forecasts are based on observed precipitation and forecast\nprecipitation for the next 48 hours.\n\n* WHAT...Moderate flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...Big River at Byrnesville.\n\n* WHEN...Until Monday afternoon.\n\n* IMPACTS...At 22.4 feet, At this level, Twin Rivers Bridge Road must\nbe closed.\n\n* ADDITIONAL DETAILS...\n- At 5:45 PM CST Friday the stage was 20.5 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 5:45 PM CST Friday was 20.5 feet.\n- Forecast...The river is expected to rise to a crest of 22.5 feet\nearly tomorrow afternoon. It will then fall below flood stage\nSunday afternoon.\n- Flood stage is 16.0 feet.",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product, along with additional weather and stream information,\nis available at https://water.noaa.gov/wfo/lsx",
+        "response": "Avoid",
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLSLSX"
+          ],
+          "WMOidentifier": [
+            "WGUS83 KLSX 070022"
+          ],
+          "NWSheadline": [
+            "FLOOD WARNING NOW IN EFFECT UNTIL MONDAY AFTERNOON"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.EXT.KLSX.FL.W.0004.000000T0000Z-260309T2116Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-09T16:16:00-05:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "FLS"
+          ],
+          "NationalWeatherService": [
+            "FLW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.003.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.003.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.003.1",
+        "areaDesc": "Cape Fairweather to Lisianski Strait; City and Borough of Sitka",
+        "geocode": {
+          "SAME": [
+            "002105",
+            "002220"
+          ],
+          "UGC": [
+            "AKZ322",
+            "AKZ323"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ322",
+          "https://api.weather.gov/zones/forecast/AKZ323"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T21:09:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:47:00-09:00",
+        "effective": "2026-03-07T02:47:00-09:00",
+        "onset": "2026-03-07T14:00:00-09:00",
+        "expires": "2026-03-07T11:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "High Wind Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "High Wind Warning issued March 7 at 2:47AM AKST until March 7 at 9:00PM AKST by NWS Juneau AK",
+        "description": "* WHAT...West winds 25 to 35 mph with gusts up to 60 mph\nexpected.\n\n* WHERE...Cape Fairweather to Lisianski Strait and City and\nBorough of Sitka.\n\n* WHEN...From 2 PM this afternoon to 9 PM AKST this evening.\n\n* IMPACTS...High winds will blow around unsecured objects and\nmay damage property and cause power outages. Travel by land,\nsea, or air will be difficult.\n\n* ADDITIONAL DETAILS...The exact timing and location of the\nstrongest winds remain uncertain given variations in potential\nstorm track. Anticipate snow showers in the wake of the system.",
+        "instruction": "People are urged to secure vessels and loose objects that could\nbe blown around or damaged by the wind.\n\nReport any damage to the National Weather Service by visiting\nweather.gov/Juneau/StormReports",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK77 PAJK 071147"
+          ],
+          "NWSheadline": [
+            "HIGH WIND WARNING REMAINS IN EFFECT FROM 2 PM THIS AFTERNOON TO 9 PM AKST THIS EVENING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.HW.W.0009.260307T2300Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5a2c92251cbd81c63dec3a75e8ffc8c348dc09a5.001.1,2026-03-06T14:07:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "HWW"
+          ],
+          "NationalWeatherService": [
+            "HWW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.006.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.006.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.006.1",
+        "areaDesc": "Western Kupreanof and Kuiu Island; Prince of Wales Island",
+        "geocode": {
+          "SAME": [
+            "002198"
+          ],
+          "UGC": [
+            "AKZ327",
+            "AKZ328"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ327",
+          "https://api.weather.gov/zones/forecast/AKZ328"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.006.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.006.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T21:09:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:47:00-09:00",
+        "effective": "2026-03-07T02:47:00-09:00",
+        "onset": "2026-03-07T14:00:00-09:00",
+        "expires": "2026-03-07T11:00:00-09:00",
+        "ends": "2026-03-08T00:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Wind Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "Wind Advisory issued March 7 at 2:47AM AKST until March 8 at 12:00AM AKST by NWS Juneau AK",
+        "description": "* WHAT...West winds 20 to 30 mph with gusts up to 50 mph\nexpected.\n\n* WHERE...Western Kupreanof Island and Kuiu Island and Prince of\nWales Island.\n\n* WHEN...From 2 PM this afternoon to midnight AKST tonight.\n\n* IMPACTS...Gusty winds could blow around unsecured objects. Use\nextra caution if traveling by land, sea, or air.\n\n* ADDITIONAL DETAILS...The exact timing of the strongest winds\nremain uncertain given variations in potential storm track.\nAnticipate snow showers in the wake of the system.",
+        "instruction": "Use extra caution when driving, especially if operating a high\nprofile vehicle. Secure outdoor objects.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK77 PAJK 071147"
+          ],
+          "NWSheadline": [
+            "WIND ADVISORY REMAINS IN EFFECT FROM 2 PM THIS AFTERNOON TO MIDNIGHT AKST TONIGHT"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.WI.Y.0021.260307T2300Z-260308T0900Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T00:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5a2c92251cbd81c63dec3a75e8ffc8c348dc09a5.004.1,2026-03-06T14:07:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WIY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.004.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.004.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.004.1",
+        "areaDesc": "Glacier Bay; Eastern Chichagof Island",
+        "geocode": {
+          "SAME": [
+            "002105"
+          ],
+          "UGC": [
+            "AKZ320",
+            "AKZ321"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ320",
+          "https://api.weather.gov/zones/forecast/AKZ321"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.004.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.004.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T21:09:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:47:00-09:00",
+        "effective": "2026-03-07T02:47:00-09:00",
+        "onset": "2026-03-07T14:00:00-09:00",
+        "expires": "2026-03-07T11:00:00-09:00",
+        "ends": "2026-03-08T00:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Wind Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "Wind Advisory issued March 7 at 2:47AM AKST until March 8 at 12:00AM AKST by NWS Juneau AK",
+        "description": "* WHAT...Southwest winds 25 to 35 mph with gusts up to 55 mph\nexpected.\n\n* WHERE...Glacier Bay and Eastern Chichagof Island.\n\n* WHEN...From 2 PM this afternoon to midnight AKST tonight.\n\n* IMPACTS...Gusty winds could blow around unsecured objects. Use\nextra caution if traveling by land, sea, or air.\n\n* ADDITIONAL DETAILS...The exact timing of the strongest winds\nremain uncertain given variations in potential storm track.\nAnticipate snow showers in the wake of the system.",
+        "instruction": "Use extra caution when driving, especially if operating a high\nprofile vehicle. Secure outdoor objects.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK77 PAJK 071147"
+          ],
+          "NWSheadline": [
+            "WIND ADVISORY REMAINS IN EFFECT FROM 2 PM THIS AFTERNOON TO MIDNIGHT AKST TONIGHT"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.WI.Y.0021.260307T2300Z-260308T0900Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T00:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5a2c92251cbd81c63dec3a75e8ffc8c348dc09a5.002.1,2026-03-06T14:07:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WIY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.005.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.005.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.cf8175d216c3fbeec4c0f9de934049bf07904fea.005.1",
+        "areaDesc": "Admiralty Island; City and Borough of Juneau",
+        "geocode": {
+          "SAME": [
+            "002105",
+            "002110"
+          ],
+          "UGC": [
+            "AKZ324",
+            "AKZ325"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ324",
+          "https://api.weather.gov/zones/forecast/AKZ325"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.005.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.8db533cf4581a204220721ca6a31a84e9b19bbbc.005.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T21:09:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:47:00-09:00",
+        "effective": "2026-03-07T02:47:00-09:00",
+        "onset": "2026-03-07T15:00:00-09:00",
+        "expires": "2026-03-07T11:00:00-09:00",
+        "ends": "2026-03-08T00:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Wind Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "Wind Advisory issued March 7 at 2:47AM AKST until March 8 at 12:00AM AKST by NWS Juneau AK",
+        "description": "* WHAT...South winds 20 to 30 mph with gusts up to 50 mph\nexpected.\n\n* WHERE...Admiralty Island and City and Borough of Juneau.\n\n* WHEN...From 3 PM this afternoon to midnight AKST tonight.\n\n* IMPACTS...Gusty winds could blow around unsecured objects. Use\nextra caution if traveling by land, sea, or air.\n\n* ADDITIONAL DETAILS...The exact timing of the strongest winds\nremain uncertain given variations in potential storm track.\nAnticipate snow showers in the wake of the system.",
+        "instruction": "Use extra caution when driving, especially if operating a high\nprofile vehicle. Secure outdoor objects.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK77 PAJK 071147"
+          ],
+          "NWSheadline": [
+            "WIND ADVISORY REMAINS IN EFFECT FROM 3 PM THIS AFTERNOON TO MIDNIGHT AKST TONIGHT"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.WI.Y.0021.260308T0000Z-260308T0900Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T00:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.5a2c92251cbd81c63dec3a75e8ffc8c348dc09a5.003.1,2026-03-06T14:07:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WIY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.001.1",
+        "areaDesc": "City and Borough of Yakutat",
+        "geocode": {
+          "SAME": [
+            "002282"
+          ],
+          "UGC": [
+            "AKZ317"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ317"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4715a94eaa71113cab7034766618bf19aba89976.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.4715a94eaa71113cab7034766618bf19aba89976.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:16:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:10:00-09:00",
+        "effective": "2026-03-07T02:10:00-09:00",
+        "onset": "2026-03-07T03:00:00-09:00",
+        "expires": "2026-03-07T10:15:00-09:00",
+        "ends": "2026-03-07T18:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "Winter Weather Advisory issued March 7 at 2:10AM AKST until March 7 at 6:00PM AKST by NWS Juneau AK",
+        "description": "...SNOWFALL EXPECTED SATURDAY FOR PORTIONS OF NORTHERN SE AK...\n\n* WHAT...Snow expected. Total snow accumulations of 4 to 6 inches.\n\n* WHERE...City and Borough of Yakutat.\n\n* WHEN...Until 6 PM AKST this evening.\n\n* IMPACTS...Travel could be very difficult.\n\n* ADDITIONAL DETAILS...The greatest snowfall rates will occur\nSaturday morning.",
+        "instruction": "Slow down and use caution while traveling.\n\nPeople are urged to prepare their property before the onset of\nwinter weather.\n\nFor the latest road conditions, where available, call 5 1 1 or\nvisit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK47 PAJK 071110"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 6 PM AKST THIS EVENING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.WW.Y.0018.260307T1200Z-260308T0300Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T18:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.824113698da22f1012fa35611b771527aef8c6fd.001.1,2026-03-06T13:57:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.3dfdf5337152bc1c27f703e2e7911cb52fa40d3f.002.1",
+        "areaDesc": "City and Borough of Juneau",
+        "geocode": {
+          "SAME": [
+            "002110"
+          ],
+          "UGC": [
+            "AKZ325"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ325"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4715a94eaa71113cab7034766618bf19aba89976.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.4715a94eaa71113cab7034766618bf19aba89976.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:16:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T02:10:00-09:00",
+        "effective": "2026-03-07T02:10:00-09:00",
+        "onset": "2026-03-07T15:00:00-09:00",
+        "expires": "2026-03-07T10:15:00-09:00",
+        "ends": "2026-03-08T03:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Juneau AK",
+        "headline": "Winter Weather Advisory issued March 7 at 2:10AM AKST until March 8 at 4:00AM AKDT by NWS Juneau AK",
+        "description": "...SNOWFALL EXPECTED SATURDAY FOR PORTIONS OF NORTHERN SE AK...\n\n* WHAT...Snow expected. Total snow accumulations of 4 to 6\ninches. Winds gusting as high as 50 mph.\n\n* WHERE...City and Borough of Juneau.\n\n* WHEN...From 3 PM this afternoon to 4 AM AKST Sunday.\n\n* IMPACTS...Travel could be very difficult. Gusty winds could\nbring down tree branches.\n\n* ADDITIONAL DETAILS...Snow accumulations will be highly\nvariable, as snow showers set up behind a fast-moving system.",
+        "instruction": "Slow down and use caution while traveling.\n\nPeople are urged to prepare their property before the onset of\nwinter weather.\n\nFor the latest road conditions, where available, call 5 1 1 or\nvisit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAJK"
+          ],
+          "WMOidentifier": [
+            "WWAK47 PAJK 071110"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT FROM 3 PM THIS AFTERNOON TO 4 AM AKST SUNDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAJK.WW.Y.0018.260308T0000Z-260308T1200Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-08T03:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.824113698da22f1012fa35611b771527aef8c6fd.002.1,2026-03-06T13:57:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.001.1",
+        "areaDesc": "Kuskokwim Delta Coast and Nunivak Island; Interior Kuskokwim Delta; Western Capes",
+        "geocode": {
+          "SAME": [
+            "002050"
+          ],
+          "UGC": [
+            "AKZ755",
+            "AKZ756",
+            "AKZ757"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ755",
+          "https://api.weather.gov/zones/forecast/AKZ756",
+          "https://api.weather.gov/zones/forecast/AKZ757"
+        ],
+        "references": [],
+        "sent": "2026-03-07T01:42:00-09:00",
+        "effective": "2026-03-07T01:42:00-09:00",
+        "onset": "2026-03-07T01:42:00-09:00",
+        "expires": "2026-03-07T17:30:00-09:00",
+        "ends": "2026-03-09T12:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Cold Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Cold Weather Advisory issued March 7 at 1:42AM AKST until March 9 at 1:00PM AKDT by NWS Anchorage AK",
+        "description": "* WHAT...Very cold wind chills from 20 below to 40 below.\n\n* WHERE...Kuskokwim Delta, and Western Capes.\n\n* WHEN...Until 1 PM AKDT Monday.\n\n* IMPACTS...The dangerously cold wind chills as low as 40 below zero\ncould cause frostbite on exposed skin in as little as 10 minutes.\nFrostbite and hypothermia are likely if exposed to these\ntemperatures. Wind chill values can lead to hypothermia with\nprolonged exposure.\n\n* ADDITIONAL DETAILS...Cold northerly flow and enhanced wind gusts\nwill lead to a period of frigid wind chills over the weekend\nthrough Monday morning. Winds expected to be relatively stronger\nalong the coast, but temperatures will be lower inland near\nBethel. Expect coldest temperatures overnight, increasing during\ndaytime hours, and returning to frigid conditions overnight. By\nMonday afternoon, a slight warming trend and decrease in wind\nspeeds will occur, raising wind chills closer to 10 below.",
+        "instruction": "Use caution while traveling outside. Wear appropriate clothing, a\nhat, and gloves.\n\nKeep pets indoors as much as possible.\n\nMake frequent checks on older family, friends, and neighbors. Ensure\nportable heaters are used correctly. Do not use generators or grills\ninside.",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWALU"
+          ],
+          "WMOidentifier": [
+            "WWAK72 PAFC 071042"
+          ],
+          "NWSheadline": [
+            "COLD WEATHER ADVISORY IN EFFECT UNTIL 1 PM AKDT MONDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.EXA.PAFC.CW.Y.0013.000000T0000Z-260309T2100Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-09T12:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "CWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4bb037ec571d12a99b9a6094561108ce5a94e0c3.002.1",
+        "areaDesc": "Central Alaska Peninsula; Chignik; Southern Alaska Peninsula",
+        "geocode": {
+          "SAME": [
+            "002164",
+            "002013"
+          ],
+          "UGC": [
+            "AKZ761",
+            "AKZ773",
+            "AKZ781"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ761",
+          "https://api.weather.gov/zones/forecast/AKZ773",
+          "https://api.weather.gov/zones/forecast/AKZ781"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.004451a0127288b99603ae855d6d77ccb46f5772.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.004451a0127288b99603ae855d6d77ccb46f5772.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T15:52:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b4a951024e726078964bada8f0f75f27535254be.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.b4a951024e726078964bada8f0f75f27535254be.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T16:04:00-09:00"
+          }
+        ],
+        "sent": "2026-03-07T01:42:00-09:00",
+        "effective": "2026-03-07T01:42:00-09:00",
+        "onset": "2026-03-07T01:42:00-09:00",
+        "expires": "2026-03-07T17:30:00-09:00",
+        "ends": "2026-03-09T12:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Cold Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Cold Weather Advisory issued March 7 at 1:42AM AKST until March 9 at 1:00PM AKDT by NWS Anchorage AK",
+        "description": "* WHAT...Very cold wind chills from 10 below to 25 below expected.\n\n* WHERE...Central Alaska Peninsula, Chignik, and Southern Alaska\nPeninsula.\n\n* WHEN...Until 1 PM AKDT Monday.\n\n* IMPACTS...Dangerously cold wind chills as low as 25 below zero\ncould cause frostbite on exposed skin in as little as 30 minutes.\nFrostbite and hypothermia are likely if exposed to these\ntemperatures. Wind chill values can lead to hypothermia with\nprolonged exposure.\n\n* ADDITIONAL DETAILS...Cold northerly flow and enhanced wind gusts\nwill lead to a period of frigid wind chills over the weekend\nthrough Monday morning. Expect coldest temperatures overnight,\nincreasing during daytime hours, and returning to frigid\nconditions overnight. By Monday afternoon, a slight warming trend\nwill occur, raising wind chills closer to zero.",
+        "instruction": "Use caution while traveling outside. Wear appropriate clothing, a\nhat, and gloves.\n\nKeep pets indoors as much as possible.\n\nMake frequent checks on older family, friends, and neighbors. Ensure\nportable heaters are used correctly. Do not use generators or grills\ninside.",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWALU"
+          ],
+          "WMOidentifier": [
+            "WWAK72 PAFC 071042"
+          ],
+          "NWSheadline": [
+            "COLD WEATHER ADVISORY REMAINS IN EFFECT UNTIL 1 PM AKDT MONDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFC.CW.Y.0013.000000T0000Z-260309T2100Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-09T12:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "CWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.005.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.005.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.005.1",
+        "areaDesc": "Western Susitna Valley; Southern Susitna Valley; Central Susitna Valley; Northern Susitna Valley",
+        "geocode": {
+          "SAME": [
+            "002170"
+          ],
+          "UGC": [
+            "AKZ745",
+            "AKZ746",
+            "AKZ747",
+            "AKZ748"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ745",
+          "https://api.weather.gov/zones/forecast/AKZ746",
+          "https://api.weather.gov/zones/forecast/AKZ747",
+          "https://api.weather.gov/zones/forecast/AKZ748"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.007.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.007.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T15:02:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.008.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.008.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T16:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.007.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.007.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:36:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T20:48:00-09:00",
+        "effective": "2026-03-06T20:48:00-09:00",
+        "onset": "2026-03-06T20:48:00-09:00",
+        "expires": "2026-03-07T05:00:00-09:00",
+        "ends": "2026-03-07T05:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Winter Weather Advisory issued March 6 at 8:48PM AKST until March 7 at 5:00AM AKST by NWS Anchorage AK",
+        "description": "* WHAT...Snow. Additional snow accumulations between 1 and 3 inches.\n\n* WHERE...Susitna Valley.\n\n* WHEN...Until 5 AM AKST Saturday.\n\n* IMPACTS...Travel could be very difficult.",
+        "instruction": "Slow down and use caution while traveling. For the latest road\nconditions call 5 1 1 or visit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAER"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFC 070548"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 5 AM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFC.WW.Y.0031.000000T0000Z-260307T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T05:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e20f3e558cdda4decbad8ff40d8225439f91a3ae.008.1,2026-03-06T09:07:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.90b5fdb856e2083ddc254799ba587bcd02e53b77.009.1,2026-03-06T04:27:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb34f50ad92322ff0b6b9a9d7074366560d17d67.007.1,2026-03-05T14:53:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6eaf0fe210c9faf4eb1d3f59a99764cc54793e90.006.1,2026-03-05T05:09:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.004.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.004.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.004.1",
+        "areaDesc": "Thompson Pass; Ernestine",
+        "geocode": {
+          "SAME": [
+            "002063",
+            "002066"
+          ],
+          "UGC": [
+            "AKZ732",
+            "AKZ744"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ732",
+          "https://api.weather.gov/zones/forecast/AKZ744"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.007.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.007.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T16:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.006.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.006.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:36:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T20:48:00-09:00",
+        "effective": "2026-03-06T20:48:00-09:00",
+        "onset": "2026-03-06T20:48:00-09:00",
+        "expires": "2026-03-07T05:00:00-09:00",
+        "ends": "2026-03-07T05:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Winter Weather Advisory issued March 6 at 8:48PM AKST until March 7 at 5:00AM AKST by NWS Anchorage AK",
+        "description": "* WHAT...Snow. Additional snow accumulations between 2 and 6 inches.\nWinds gusting as high as 40 mph. Visibility as low as one half\nmile or less at times.\n\n* WHERE...Ernestine and Thompson Pass.\n\n* WHEN...Until 5 AM AKST Saturday.\n\n* IMPACTS...Travel could be very difficult. Areas of blowing snow\ncould significantly reduce visibility.",
+        "instruction": "Slow down and use caution while traveling. For the latest road\nconditions call 5 1 1 or visit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAER"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFC 070548"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 5 AM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFC.WW.Y.0031.000000T0000Z-260307T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T05:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e20f3e558cdda4decbad8ff40d8225439f91a3ae.007.1,2026-03-06T09:07:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.90b5fdb856e2083ddc254799ba587bcd02e53b77.007.1,2026-03-06T04:27:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.006.1,2026-03-06T15:02:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb34f50ad92322ff0b6b9a9d7074366560d17d67.008.1,2026-03-05T14:53:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6eaf0fe210c9faf4eb1d3f59a99764cc54793e90.007.1,2026-03-05T05:09:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.003.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.003.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.003.1",
+        "areaDesc": "Anchorage; Anchorage Hillside / Eagle River; Lower Matanuska Valley",
+        "geocode": {
+          "SAME": [
+            "002020",
+            "002170"
+          ],
+          "UGC": [
+            "AKZ701",
+            "AKZ702",
+            "AKZ711"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ701",
+          "https://api.weather.gov/zones/forecast/AKZ702",
+          "https://api.weather.gov/zones/forecast/AKZ711"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.009.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.009.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T15:02:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T16:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:36:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T20:48:00-09:00",
+        "effective": "2026-03-06T20:48:00-09:00",
+        "onset": "2026-03-06T20:48:00-09:00",
+        "expires": "2026-03-07T06:00:00-09:00",
+        "ends": "2026-03-07T06:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Winter Weather Advisory issued March 6 at 8:48PM AKST until March 7 at 6:00AM AKST by NWS Anchorage AK",
+        "description": "* WHAT...Snow. Additional snow accumulations between 1 and 3 inches,\nmainly in the Mat Valley.\n\n* WHERE...Anchorage / Eagle River (all elevations), and Lower\nMatanuska Valley.\n\n* WHEN...Until 6 AM AKST Saturday.\n\n* IMPACTS...Travel could be very difficult.",
+        "instruction": "Slow down and use caution while traveling. For the latest road\nconditions call 5 1 1 or visit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAER"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFC 070548"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 6 AM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFC.WW.Y.0031.000000T0000Z-260307T1500Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T06:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e20f3e558cdda4decbad8ff40d8225439f91a3ae.010.1,2026-03-06T09:07:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.90b5fdb856e2083ddc254799ba587bcd02e53b77.002.1,2026-03-06T04:27:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.006.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.006.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.91084e53c81281520f75c505a39e76136971cd3f.006.1",
+        "areaDesc": "Southern Copper Valley; McCarthy",
+        "geocode": {
+          "SAME": [
+            "002066"
+          ],
+          "UGC": [
+            "AKZ749",
+            "AKZ751"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ749",
+          "https://api.weather.gov/zones/forecast/AKZ751"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.008.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.20135eb2ba906345cfeb11f5d2727dd003e9a8bd.008.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T15:02:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.009.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.bb9012ee63f58108a69106736a41e48568f0e2a6.009.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T16:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.008.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.f6296ebb12df41221922f8dc5a2f0d678865c93f.008.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T18:36:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T20:48:00-09:00",
+        "effective": "2026-03-06T20:48:00-09:00",
+        "onset": "2026-03-06T20:48:00-09:00",
+        "expires": "2026-03-07T05:00:00-09:00",
+        "ends": "2026-03-07T05:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Anchorage AK",
+        "headline": "Winter Weather Advisory issued March 6 at 8:48PM AKST until March 7 at 5:00AM AKST by NWS Anchorage AK",
+        "description": "* WHAT...Mixed precipitation. Additional snow accumulations up to 2\ninches and ice accumulations around a light glaze. Winds gusting\nas high as 30 mph.\n\n* WHERE...McCarthy and Southern Copper Valley.\n\n* WHEN...Until 5 AM AKST Saturday.\n\n* IMPACTS...Travel could be very difficult. Areas of blowing snow\ncould significantly reduce visibility.\n\n* ADDITIONAL DETAILS...If temperatures warm above freezing, rain\nfalling onto snow covered and frozen roadways may freeze on\ncontact leading to slippery conditions.",
+        "instruction": "Slow down and use caution while traveling. For the latest road\nconditions call 5 1 1 or visit 511.alaska.gov.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAER"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFC 070548"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 5 AM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFC.WW.Y.0031.000000T0000Z-260307T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T05:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.e20f3e558cdda4decbad8ff40d8225439f91a3ae.009.1,2026-03-06T09:07:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.90b5fdb856e2083ddc254799ba587bcd02e53b77.010.1,2026-03-06T04:27:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.eb34f50ad92322ff0b6b9a9d7074366560d17d67.009.1,2026-03-05T14:53:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.6eaf0fe210c9faf4eb1d3f59a99764cc54793e90.008.1,2026-03-05T05:09:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.002.1",
+        "areaDesc": "Central Beaufort Sea Coast; Eastern Beaufort Sea Coast; Central Arctic Plains",
+        "geocode": {
+          "SAME": [
+            "002185"
+          ],
+          "UGC": [
+            "AKZ804",
+            "AKZ805",
+            "AKZ808"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ804",
+          "https://api.weather.gov/zones/forecast/AKZ805",
+          "https://api.weather.gov/zones/forecast/AKZ808"
+        ],
+        "references": [],
+        "sent": "2026-03-06T14:15:00-09:00",
+        "effective": "2026-03-06T14:15:00-09:00",
+        "onset": "2026-03-08T15:00:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-11T15:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "event": "Winter Storm Watch",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Storm Watch issued March 6 at 2:15PM AKST until March 11 at 4:00PM AKDT by NWS Fairbanks AK",
+        "description": "* WHAT...Blizzard conditions possible. Winds could gust as high as\n55 mph.\n\n* WHERE...Central Arctic Plains, Central Beaufort Sea Coast, and\nEastern Beaufort Sea Coast.\n\n* WHEN...From Sunday afternoon through Wednesday afternoon.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/4 mile or less.",
+        "instruction": "Prepare for possible blizzard conditions. Continue to monitor the\nlatest forecasts for updates on this situation.",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWNSB"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFG 062315"
+          ],
+          "NWSheadline": [
+            "WINTER STORM WATCH IN EFFECT FROM SUNDAY AFTERNOON THROUGH WEDNESDAY AFTERNOON"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.NEW.PAFG.WS.A.0023.260309T0000Z-260312T0000Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-11T15:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "WSA"
+          ],
+          "NationalWeatherService": [
+            "WSA"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.36f13a9426272b67c74b378041744b5467a20992.001.1",
+        "areaDesc": "Western Arctic Coast",
+        "geocode": {
+          "SAME": [
+            "002185"
+          ],
+          "UGC": [
+            "AKZ801"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ801"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.cec793a9584a117541384a6311f91b011334fb03.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.cec793a9584a117541384a6311f91b011334fb03.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:49:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T14:15:00-09:00",
+        "effective": "2026-03-06T14:15:00-09:00",
+        "onset": "2026-03-06T14:15:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 2:15PM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Blowing snow. Winds gusting as high as 40 mph.\n\n* WHERE...Western Arctic Coast.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/2 mile or less at times.",
+        "instruction": "Use caution while traveling.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWNSB"
+          ],
+          "WMOidentifier": [
+            "WWAK41 PAFG 062315"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0034.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.002.1",
+        "areaDesc": "Dalton Highway Summits; White Mountains and High Terrain South of the Yukon River; Fortymile Country",
+        "geocode": {
+          "SAME": [
+            "002290",
+            "002240"
+          ],
+          "UGC": [
+            "AKZ832",
+            "AKZ834",
+            "AKZ835"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ832",
+          "https://api.weather.gov/zones/forecast/AKZ834",
+          "https://api.weather.gov/zones/forecast/AKZ835"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.005.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.005.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:21:00-09:00",
+        "effective": "2026-03-06T11:21:00-09:00",
+        "onset": "2026-03-06T11:21:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:21AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Snow and blowing snow. Total snow accumulations between 2\nand 4 inches. Winds gusting as high as 40 mph.\n\n* WHERE...Dalton Highway Summits, Fortymile Country, and White\nMountains and High Terrain South of the Yukon River.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Travel could be difficult. Areas of blowing snow could\nsignificantly reduce visibility.",
+        "instruction": "Slow down and use caution while traveling. Visit 511.alaska.gov or\ncall 5 1 1 for the latest road conditions.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAFG"
+          ],
+          "WMOidentifier": [
+            "WWAK43 PAFG 062021"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0032.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bb5bc5b40af392c04978c15aec5130832a32ff0c.003.1,2026-03-04T19:33:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c527e7ef778fe9823732b64a45f1c63f1cc8072a.003.1,2026-03-04T19:32:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.439bb78f86baaf7cc60afbfba017c21bc402870f.001.1,2026-03-04T14:31:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.005.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.005.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.005.1",
+        "areaDesc": "Upper Chena River Valley; Eielson AFB and Salcha; Goldstream Valley and Nenana Hills; Chatanika River Valley; Two Rivers; Fairbanks Metro Area; Nenana; Central Interior",
+        "geocode": {
+          "SAME": [
+            "002090",
+            "002290"
+          ],
+          "UGC": [
+            "AKZ838",
+            "AKZ840",
+            "AKZ841",
+            "AKZ842",
+            "AKZ843",
+            "AKZ844",
+            "AKZ845",
+            "AKZ846"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ838",
+          "https://api.weather.gov/zones/forecast/AKZ840",
+          "https://api.weather.gov/zones/forecast/AKZ841",
+          "https://api.weather.gov/zones/forecast/AKZ842",
+          "https://api.weather.gov/zones/forecast/AKZ843",
+          "https://api.weather.gov/zones/forecast/AKZ844",
+          "https://api.weather.gov/zones/forecast/AKZ845",
+          "https://api.weather.gov/zones/forecast/AKZ846"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.004.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.004.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:21:00-09:00",
+        "effective": "2026-03-06T11:21:00-09:00",
+        "onset": "2026-03-06T15:00:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:21AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Snow. Total snow accumulations between 2 and 4 inches.\n\n* WHERE...Central Interior, Chatanika River Valley, Eielson AFB and\nSalcha, Fairbanks Metro Area, Goldstream Valley and Nenana Hills,\nNenana, Two Rivers, and Upper Chena River Valley.\n\n* WHEN...From 3 PM this afternoon to 9 PM AKST Saturday.\n\n* IMPACTS...Travel could be difficult.",
+        "instruction": "Slow down and use caution while traveling. Visit 511.alaska.gov or\ncall 5 1 1 for the latest road conditions.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAFG"
+          ],
+          "WMOidentifier": [
+            "WWAK43 PAFG 062021"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT FROM 3 PM THIS AFTERNOON TO 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0032.260307T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.001.1",
+        "areaDesc": "Eastern Alaska Range South of Trims Camp",
+        "geocode": {
+          "SAME": [
+            "002240"
+          ],
+          "UGC": [
+            "AKZ850"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ850"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:21:00-09:00",
+        "effective": "2026-03-06T11:21:00-09:00",
+        "onset": "2026-03-06T11:21:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Storm Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Storm Warning issued March 6 at 11:21AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Heavy snow. Total snow accumulations between 6 and 12\ninches. Winds gusting as high as 30 mph.\n\n* WHERE...Eastern Alaska Range South of Trims Camp.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Travel could be very difficult. Areas of blowing snow\ncould significantly reduce visibility.",
+        "instruction": "If you must travel, keep an extra flashlight, food, and water in\nyour vehicle in case of an emergency. Visit 511.alaska.gov or call 5\n1 1 for the latest road conditions.",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAFG"
+          ],
+          "WMOidentifier": [
+            "WWAK43 PAFG 062021"
+          ],
+          "NWSheadline": [
+            "WINTER STORM WARNING REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WS.W.0013.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bb5bc5b40af392c04978c15aec5130832a32ff0c.001.1,2026-03-04T19:33:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c527e7ef778fe9823732b64a45f1c63f1cc8072a.001.2,2026-03-04T19:32:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "WSW"
+          ],
+          "NationalWeatherService": [
+            "WSW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.003.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.003.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.003.1",
+        "areaDesc": "Delta Junction; Tanana Flats; Eastern Alaska Range North of Trims Camp",
+        "geocode": {
+          "SAME": [
+            "002240",
+            "002090"
+          ],
+          "UGC": [
+            "AKZ837",
+            "AKZ839",
+            "AKZ849"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ837",
+          "https://api.weather.gov/zones/forecast/AKZ839",
+          "https://api.weather.gov/zones/forecast/AKZ849"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.006.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.006.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:21:00-09:00",
+        "effective": "2026-03-06T11:21:00-09:00",
+        "onset": "2026-03-06T11:21:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:21AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Snow and blowing snow. Total snow accumulations between 2\nand 4 inches. Winds gusting as high as 50 mph in Delta Junction.\n\n* WHERE...Delta Junction, Eastern Alaska Range North of Trims Camp,\nand Tanana Flats.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Travel could be difficult. Areas of blowing snow could\nsignificantly reduce visibility.",
+        "instruction": "Slow down and use caution while traveling. Visit 511.alaska.gov or\ncall 5 1 1 for the latest road conditions.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAFG"
+          ],
+          "WMOidentifier": [
+            "WWAK43 PAFG 062021"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0032.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ],
+          "expiredReferences": [
+            "w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.bb5bc5b40af392c04978c15aec5130832a32ff0c.002.1,2026-03-04T19:33:00-09:00 w-nws.webmaster@noaa.gov,urn:oid:2.49.0.1.840.0.c527e7ef778fe9823732b64a45f1c63f1cc8072a.002.1,2026-03-04T19:32:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.004.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.004.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.4f74509cb73681d01fa7f782a52f15394d9c1a3d.004.1",
+        "areaDesc": "Northern Denali Borough; Southern Denali Borough",
+        "geocode": {
+          "SAME": [
+            "002068"
+          ],
+          "UGC": [
+            "AKZ847",
+            "AKZ848"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ847",
+          "https://api.weather.gov/zones/forecast/AKZ848"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.2c9ac147c123595dbb904112ff4cd4613db4e630.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:44:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:21:00-09:00",
+        "effective": "2026-03-06T11:21:00-09:00",
+        "onset": "2026-03-06T11:21:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:21AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Snow. Total snow accumulations between 3 and 6 inches.\n\n* WHERE...Northern Denali Borough and Southern Denali Borough.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Travel could be difficult.",
+        "instruction": "Slow down and use caution while traveling. Visit 511.alaska.gov or\ncall 5 1 1 for the latest road conditions.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWAFG"
+          ],
+          "WMOidentifier": [
+            "WWAK43 PAFG 062021"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0032.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.001.1",
+        "areaDesc": "Shishmaref; Bering Strait Coast",
+        "geocode": {
+          "SAME": [
+            "002180"
+          ],
+          "UGC": [
+            "AKZ820",
+            "AKZ821"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ820",
+          "https://api.weather.gov/zones/forecast/AKZ821"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.001.2",
+            "identifier": "urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.001.2",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T09:38:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:11:00-09:00",
+        "effective": "2026-03-06T11:11:00-09:00",
+        "onset": "2026-03-06T11:11:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Extreme",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Blizzard Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Blizzard Warning issued March 6 at 11:11AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Blizzard conditions. Winds gusting as high as 50 mph.\n\n* WHERE...Bering Strait Coast and Diomede.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/4 mile or less at times.",
+        "instruction": "Travel should be restricted to emergencies only. If you must travel,\nhave a winter survival kit with you. If you get stranded, stay with\nyour vehicle.",
+        "response": "Prepare",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWWCZ"
+          ],
+          "WMOidentifier": [
+            "WWAK42 PAFG 062011"
+          ],
+          "NWSheadline": [
+            "BLIZZARD WARNING REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.BZ.W.0021.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "BZW"
+          ],
+          "NationalWeatherService": [
+            "BZW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.002.1",
+        "areaDesc": "St Lawrence Island",
+        "geocode": {
+          "SAME": [
+            "002180"
+          ],
+          "UGC": [
+            "AKZ827"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ827"
+        ],
+        "references": [],
+        "sent": "2026-03-06T11:11:00-09:00",
+        "effective": "2026-03-06T11:11:00-09:00",
+        "onset": "2026-03-06T11:11:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:11AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Blowing snow. Winds gusting as high as 50 mph.\n\n* WHERE...St Lawrence Island.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/2 mile or less at times.",
+        "instruction": "Use caution while traveling.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWWCZ"
+          ],
+          "WMOidentifier": [
+            "WWAK42 PAFG 062011"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.EXA.PAFG.WW.Y.0033.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.004.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.004.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.004.1",
+        "areaDesc": "Eastern Norton Sound and Nulato Hills",
+        "geocode": {
+          "SAME": [
+            "002180"
+          ],
+          "UGC": [
+            "AKZ824"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ824"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T09:38:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:11:00-09:00",
+        "effective": "2026-03-06T11:11:00-09:00",
+        "onset": "2026-03-06T11:11:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:11AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Blowing snow. Winds gusting as high as 50 mph.\n\n* WHERE...Shaktoolik.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/2 mile or less at times.",
+        "instruction": "Use caution while traveling.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWWCZ"
+          ],
+          "WMOidentifier": [
+            "WWAK42 PAFG 062011"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0033.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.003.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.003.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.9c716ad61d3d1ad983f1b779a88cb3409299718e.003.1",
+        "areaDesc": "Kivalina and Red Dog Dock",
+        "geocode": {
+          "SAME": [
+            "002188"
+          ],
+          "UGC": [
+            "AKZ815"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/AKZ815"
+        ],
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.65503b3a669b5fa4002da1bd7b5b14911215c819.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-05T14:48:00-09:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.003.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.a4ec77aab589b879f018434c9342f287a88fbd9d.003.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-03-06T09:38:00-09:00"
+          }
+        ],
+        "sent": "2026-03-06T11:11:00-09:00",
+        "effective": "2026-03-06T11:11:00-09:00",
+        "onset": "2026-03-06T11:11:00-09:00",
+        "expires": "2026-03-07T16:00:00-09:00",
+        "ends": "2026-03-07T21:00:00-09:00",
+        "status": "Actual",
+        "messageType": "Update",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Winter Weather Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Fairbanks AK",
+        "headline": "Winter Weather Advisory issued March 6 at 11:11AM AKST until March 7 at 9:00PM AKST by NWS Fairbanks AK",
+        "description": "* WHAT...Blowing snow. Winds gusting as high as 50 mph.\n\n* WHERE...Kivalina and Red Dog Dock.\n\n* WHEN...Until 9 PM AKST Saturday.\n\n* IMPACTS...Areas of blowing snow could significantly reduce\nvisibility to 1/2 mile or less at times.",
+        "instruction": "Use caution while traveling.",
+        "response": "Execute",
+        "parameters": {
+          "AWIPSidentifier": [
+            "WSWWCZ"
+          ],
+          "WMOidentifier": [
+            "WWAK42 PAFG 062011"
+          ],
+          "NWSheadline": [
+            "WINTER WEATHER ADVISORY REMAINS IN EFFECT UNTIL 9 PM AKST SATURDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.CON.PAFG.WW.Y.0033.000000T0000Z-260308T0600Z/"
+          ],
+          "eventEndingTime": [
+            "2026-03-07T21:00:00-09:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "WWY"
+          ]
+        }
       }
     }
-  ]
+  ],
+  "title": "Current watches, warnings, and advisories",
+  "updated": "2026-03-07T11:45:00+00:00"
 }
