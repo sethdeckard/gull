@@ -1,12 +1,8 @@
 [![Gem Version](https://badge.fury.io/rb/gull.svg)](http://badge.fury.io/rb/gull)
-[![Build Status](https://travis-ci.org/sethdeckard/gull.svg?branch=master)](https://travis-ci.org/sethdeckard/gull)
-[![Coverage Status](https://coveralls.io/repos/sethdeckard/gull/badge.svg?branch=master)](https://coveralls.io/r/sethdeckard/gull)
-[![Code Climate](https://codeclimate.com/github/sethdeckard/gull/badges/gpa.svg)](https://codeclimate.com/github/sethdeckard/gull)
-[![Dependency Status](https://gemnasium.com/sethdeckard/gull.svg)](https://gemnasium.com/sethdeckard/gull)
-[![security](https://hakiri.io/github/sethdeckard/gull/master.svg)](https://hakiri.io/github/sethdeckard/gull/master)
+[![CI](https://github.com/sethdeckard/gull/actions/workflows/ci.yml/badge.svg)](https://github.com/sethdeckard/gull/actions/workflows/ci.yml)
 # Gull
 
-Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo. Please read the Notes/Caveats section for limitations.
+Ruby client for parsing NOAA/NWS alerts, warnings, and watches. The name comes from the type of bird featured on the NOAA logo. Zero runtime dependencies -- uses only Ruby stdlib (`net/http`, `json`).
 
 ## Installation
 
@@ -49,11 +45,10 @@ alert.certainty
 alert.vtec
 ```
 
-To get alerts for a single state, territory, or marine zone just pass an optional URL
+To get alerts for a single state or territory, pass the area option:
 
 ```ruby
-oklahoma_url = 'http://alerts.weather.gov/cap/ok.php?x=1'
-alerts = Gull::Alert.fetch(url: oklahoma_url)
+alerts = Gull::Alert.fetch(area: 'OK')
 ```
 
 You can also generate a map (a really long URL pointing to a map) of the polygon if alert has one (requires Google Static Maps API Key)
@@ -61,7 +56,7 @@ You can also generate a map (a really long URL pointing to a map) of the polygon
 ```ruby
 alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
 
-=> "http://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=YOUR_GOOGLE_API_KEY"
+=> "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=YOUR_GOOGLE_API_KEY"
 ```
 
 Options can be passed for map to override defaults
@@ -73,17 +68,15 @@ alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options
 ```
 
 ##Notes, Caveats
-This library provides a simplified/flattened model of the [Common Alerting Protocol](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) based only on the elements NWS utilizes in their [public Atom feeds](http://alerts.weather.gov/). If you need a complete CAP parser I suggest looking at [RCAP](https://github.com/farrel/RCAP).
+This library fetches active alerts from the [NWS API](https://api.weather.gov) (`api.weather.gov/alerts/active`), which returns GeoJSON. No authentication is required but the API does require a `User-Agent` header (set automatically by the gem).
 
-The NWS will often cancel or update alerts before their expiration time. The public Atom feeds only provide current active alerts and do not include these separate update and cancellation CAP messages.
-
-The public Atom feeds have not always been reliable in terms of uptime and are often delayed by 2-3 minutes. If you are considering using this (or another gem/library that accesses the public Atom feeds) for mission critical purposes then you should explore other options.
+The NWS will often cancel or update alerts before their expiration time. The API only returns currently active alerts.
 
 ### Urgency
 
-| Symbol        | Definition          
+| Symbol        | Definition
 | :------------- |:-------------
-| :immediate  | Responsive action should betaken immediately
+| :immediate  | Responsive action should be taken immediately
 | :expected  | Responsive action should be taken soon (within next hour)
 | :future  | Responsive action should be taken in the near future
 | :past  | Responsive action is no longer required
@@ -91,7 +84,7 @@ The public Atom feeds have not always been reliable in terms of uptime and are o
 
 ### Severity
 
-| Symbol        | Definition          
+| Symbol        | Definition
 | :------------- |:-------------
 | :extreme  | Extraordinary threat to life or property
 | :severe  | Significant threat to life or property
@@ -101,7 +94,7 @@ The public Atom feeds have not always been reliable in terms of uptime and are o
 
 ### Certainty
 
-| Symbol        | Definition          
+| Symbol        | Definition
 | :------------- |:-------------
 | :very_likely  | Highly likely (p > ~ 85%) or certain
 | :likely  | Likely (p > ~50%)
