@@ -57,7 +57,9 @@ module Gull
       coords = geometry['coordinates']
       return if coords.nil? || coords.empty?
 
-      self.polygon = Polygon.new(coords.first)
+      ring = coords.first
+      ring = ring.first if geometry['type'] == 'MultiPolygon'
+      self.polygon = Polygon.new(ring)
     end
 
     def parse_geocode(props)

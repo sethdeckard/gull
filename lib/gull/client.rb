@@ -23,11 +23,15 @@ module Gull
     def response
       uri = build_uri
       http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
+      http.use_ssl = uri.scheme == 'https'
       request = Net::HTTP::Get.new(uri)
       request['User-Agent'] = USER_AGENT
       request['Accept'] = 'application/geo+json'
       result = http.request(request)
+      unless result.is_a?(Net::HTTPSuccess)
+        raise HttpError, "NWS API returned #{result.code}"
+      end
+
       result.body
     rescue Net::OpenTimeout, Net::ReadTimeout
       raise TimeoutError,
@@ -38,8 +42,7 @@ module Gull
     end
 
     def build_uri
-      url = @options[:url] || URL
-      uri = URI(url)
+      uri = URI(URL)
       if @options[:area]
         params = URI.decode_www_form(uri.query || '')
         params << ['area', @options[:area]]
