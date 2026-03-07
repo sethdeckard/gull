@@ -1,80 +1,87 @@
-require 'httpclient'
-require 'nokogiri'
+# frozen_string_literal: true
 
 module Gull
-  # Gull represents an NWS/NOAA alert and provides the ability to fetch
-  # them from the public web service
   class Alert
-    attr_accessor :id, :title, :summary, :link, :alert_type, :polygon, :area,
-                  :effective_at, :expires_at, :updated_at, :published_at,
-                  :urgency, :severity, :certainty, :geocode, :vtec
+    attr_accessor :id, :title, :summary, :link, :alert_type, :polygon,
+                  :area, :effective_at, :expires_at, :updated_at,
+                  :published_at, :urgency, :severity, :certainty,
+                  :geocode, :vtec
 
     def initialize
       self.geocode = Geocode.new
     end
 
     def self.fetch(options = {})
-      client = Client.new options
+      client = Client.new(options)
       client.fetch
     end
 
-    def parse(element)
-      parse_core_attributes element
-      parse_times element
-      parse_categories element
-
-      parse_polygon element.xpath('cap:polygon').inner_text
-      parse_geocode element.xpath('cap:geocode')
-      parse_vtec element.xpath('cap:parameter')
+    def parse(feature)
+      props = feature['properties']
+      parse_core_attributes(feature, props)
+      parse_times(props)
+      parse_categories(props)
+      parse_polygon(feature)
+      parse_geocode(props)
+      parse_vtec(props)
     end
 
     private
 
-    def parse_core_attributes(element)
-      self.id = element.css('id').inner_text
-      self.title = element.css('title').inner_text
-      self.summary = element.css('summary').inner_text
-      self.link = parse_link element
-      self.alert_type = element.xpath('cap:event').inner_text
-      self.area = element.xpath('cap:areaDesc').inner_text
+    def parse_core_attributes(feature, props)
+      self.id = props['id']
+      self.title = props['headline']
+      self.summary = props['description']
+      self.link = props['@id'] || feature['id']
+      self.alert_type = props['event']
+      self.area = props['areaDesc']
     end
 
-    def parse_link(element)
-      link = element.css('link').first
-      link.attributes['href'].value unless link.nil?
+    def parse_times(props)
+      self.effective_at = Time.parse(props['effective'])
+      self.expires_at = Time.parse(props['expires'])
+      self.published_at = Time.parse(props['sent'])
+      self.updated_at = Time.parse(props['onset'] || props['sent'])
     end
 
-    def parse_times(element)
-      self.updated_at = Time.parse(element.css('updated').inner_text)
-      self.published_at = Time.parse(element.css('published').inner_text)
-      self.effective_at = Time.parse(element.xpath('cap:effective').inner_text)
-      self.expires_at = Time.parse(element.xpath('cap:expires').inner_text)
+    def parse_categories(props)
+      self.urgency = code_to_symbol(props['urgency'])
+      self.severity = code_to_symbol(props['severity'])
+      self.certainty = code_to_symbol(props['certainty'])
     end
 
-    def parse_categories(element)
-      self.urgency = code_to_symbol element.xpath('cap:urgency').inner_text
-      self.severity = code_to_symbol element.xpath('cap:severity').inner_text
-      self.certainty = code_to_symbol element.xpath('cap:certainty').inner_text
+    def parse_polygon(feature)
+      geometry = feature['geometry']
+      return if geometry.nil?
+
+      coords = geometry['coordinates']
+      return if coords.nil? || coords.empty?
+
+      self.polygon = Polygon.new(coords.first)
     end
 
-    def parse_polygon(text)
-      return if text.empty?
-      self.polygon = Polygon.new text
+    def parse_geocode(props)
+      geocode_data = props['geocode']
+      return if geocode_data.nil?
+
+      ugc = geocode_data['UGC']
+      self.geocode.ugc = ugc&.join(' ')
+
+      fips = geocode_data['SAME']
+      self.geocode.fips6 = fips&.join(' ')
     end
 
-    def parse_geocode(element)
-      return if element.children.css('value').first.nil?
+    def parse_vtec(props)
+      params = props['parameters']
+      return if params.nil?
 
-      geocode.fips6 = element.children.css('value').first.inner_text
-      geocode.ugc = element.children.css('value').last.inner_text
-    end
-
-    def parse_vtec(element)
-      value = element.children.css('value').inner_text
-      self.vtec = value.empty? ? nil : value
+      vtec_values = params['VTEC']
+      self.vtec = vtec_values&.first
     end
 
     def code_to_symbol(code)
+      return :unknown if code.nil?
+
       code.tr(' ', '_').downcase.to_sym
     end
   end
