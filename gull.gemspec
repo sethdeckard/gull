@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Seth Deckard']
   spec.email         = ['seth@deckard.me']
   spec.summary       = 'Client for parsing NOAA/NWS alerts, warnings, and watches.'
-  spec.description   = 'Client for parsing NOAA/NWS alerts, warnings, and watches.'
+  spec.description   = 'Fetches and parses NOAA/NWS alerts, warnings, and watches from api.weather.gov. Zero runtime dependencies.'
   spec.homepage      = 'https://github.com/sethdeckard/gull'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 3.1'
