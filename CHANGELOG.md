@@ -1,3 +1,7 @@
+1.0.1 (03/07/2026) - Add YARD doc comments to all public classes and methods. Expand README with polygon, error handling, and client usage examples. Handle malformed JSON responses (raise `HttpError` instead of `JSON::ParserError`). Handle missing time fields in alert data (return `nil` instead of raising `TypeError`).
+
+***
+
 1.0.0 (03/07/2026) - Major rewrite: migrate from defunct `alerts.weather.gov` XML feed to `api.weather.gov/alerts` JSON API. Drop all runtime dependencies (`httpclient`, `nokogiri`) in favor of Ruby stdlib (`net/http`, `json`). Require Ruby >= 3.1. Add `area` option for state-based filtering. Replace Travis CI with GitHub Actions. Add RuboCop. **Breaking:** remove `url` option (use `area` instead), remove `Polygon#image_url`, remove `strict` option.
 
 ***
