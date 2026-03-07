@@ -1,0 +1,145 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
+  "type": "Feature",
+  "geometry": null,
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.13a53a6360dc28a8bb56ca34f9a4091651ba2c6e.002.1",
+    "areaDesc": "Clark, AR; Cleburne, AR; Conway, AR; Dallas, AR; Faulkner, AR; Garland, AR; Grant, AR; Hot Spring, AR; Independence, AR; Lonoke, AR; Montgomery, AR; Ouachita, AR; Perry, AR; Pike, AR; Pope, AR; Pulaski, AR; Saline, AR; Searcy, AR; Stone, AR; Van Buren, AR; White, AR; Yell, AR",
+    "geocode": {
+      "SAME": [
+        "005019",
+        "005023",
+        "005029",
+        "005039",
+        "005045",
+        "005051",
+        "005053",
+        "005059",
+        "005063",
+        "005085",
+        "005097",
+        "005103",
+        "005105",
+        "005109",
+        "005115",
+        "005119",
+        "005125",
+        "005129",
+        "005137",
+        "005141",
+        "005145",
+        "005149"
+      ],
+      "UGC": [
+        "ARC019",
+        "ARC023",
+        "ARC029",
+        "ARC039",
+        "ARC045",
+        "ARC051",
+        "ARC053",
+        "ARC059",
+        "ARC063",
+        "ARC085",
+        "ARC097",
+        "ARC103",
+        "ARC105",
+        "ARC109",
+        "ARC115",
+        "ARC119",
+        "ARC125",
+        "ARC129",
+        "ARC137",
+        "ARC141",
+        "ARC145",
+        "ARC149"
+      ]
+    },
+    "affectedZones": [
+      "https://api.weather.gov/zones/county/ARC019",
+      "https://api.weather.gov/zones/county/ARC023",
+      "https://api.weather.gov/zones/county/ARC029",
+      "https://api.weather.gov/zones/county/ARC039",
+      "https://api.weather.gov/zones/county/ARC045",
+      "https://api.weather.gov/zones/county/ARC051",
+      "https://api.weather.gov/zones/county/ARC053",
+      "https://api.weather.gov/zones/county/ARC059",
+      "https://api.weather.gov/zones/county/ARC063",
+      "https://api.weather.gov/zones/county/ARC085",
+      "https://api.weather.gov/zones/county/ARC097",
+      "https://api.weather.gov/zones/county/ARC103",
+      "https://api.weather.gov/zones/county/ARC105",
+      "https://api.weather.gov/zones/county/ARC109",
+      "https://api.weather.gov/zones/county/ARC115",
+      "https://api.weather.gov/zones/county/ARC119",
+      "https://api.weather.gov/zones/county/ARC125",
+      "https://api.weather.gov/zones/county/ARC129",
+      "https://api.weather.gov/zones/county/ARC137",
+      "https://api.weather.gov/zones/county/ARC141",
+      "https://api.weather.gov/zones/county/ARC145",
+      "https://api.weather.gov/zones/county/ARC149"
+    ],
+    "references": [
+      {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6d9b39fd6e1ceb202a2a70cd92c68d4d9fb84e21.001.1",
+        "identifier": "urn:oid:2.49.0.1.840.0.6d9b39fd6e1ceb202a2a70cd92c68d4d9fb84e21.001.1",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "sent": "2026-03-07T03:19:00-06:00"
+      }
+    ],
+    "sent": "2026-03-07T06:45:00-06:00",
+    "effective": "2026-03-07T06:45:00-06:00",
+    "onset": "2026-03-07T06:45:00-06:00",
+    "expires": "2026-03-07T08:00:00-06:00",
+    "ends": "2026-03-07T08:00:00-06:00",
+    "status": "Actual",
+    "messageType": "Update",
+    "category": "Met",
+    "severity": "Extreme",
+    "certainty": "Possible",
+    "urgency": "Future",
+    "event": "Tornado Watch",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Little Rock AR",
+    "headline": "Tornado Watch issued March 7 at 6:45AM CST until March 7 at 8:00AM CST by NWS Little Rock AR",
+    "description": "TORNADO WATCH 22 REMAINS VALID UNTIL 8 AM CST THIS MORNING FOR\nTHE FOLLOWING AREAS\n\nIN ARKANSAS THIS WATCH INCLUDES 22 COUNTIES\n\nIN CENTRAL ARKANSAS\n\nCONWAY                FAULKNER              GARLAND\nGRANT                 LONOKE                PERRY\nPOPE                  PULASKI               SALINE\nWHITE                 YELL\n\nIN NORTH CENTRAL ARKANSAS\n\nCLEBURNE              INDEPENDENCE          SEARCY\nSTONE                 VAN BUREN\n\nIN SOUTHWEST ARKANSAS\n\nCLARK                 DALLAS                HOT SPRING\nOUACHITA              PIKE\n\nIN WESTERN ARKANSAS\n\nMONTGOMERY\n\nTHIS INCLUDES THE CITIES OF ARKADELPHIA, BATESVILLE, BEEBE,\nBENTON, BRYANT, CABOT, CAMDEN, CLINTON, CONWAY, DANVILLE,\nDARDANELLE, FAIRFIELD BAY, FORDYCE, GLENWOOD, HEBER SPRINGS,\nHOT SPRINGS, LESLIE, LITTLE ROCK, LONOKE, MALVERN, MARSHALL,\nMORRILTON, MOUNT IDA, MOUNTAIN VIEW, MURFREESBORO, NORMAN,\nNORTH LITTLE ROCK, OLA, PERRYVILLE, RUSSELLVILLE, SEARCY,\nAND SHERIDAN.",
+    "instruction": null,
+    "response": "Monitor",
+    "parameters": {
+      "AWIPSidentifier": [
+        "WCNLZK"
+      ],
+      "WMOidentifier": [
+        "WWUS64 KLZK 071245"
+      ],
+      "BLOCKCHANNEL": [
+        "EAS",
+        "NWEM",
+        "CMAS"
+      ],
+      "EAS-ORG": [
+        "WXR"
+      ],
+      "VTEC": [
+        "/O.CON.KLZK.TO.A.0022.000000T0000Z-260307T1400Z/"
+      ],
+      "eventEndingTime": [
+        "2026-03-07T08:00:00-06:00"
+      ]
+    },
+    "scope": "Public",
+    "code": "IPAWSv1.0",
+    "language": "en-US",
+    "web": "http://www.weather.gov",
+    "eventCode": {
+      "SAME": [
+        "TOA"
+      ],
+      "NationalWeatherService": [
+        "TOA"
+      ]
+    }
+  }
+}

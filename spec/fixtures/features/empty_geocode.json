@@ -1,0 +1,34 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.empty-geocode",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-81.79, 27.35],
+        [-81.89, 27.14],
+        [-81.79, 27.35]
+      ]
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.empty-geocode",
+    "id": "urn:oid:2.49.0.1.840.0.empty-geocode",
+    "areaDesc": "Some Area",
+    "geocode": {},
+    "sent": "2026-03-07T08:00:00-06:00",
+    "effective": "2026-03-07T08:00:00-06:00",
+    "onset": "2026-03-07T08:00:00-06:00",
+    "expires": "2026-03-07T12:00:00-06:00",
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Minor",
+    "certainty": "Likely",
+    "urgency": "Expected",
+    "event": "Heat Advisory",
+    "headline": "Heat Advisory",
+    "description": "Heat advisory details",
+    "parameters": {}
+  }
+}

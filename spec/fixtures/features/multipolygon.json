@@ -1,0 +1,69 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4444",
+  "type": "Feature",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -97.56,
+            34.57
+          ],
+          [
+            -97.38,
+            34.77
+          ],
+          [
+            -97.17,
+            34.75
+          ],
+          [
+            -97.56,
+            34.57
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -96.0,
+            35.0
+          ],
+          [
+            -95.8,
+            35.2
+          ],
+          [
+            -95.6,
+            35.1
+          ],
+          [
+            -96.0,
+            35.0
+          ]
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4444",
+    "id": "urn:oid:2.49.0.1.840.0.4444",
+    "areaDesc": "Central Oklahoma",
+    "geocode": {},
+    "sent": "2014-10-01T08:40:00-07:00",
+    "effective": "2014-10-01T08:40:00-07:00",
+    "onset": "2014-10-01T08:40:00-07:00",
+    "expires": "2014-10-03T21:00:00-07:00",
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Extreme",
+    "certainty": "Likely",
+    "urgency": "Immediate",
+    "event": "Tornado Warning",
+    "headline": "Tornado Warning issued October 01",
+    "description": "Tornado warning details",
+    "parameters": {}
+  }
+}

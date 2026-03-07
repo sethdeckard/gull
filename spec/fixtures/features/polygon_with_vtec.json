@@ -1,0 +1,128 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -91.75,
+          35.85
+        ],
+        [
+          -91.82,
+          35.99
+        ],
+        [
+          -91.25,
+          36.29
+        ],
+        [
+          -91.03,
+          36.05
+        ],
+        [
+          -91.75,
+          35.85
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.6fd19dc0ecfb760f9e79d1311c993a4fc1760ec4.001.1",
+    "areaDesc": "Independence, AR; Izard, AR; Lawrence, AR; Randolph, AR; Sharp, AR",
+    "geocode": {
+      "SAME": [
+        "005063",
+        "005065",
+        "005075",
+        "005121",
+        "005135"
+      ],
+      "UGC": [
+        "ARC063",
+        "ARC065",
+        "ARC075",
+        "ARC121",
+        "ARC135"
+      ]
+    },
+    "affectedZones": [
+      "https://api.weather.gov/zones/county/ARC063",
+      "https://api.weather.gov/zones/county/ARC065",
+      "https://api.weather.gov/zones/county/ARC075",
+      "https://api.weather.gov/zones/county/ARC121",
+      "https://api.weather.gov/zones/county/ARC135"
+    ],
+    "references": [],
+    "sent": "2026-03-07T07:28:00-06:00",
+    "effective": "2026-03-07T07:28:00-06:00",
+    "onset": "2026-03-07T07:28:00-06:00",
+    "expires": "2026-03-07T08:15:00-06:00",
+    "ends": "2026-03-07T08:15:00-06:00",
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Severe",
+    "certainty": "Observed",
+    "urgency": "Immediate",
+    "event": "Severe Thunderstorm Warning",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Little Rock AR",
+    "headline": "Severe Thunderstorm Warning issued March 7 at 7:28AM CST until March 7 at 8:15AM CST by NWS Little Rock AR",
+    "description": "SVRLZK\n\nThe National Weather Service in Little Rock has issued a\n\n* Severe Thunderstorm Warning for...\nNorthwestern Independence County in north central Arkansas...\nSouth central Randolph County in eastern Arkansas...\nSoutheastern Izard County in north central Arkansas...\nNorthwestern Lawrence County in eastern Arkansas...\nSouthern Sharp County in north central Arkansas...\n\n* Until 815 AM CST.\n\n* At 728 AM CST, a severe thunderstorm was located over Sidney, or 12\nmiles southeast of Melbourne, moving east at 50 mph.\n\nHAZARD...60 mph wind gusts.\n\nSOURCE...Radar indicated.\n\nIMPACT...Expect damage to roofs, siding, and trees.\n\n* Locations impacted include...\nBlack Rock...                     Lake Charles State Park...\nCave City...                      Imboden...\nRavenden...                       Cushman...\nPortia...                         Mount Pleasant...\nStrawberry...                     Lynn...\nSidney...                         Annieville...\nStella...                         Evening Shade...\nSmithville...                     Powhatan...\nAetna...                          Calamine...\nNelsonville...                    Sitka...",
+    "instruction": "A Tornado Watch remains in effect until 800 AM CST for north central\nArkansas.\n\nFor your protection move to an interior room on the lowest floor of a\nbuilding.\n\nA Tornado Watch remains in effect until 800 AM CST for north central\nArkansas.",
+    "response": "Shelter",
+    "parameters": {
+      "AWIPSidentifier": [
+        "SVRLZK"
+      ],
+      "WMOidentifier": [
+        "WUUS54 KLZK 071328"
+      ],
+      "eventMotionDescription": [
+        "2026-03-07T13:28:00-00:00...storm...248DEG...42KT...35.97,-91.69"
+      ],
+      "windThreat": [
+        "RADAR INDICATED"
+      ],
+      "maxWindGust": [
+        "60 MPH"
+      ],
+      "hailThreat": [
+        "RADAR INDICATED"
+      ],
+      "maxHailSize": [
+        "Up to .75"
+      ],
+      "BLOCKCHANNEL": [
+        "EAS",
+        "NWEM",
+        "CMAS"
+      ],
+      "EAS-ORG": [
+        "WXR"
+      ],
+      "VTEC": [
+        "/O.NEW.KLZK.SV.W.0013.260307T1328Z-260307T1415Z/"
+      ],
+      "eventEndingTime": [
+        "2026-03-07T08:15:00-06:00"
+      ]
+    },
+    "scope": "Public",
+    "code": "IPAWSv1.0",
+    "language": "en-US",
+    "web": "http://www.weather.gov",
+    "eventCode": {
+      "SAME": [
+        "SVR"
+      ],
+      "NationalWeatherService": [
+        "SVW"
+      ]
+    }
+  }
+}

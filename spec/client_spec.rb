@@ -11,7 +11,7 @@ describe Gull::Client do
 
     client = Gull::Client.new
     alerts = client.fetch
-    expect(alerts.size).to eq 3
+    expect(alerts.size).to eq 44
     expect(client.errors.size).to eq 0
   end
 
@@ -79,6 +79,6 @@ describe Gull::Client do
 
     client = Gull::Client.new(area: 'OK')
     alerts = client.fetch
-    expect(alerts.size).to eq 3
+    expect(alerts.size).to eq 44
   end
 end

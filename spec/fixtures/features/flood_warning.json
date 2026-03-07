@@ -1,0 +1,108 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -92.8,
+          38.92
+        ],
+        [
+          -92.64,
+          38.94
+        ],
+        [
+          -92.5,
+          38.92
+        ],
+        [
+          -92.52,
+          38.88
+        ],
+        [
+          -92.79,
+          38.87
+        ],
+        [
+          -92.8,
+          38.92
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.32aef7dc2ec79ea474042bd2312a4d46fc46bdee.001.1",
+    "areaDesc": "Cooper, MO",
+    "geocode": {
+      "SAME": [
+        "029053"
+      ],
+      "UGC": [
+        "MOC053"
+      ]
+    },
+    "affectedZones": [
+      "https://api.weather.gov/zones/county/MOC053"
+    ],
+    "references": [],
+    "sent": "2026-03-07T08:40:00-05:00",
+    "effective": "2026-03-07T08:40:00-05:00",
+    "onset": "2026-03-07T10:40:00-05:00",
+    "expires": "2026-03-08T08:45:00-05:00",
+    "ends": "2026-03-08T14:43:00-05:00",
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Severe",
+    "certainty": "Likely",
+    "urgency": "Expected",
+    "event": "Flood Warning",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Kansas City/Pleasant Hill MO",
+    "headline": "Flood Warning issued March 7 at 7:40AM CST until March 8 at 2:43PM CDT by NWS Kansas City/Pleasant Hill MO",
+    "description": "...The National Weather Service in Pleasant Hill MO has issued a\nFlood Warning for the following rivers in Missouri...\n\nPetite Saline Creek near Boonville affecting Cooper County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Petite Saline Creek near Boonville.\n\n* WHEN...Until early tomorrow afternoon.\n\n* IMPACTS...At 16.0 feet, Low lying woodlands and fields near the\ncreek flood.\nAt 19.5 feet, The creek floods U Highway about 4 miles southeast\nof Boonville.\n\n* ADDITIONAL DETAILS...\n- At 6:30 AM CST Saturday the stage was 14.1 feet.\n- Forecast...The river is expected to rise above flood stage\nlate this morning to a crest of 17.7 feet this evening. It\nwill then fall below flood stage just after midnight tonight.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+    "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nThis product along with additional weather and stream information is\navailable at www.weather.gov/kc/.",
+    "response": "Avoid",
+    "parameters": {
+      "AWIPSidentifier": [
+        "FLWEAX"
+      ],
+      "WMOidentifier": [
+        "WGUS43 KEAX 071340"
+      ],
+      "NWSheadline": [
+        "FLOOD WARNING IN EFFECT UNTIL EARLY TOMORROW AFTERNOON"
+      ],
+      "BLOCKCHANNEL": [
+        "EAS",
+        "NWEM",
+        "CMAS"
+      ],
+      "EAS-ORG": [
+        "WXR"
+      ],
+      "VTEC": [
+        "/O.NEW.KEAX.FL.W.0003.260307T1540Z-260308T1943Z/"
+      ],
+      "eventEndingTime": [
+        "2026-03-08T14:43:00-05:00"
+      ]
+    },
+    "scope": "Public",
+    "code": "IPAWSv1.0",
+    "language": "en-US",
+    "web": "http://www.weather.gov",
+    "eventCode": {
+      "SAME": [
+        "FLW"
+      ],
+      "NationalWeatherService": [
+        "FLW"
+      ]
+    }
+  }
+}
