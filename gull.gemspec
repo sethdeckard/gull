@@ -1,5 +1,6 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gull/version'
 
@@ -12,19 +13,26 @@ Gem::Specification.new do |spec|
   spec.description   = 'Client for parsing NOAA/NWS alerts, warnings, and watches.'
   spec.homepage      = 'https://github.com/sethdeckard/gull'
   spec.license       = 'MIT'
+  spec.required_ruby_version = '>= 3.1'
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.metadata = {
+    'source_code_uri' => 'https://github.com/sethdeckard/gull',
+    'changelog_uri' => 'https://github.com/sethdeckard/gull/blob/master/CHANGELOG.md',
+    'bug_tracker_uri' => 'https://github.com/sethdeckard/gull/issues'
+  }
+
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(AGENTS|CLAUDE)\.md$})
+  end
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'httpclient'
-  spec.add_runtime_dependency 'nokogiri', '>= 1.6.8'
-
   spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'guard-rspec'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec', '>=3.0'
-  spec.add_development_dependency 'coveralls'
-  spec.add_development_dependency 'guard'
+  spec.add_development_dependency 'rspec', '>= 3.0'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'rubocop-rake'
+  spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'webmock'
 end
