@@ -1,3 +1,7 @@
+1.0.0 (03/07/2026) - Major rewrite: migrate from defunct `alerts.weather.gov` XML feed to `api.weather.gov/alerts` JSON API. Drop all runtime dependencies (`httpclient`, `nokogiri`) in favor of Ruby stdlib (`net/http`, `json`). Require Ruby >= 3.1. Add `area` option for state-based filtering. Replace Travis CI with GitHub Actions. Add RuboCop. **Breaking:** remove `url` option (use `area` instead), remove `Polygon#image_url`, remove `strict` option.
+
+***
+
 0.4.0 (07/26/2016) - Merged pull request #2 from [schrockwell](https://github.com/schrockwell), which adds `to_wkt` to `Polygon` which formats the polygon points as Well-Known Text (WKT). Removed `centroid` method, use new `to_wkt` method with an external geospatial library instead.
 
 ***
@@ -43,7 +47,7 @@
 ***
 
 0.2.0 (10/02/2014) - Introduced Polygon type.
- 
+
 ***
 
 0.1.1 (10/01/2014) - Refactored and simplified alert processing.
