@@ -3,18 +3,7 @@
 require 'spec_helper'
 
 describe Gull::Client do
-  it 'should initialize with options' do
-    json = File.read 'spec/fixtures/alerts.json'
-    stub_request(:get, 'https://test.url/alerts')
-      .to_return(status: 200, body: json, headers: {})
-
-    options = { url: 'https://test.url/alerts' }
-    client = Gull::Client.new(options)
-    alerts = client.fetch
-    expect(alerts.size).to eq 3
-  end
-
-  it 'should fetch alerts without options' do
+  it 'should fetch alerts' do
     json = File.read 'spec/fixtures/alerts.json'
 
     stub_request(:get, 'https://api.weather.gov/alerts/active')
@@ -36,6 +25,14 @@ describe Gull::Client do
     alerts = client.fetch
     expect(alerts.size).to eq 0
     expect(client.errors.size).to eq 1
+  end
+
+  it 'should raise error on non-success response' do
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 503, body: '{"title":"Service Unavailable"}', headers: {})
+
+    client = Gull::Client.new
+    expect { client.fetch }.to raise_error(Gull::HttpError, 'NWS API returned 503')
   end
 
   it 'should raise own error if timeout occurs' do

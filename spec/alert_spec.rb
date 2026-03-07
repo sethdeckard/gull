@@ -71,6 +71,19 @@ describe Gull::Alert do
     expect(alerts.size).to eq(3)
   end
 
+  it 'should parse MultiPolygon geometry' do
+    json = File.read 'spec/fixtures/multipolygon_alert.json'
+
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
+
+    alerts = Gull::Alert.fetch
+    first = alerts.first
+    coordinates = [[34.57, -97.56], [34.77, -97.38],
+                   [34.75, -97.17], [34.57, -97.56]]
+    expect(first.polygon.coordinates).to eq coordinates
+  end
+
   it 'should handle empty alerts' do
     json = File.read 'spec/fixtures/empty.json'
 
