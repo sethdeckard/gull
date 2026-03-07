@@ -1,65 +1,70 @@
-require 'httpclient'
-require 'nokogiri'
+# frozen_string_literal: true
 
 module Gull
-  # Client exposes methods and options for fetching alerts from the NWS/NOAA
-  # web service
   class Client
+    URL = 'https://api.weather.gov/alerts/active'
+    USER_AGENT = "gull/#{VERSION} (Ruby #{RUBY_VERSION})"
+
     attr_accessor :errors
 
     def initialize(options = {})
-      @options = {
-        url: 'http://alerts.weather.gov/cap/us.php?x=1',
-        strict: false
-      }.merge options
+      @options = options
     end
 
     def fetch
       self.errors = []
-      content = response
-      document = Nokogiri::XML content do |config|
-        config.strict if @options[:strict]
-      end
-      process document.xpath('//xmlns:feed/xmlns:entry', namespaces)
+      json = response
+      data = JSON.parse(json)
+      process(data['features'] || [])
     end
 
     private
 
     def response
-      client = HTTPClient.new
-      begin
-        return client.get_content @options[:url]
-      rescue HTTPClient::TimeoutError
-        raise TimeoutError, 'Timeout while connecting to NWS web service'
-      rescue HTTPClient::KeepAliveDisconnected, HTTPClient::BadResponseError,
-             SocketError, Errno::ECONNREFUSED, Errno::ECONNRESET
-        raise HttpError, 'Could not connect to NWS web service'
-      end
+      uri = build_uri
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      request = Net::HTTP::Get.new(uri)
+      request['User-Agent'] = USER_AGENT
+      request['Accept'] = 'application/geo+json'
+      result = http.request(request)
+      result.body
+    rescue Net::OpenTimeout, Net::ReadTimeout
+      raise TimeoutError,
+            'Timeout while connecting to NWS web service'
+    rescue SocketError, Errno::ECONNREFUSED, Errno::ECONNRESET
+      raise HttpError,
+            'Could not connect to NWS web service'
     end
 
-    def process(entries)
-      alerts = []
-      entries.each do |entry|
-        alert = create_instance entry
-        alerts.push alert unless alert.nil?
-        errors.push entry if alert.nil?
+    def build_uri
+      url = @options[:url] || URL
+      uri = URI(url)
+      if @options[:area]
+        params = URI.decode_www_form(uri.query || '')
+        params << ['area', @options[:area]]
+        uri.query = URI.encode_www_form(params)
       end
+      uri
+    end
 
+    def process(features)
+      alerts = []
+      features.each do |feature|
+        alert = create_instance(feature)
+        alerts.push(alert) unless alert.nil?
+        errors.push(feature) if alert.nil?
+      end
       alerts
     end
 
-    def create_instance(entry)
-      return if entry.xpath('cap:event').empty?
+    def create_instance(feature)
+      properties = feature['properties']
+      return if properties.nil? || properties['event'].nil?
 
       alert = Alert.new
-      alert.parse entry
+      alert.parse(feature)
       alert
-    end
-
-    def namespaces
-      { 'xmlns' => 'http://www.w3.org/2005/Atom',
-        'cap' => 'urn:oasis:names:tc:emergency:cap:1.1',
-        'ha' => 'http://www.alerting.net/namespace/index_1.0' }
     end
   end
 end
