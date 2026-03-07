@@ -2,31 +2,21 @@ require 'spec_helper'
 
 describe Gull::Client do
   it 'should initialize with options' do
-    xml = File.read 'spec/fixtures/alerts.xml'
-    stub_request(:get, 'http://test.url')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    json = File.read 'spec/fixtures/alerts.json'
+    stub_request(:get, 'https://test.url/alerts')
+      .to_return(status: 200, body: json, headers: {})
 
-    options = { url: 'http://test.url', strict: true }
+    options = { url: 'https://test.url/alerts' }
     client = Gull::Client.new(options)
     alerts = client.fetch
     expect(alerts.size).to eq 3
-
-    xml = File.read 'spec/fixtures/bad.xml'
-    stub_request(:get, 'http://test.url')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
-
-    expect { client.fetch }
-      .to raise_error(Nokogiri::XML::SyntaxError)
   end
 
   it 'should fetch alerts without options' do
-    xml = File.read 'spec/fixtures/alerts.xml'
+    json = File.read 'spec/fixtures/alerts.json'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
 
     client = Gull::Client.new
     alerts = client.fetch
@@ -34,12 +24,11 @@ describe Gull::Client do
     expect(client.errors.size).to eq 0
   end
 
-  it 'should handle incomplete entries in xml' do
-    xml = File.read 'spec/fixtures/missing_cap.xml'
+  it 'should handle features with missing event' do
+    json = File.read 'spec/fixtures/missing_event.json'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
 
     client = Gull::Client.new
     alerts = client.fetch
@@ -48,8 +37,7 @@ describe Gull::Client do
   end
 
   it 'should raise own error if timeout occurs' do
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
       .to_timeout
 
     message = 'Timeout while connecting to NWS web service'
@@ -57,31 +45,8 @@ describe Gull::Client do
     expect { client.fetch }.to raise_error(Gull::TimeoutError, message)
   end
 
-  it 'should raise own error if http errors occur' do
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_raise(HTTPClient::KeepAliveDisconnected)
-
-    message = 'Could not connect to NWS web service'
-    client = Gull::Client.new
-    expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
-      expect(error.original).to be_a(HTTPClient::KeepAliveDisconnected)
-    end
-
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_raise(HTTPClient::BadResponseError)
-
-    message = 'Could not connect to NWS web service'
-    client = Gull::Client.new
-    expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
-      expect(error.original).to be_a(HTTPClient::BadResponseError)
-    end
-  end
-
   it 'should raise own error if connection errors occur' do
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
       .to_raise(SocketError)
 
     message = 'Could not connect to NWS web service'
@@ -90,24 +55,31 @@ describe Gull::Client do
       expect(error.original).to be_a(SocketError)
     end
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
       .to_raise(Errno::ECONNREFUSED)
 
-    message = 'Could not connect to NWS web service'
     client = Gull::Client.new
     expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
       expect(error.original).to be_a(Errno::ECONNREFUSED)
     end
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
       .to_raise(Errno::ECONNRESET)
 
-    message = 'Could not connect to NWS web service'
     client = Gull::Client.new
     expect { client.fetch }.to raise_error(Gull::HttpError, message) do |error|
       expect(error.original).to be_a(Errno::ECONNRESET)
     end
+  end
+
+  it 'should filter by area' do
+    json = File.read 'spec/fixtures/alerts.json'
+
+    stub_request(:get, 'https://api.weather.gov/alerts/active?area=OK')
+      .to_return(status: 200, body: json, headers: {})
+
+    client = Gull::Client.new(area: 'OK')
+    alerts = client.fetch
+    expect(alerts.size).to eq 3
   end
 end

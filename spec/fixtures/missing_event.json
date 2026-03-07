@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9999",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9999",
+        "id": "urn:oid:2.49.0.1.840.0.9999",
+        "areaDesc": "Some area",
+        "event": null,
+        "headline": "Test",
+        "description": "Test",
+        "sent": "2014-10-01T08:40:00-07:00",
+        "effective": "2014-10-01T08:40:00-07:00",
+        "expires": "2014-10-03T21:00:00-07:00"
+      }
+    }
+  ]
+}
