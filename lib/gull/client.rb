@@ -21,6 +21,8 @@ module Gull
       json = response
       data = JSON.parse(json)
       process(data['features'] || [])
+    rescue JSON::ParserError
+      raise HttpError, 'Unexpected response from NWS API'
     end
 
     private

@@ -71,6 +71,18 @@ describe Gull::Client do
     end
   end
 
+  it 'should raise error on malformed JSON response' do
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: '<html>Bad Gateway</html>',
+                 headers: {})
+
+    client = Gull::Client.new
+    expect { client.fetch }
+      .to raise_error(Gull::HttpError, /Unexpected response/) do |e|
+        expect(e.original).to be_a(JSON::ParserError)
+      end
+  end
+
   it 'should filter by area' do
     json = File.read 'spec/fixtures/alerts.json'
 
