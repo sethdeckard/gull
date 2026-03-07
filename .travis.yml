@@ -1,8 +1,0 @@
-language: ruby
-sudo: true
-rvm:
-- 2.4.0
-- 2.3.3
-- 2.2.6
-
-script: rspec spec
