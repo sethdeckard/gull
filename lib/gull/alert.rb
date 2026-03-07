@@ -59,10 +59,14 @@ module Gull
     end
 
     def parse_times(props)
-      self.effective_at = Time.parse(props['effective'])
-      self.expires_at = Time.parse(props['expires'])
-      self.published_at = Time.parse(props['sent'])
-      self.updated_at = Time.parse(props['onset'] || props['sent'])
+      self.effective_at = parse_time(props['effective'])
+      self.expires_at = parse_time(props['expires'])
+      self.published_at = parse_time(props['sent'])
+      self.updated_at = parse_time(props['onset'] || props['sent'])
+    end
+
+    def parse_time(value)
+      value ? Time.parse(value) : nil
     end
 
     def parse_categories(props)

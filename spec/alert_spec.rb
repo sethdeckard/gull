@@ -154,6 +154,18 @@ describe Gull::Alert do
     expect(alerts.size).to eq(0)
   end
 
+  it 'should handle missing onset time' do
+    feature = load_feature('missing_times.json')
+    stub_alerts(wrap_features(feature))
+
+    alert = Gull::Alert.fetch.first
+
+    expect(alert.effective_at).to be_nil
+    expect(alert.expires_at).to eq Time.parse('2026-03-07T08:15:00-06:00')
+    expect(alert.updated_at).to eq Time.parse('2026-03-07T07:48:00-06:00')
+    expect(alert.published_at).to eq Time.parse('2026-03-07T07:48:00-06:00')
+  end
+
   it 'should handle missing event' do
     json = File.read 'spec/fixtures/missing_event.json'
     stub_alerts(json)

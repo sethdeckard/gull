@@ -1,0 +1,36 @@
+{
+  "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.missing-times-test",
+  "type": "Feature",
+  "geometry": null,
+  "properties": {
+    "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.missing-times-test",
+    "@type": "wx:Alert",
+    "id": "urn:oid:2.49.0.1.840.0.missing-times-test",
+    "areaDesc": "Test County",
+    "geocode": {
+      "SAME": ["005001"],
+      "UGC": ["ARZ001"]
+    },
+    "affectedZones": [],
+    "references": [],
+    "sent": "2026-03-07T07:48:00-06:00",
+    "effective": null,
+    "onset": null,
+    "expires": "2026-03-07T08:15:00-06:00",
+    "ends": null,
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Moderate",
+    "certainty": "Likely",
+    "urgency": "Expected",
+    "event": "Special Weather Statement",
+    "sender": "w-nws.webmaster@noaa.gov",
+    "senderName": "NWS Test",
+    "headline": "Test alert with missing onset",
+    "description": "Test description.",
+    "instruction": null,
+    "response": "Monitor",
+    "parameters": {}
+  }
+}
