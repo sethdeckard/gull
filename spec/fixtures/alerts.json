@@ -1,0 +1,108 @@
+{
+  "@context": [
+    "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    {
+      "@version": "1.1",
+      "wx": "https://api.weather.gov/ontology#"
+    }
+  ],
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-81.79, 27.35],
+            [-81.89, 27.14],
+            [-81.97, 27.04],
+            [-82.02, 27.04],
+            [-81.97, 27.14],
+            [-81.86, 27.35],
+            [-81.79, 27.35]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111",
+        "id": "urn:oid:2.49.0.1.840.0.1111",
+        "areaDesc": "Southern Salinas Valley, Arroyo Seco and Lake San Antonio",
+        "geocode": {},
+        "sent": "2014-10-01T08:40:00-07:06",
+        "effective": "2014-10-01T08:40:00-07:00",
+        "onset": "2014-10-01T08:40:00-07:05",
+        "expires": "2014-10-03T21:00:00-07:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Minor",
+        "certainty": "Very Likely",
+        "urgency": "Expected",
+        "event": "Heat Advisory",
+        "headline": "Heat Advisory issued October 01 at 8:40AM PDT until October 03 at 9:00PM PDT by NWS",
+        "description": "SUMMARY TEXT",
+        "parameters": {
+          "VTEC": ["/O.NEW.KMTR.HT.Y.0002.141002T1900Z-141004T0400Z/"]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2222",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.2222",
+        "id": "urn:oid:2.49.0.1.840.0.2222",
+        "areaDesc": "Coastal North Bay Including Point Reyes National Seashore",
+        "geocode": {
+          "SAME": ["006001", "006013", "006041", "006053", "006055", "006069", "006075", "006081", "006085", "006087", "006097"],
+          "UGC": ["CAZ006", "CAZ505", "CAZ506", "CAZ507", "CAZ508", "CAZ509", "CAZ510", "CAZ511", "CAZ512", "CAZ513", "CAZ516", "CAZ517", "CAZ518", "CAZ528", "CAZ529", "CAZ530"]
+        },
+        "sent": "2014-10-01T08:40:00-07:00",
+        "effective": "2014-10-01T08:40:00-07:00",
+        "onset": "2014-10-01T08:40:00-07:00",
+        "expires": "2014-10-03T21:00:00-07:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Minor",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Advisory",
+        "headline": "Flood Advisory issued October 01",
+        "description": "Flood advisory details",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3333",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.3333",
+        "id": "urn:oid:2.49.0.1.840.0.3333",
+        "areaDesc": "Some Area",
+        "geocode": {
+          "SAME": ["006001"],
+          "UGC": ["CAZ006"]
+        },
+        "sent": "2014-10-01T08:40:00-07:00",
+        "effective": "2014-10-01T08:40:00-07:00",
+        "onset": "2014-10-01T08:40:00-07:00",
+        "expires": "2014-10-03T21:00:00-07:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Minor",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Tornado Warning",
+        "headline": "Tornado Warning issued October 01",
+        "description": "Tornado warning details",
+        "parameters": {}
+      }
+    }
+  ]
+}

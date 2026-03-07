@@ -7,18 +7,17 @@ describe Gull::Alert do
   end
 
   it 'should fetch parsed alerts' do
-    xml = File.read 'spec/fixtures/alerts.xml'
+    json = File.read 'spec/fixtures/alerts.json'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
 
     alerts = Gull::Alert.fetch
     expect(alerts.size).to eq(3)
 
     first = alerts.first
-    expect(first.id).to eq 'http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory'
-    expect(first.link).to eq 'http://alerts.weather.gov/cap/wwacapget.php?x=CA125171381DD0.HeatAdvisory'
+    expect(first.id).to eq 'urn:oid:2.49.0.1.840.0.1111'
+    expect(first.link).to eq 'https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111'
     expect(first.alert_type).to eq 'Heat Advisory'
     expect(first.title).to eq 'Heat Advisory issued October 01 at 8:40AM PDT' \
       ' until October 03 at 9:00PM PDT by NWS'
@@ -58,59 +57,33 @@ describe Gull::Alert do
 
     third = alerts[2]
     expect(third.vtec).to be_nil
-    expect(third.link).to be_nil
   end
 
-  it 'should fetch from url in options' do
-    xml = File.read 'spec/fixtures/alerts.xml'
+  it 'should fetch with area option' do
+    json = File.read 'spec/fixtures/alerts.json'
 
-    stub_request(:get, 'http://test.url')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active?area=OK')
+      .to_return(status: 200, body: json, headers: {})
 
-    alerts = Gull::Alert.fetch(url: 'http://test.url')
+    alerts = Gull::Alert.fetch(area: 'OK')
     expect(alerts.size).to eq(3)
   end
 
-  it 'should enable strict xml parsing via option' do
-    xml = File.read 'spec/fixtures/bad.xml'
-
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
-
-    expect { Gull::Alert.fetch(strict: true) }
-      .to raise_error(Nokogiri::XML::SyntaxError)
-  end
-
   it 'should handle empty alerts' do
-    xml = File.read 'spec/fixtures/empty.xml'
+    json = File.read 'spec/fixtures/empty.json'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
-
-    alerts = Gull::Alert.fetch
-    expect(alerts.size).to eq(0)
-  end
-
-  it 'should handle bad response' do
-    xml = File.read 'spec/fixtures/bad.xml'
-
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
 
     alerts = Gull::Alert.fetch
     expect(alerts.size).to eq(0)
   end
 
-  it 'should handle missing cap section' do
-    xml = File.read 'spec/fixtures/missing_cap.xml'
+  it 'should handle missing event' do
+    json = File.read 'spec/fixtures/missing_event.json'
 
-    stub_request(:get, 'http://alerts.weather.gov/cap/us.php?x=1')
-      .with(headers: { 'Accept' => '*/*' })
-      .to_return(status: 200, body: xml, headers: {})
+    stub_request(:get, 'https://api.weather.gov/alerts/active')
+      .to_return(status: 200, body: json, headers: {})
 
     alerts = Gull::Alert.fetch
     expect(alerts.size).to eq 0
