@@ -36,7 +36,7 @@ alert.effective_at
 alert.expires_at
 alert.published_at
 alert.area
-alert.polygon
+alert.polygon           # Gull::Polygon or nil
 alert.geocode.fips6
 alert.geocode.ugc
 alert.urgency
@@ -51,8 +51,47 @@ To get alerts for a single state or territory, pass the area option:
 alerts = Gull::Alert.fetch(area: 'OK')
 ```
 
-##Notes, Caveats
-This library fetches active alerts from the [NWS API](https://api.weather.gov) (`api.weather.gov/alerts/active`), which returns GeoJSON. No authentication is required but the API does require a `User-Agent` header (set automatically by the gem).
+### Polygons
+
+Alerts with geographic boundaries include a `Polygon` object:
+
+```ruby
+alert.polygon.coordinates
+# => [[34.57, -97.56], [34.77, -97.38], ...]
+
+alert.polygon.to_s
+# => "34.57,-97.56 34.77,-97.38 ..."
+
+alert.polygon.to_wkt
+# => "POLYGON((-97.56 34.57, -97.38 34.77, ...))"
+```
+
+### Error Handling
+
+```ruby
+begin
+  alerts = Gull::Alert.fetch
+rescue Gull::TimeoutError => e
+  # request timed out
+rescue Gull::HttpError => e
+  # non-success response or connection failure
+  e.original # wrapped exception, if any
+end
+```
+
+### Advanced: Client
+
+For direct access to unparseable features, use `Client`:
+
+```ruby
+client = Gull::Client.new(area: 'OK')
+alerts = client.fetch
+client.errors # features that could not be parsed
+```
+
+## Notes, Caveats
+
+This library fetches active alerts from the [NWS API](https://api.weather.gov) (`api.weather.gov/alerts/active`), which returns GeoJSON. No authentication is required but the API does require a `User-Agent` header (set automatically by the gem). See the [NWS API docs](https://www.weather.gov/documentation/services-web-api) for more details.
 
 The NWS will often cancel or update alerts before their expiration time. The API only returns currently active alerts.
 
