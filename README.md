@@ -51,22 +51,6 @@ To get alerts for a single state or territory, pass the area option:
 alerts = Gull::Alert.fetch(area: 'OK')
 ```
 
-You can also generate a map (a really long URL pointing to a map) of the polygon if alert has one (requires Google Static Maps API Key)
-
-```ruby
-alert.polygon.image_url 'YOUR_GOOGLE_API_KEY'
-
-=> "https://maps.googleapis.com/maps/api/staticmap?size=640x640&maptype=roadmap&path=color:0xff0000|weight:3|fillcolor:0xff000060|38.73,-94.22|38.75,-94.16|38.57,-93.94|38.4,-93.84|38.4,-93.91|38.73,-94.22&key=YOUR_GOOGLE_API_KEY"
-```
-
-Options can be passed for map to override defaults
-
-```ruby
-options = { width: 600, height: 300, color: '0xfbf000', weight: 4,
-            fillcolor: '0xfbf00070', maptype: 'hybrid' }
-alert.polygon.image_url 'YOUR_GOOGLE_API_KEY', options
-```
-
 ##Notes, Caveats
 This library fetches active alerts from the [NWS API](https://api.weather.gov) (`api.weather.gov/alerts/active`), which returns GeoJSON. No authentication is required but the API does require a `User-Agent` header (set automatically by the gem).
 
