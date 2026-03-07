@@ -65,10 +65,10 @@ module Gull
       return if geocode_data.nil?
 
       ugc = geocode_data['UGC']
-      self.geocode.ugc = ugc&.join(' ')
+      geocode.ugc = ugc&.join(' ')
 
       fips = geocode_data['SAME']
-      self.geocode.fips6 = fips&.join(' ')
+      geocode.fips6 = fips&.join(' ')
     end
 
     def parse_vtec(props)
