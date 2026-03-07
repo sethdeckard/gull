@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Gull::Alert do
@@ -19,8 +21,8 @@ describe Gull::Alert do
     expect(first.id).to eq 'urn:oid:2.49.0.1.840.0.1111'
     expect(first.link).to eq 'https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1111'
     expect(first.alert_type).to eq 'Heat Advisory'
-    expect(first.title).to eq 'Heat Advisory issued October 01 at 8:40AM PDT' \
-      ' until October 03 at 9:00PM PDT by NWS'
+    expect(first.title).to eq 'Heat Advisory issued October 01 at 8:40AM PDT ' \
+                              'until October 03 at 9:00PM PDT by NWS'
     expect(first.summary).to eq 'SUMMARY TEXT'
 
     coordinates = [[27.35, -81.79], [27.14, -81.89], [27.04, -81.97],
@@ -34,7 +36,7 @@ describe Gull::Alert do
     expect(first.published_at).to eq Time.parse('2014-10-01T08:40:00-07:06')
 
     expect(first.area).to eq 'Southern Salinas Valley, Arroyo Seco and Lake ' \
-      'San Antonio'
+                             'San Antonio'
     expect(first.urgency).to eq :expected
     expect(first.severity).to eq :minor
     expect(first.certainty).to eq :very_likely
@@ -48,10 +50,10 @@ describe Gull::Alert do
     expect(second.polygon).to be_nil
 
     expect(second.geocode.fips6).to eq '006001 006013 006041 006053 006055 ' \
-      '006069 006075 006081 006085 006087 006097'
+                                       '006069 006075 006081 006085 006087 006097'
     expect(second.geocode.ugc).to eq 'CAZ006 CAZ505 CAZ506 CAZ507 CAZ508 ' \
-      'CAZ509 CAZ510 CAZ511 CAZ512 CAZ513 CAZ516 CAZ517 CAZ518 CAZ528 ' \
-      'CAZ529 CAZ530'
+                                     'CAZ509 CAZ510 CAZ511 CAZ512 CAZ513 CAZ516 CAZ517 CAZ518 CAZ528 ' \
+                                     'CAZ529 CAZ530'
 
     expect(second.vtec).to be_nil
 

@@ -3,7 +3,7 @@
 module Gull
   class Client
     URL = 'https://api.weather.gov/alerts/active'
-    USER_AGENT = "gull/#{VERSION} (Ruby #{RUBY_VERSION})"
+    USER_AGENT = "gull/#{VERSION} (Ruby #{RUBY_VERSION})".freeze
 
     attr_accessor :errors
 

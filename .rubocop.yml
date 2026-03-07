@@ -32,5 +32,7 @@ Style/StringLiterals:
 Style/StringConcatenation:
   Exclude:
     - 'spec/**/*'
+Style/Documentation:
+  Enabled: false
 Naming/PredicateMethod:
   Enabled: false
