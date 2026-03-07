@@ -1,7 +1,26 @@
 # frozen_string_literal: true
 
 module Gull
+  # Represents a single NWS weather alert (warning, watch, or
+  # advisory). Use +Alert.fetch+ to retrieve active alerts from the
+  # NWS API.
   class Alert
+    # @!attribute id [rw] NWS alert identifier
+    # @!attribute title [rw] Alert headline
+    # @!attribute summary [rw] Full alert description text
+    # @!attribute link [rw] Canonical URL for this alert
+    # @!attribute alert_type [rw] Event type (e.g. "Tornado Warning")
+    # @!attribute polygon [rw] Alert area as a Polygon, or nil
+    # @!attribute area [rw] Human-readable area description
+    # @!attribute effective_at [rw] Time the alert takes effect
+    # @!attribute expires_at [rw] Time the alert expires
+    # @!attribute updated_at [rw] Onset time, or sent time if absent
+    # @!attribute published_at [rw] Time the alert was sent
+    # @!attribute urgency [rw] Urgency level as a Symbol
+    # @!attribute severity [rw] Severity level as a Symbol
+    # @!attribute certainty [rw] Certainty level as a Symbol
+    # @!attribute geocode [rw] Geocode with UGC and FIPS codes
+    # @!attribute vtec [rw] VTEC string, or nil
     attr_accessor :id, :title, :summary, :link, :alert_type, :polygon,
                   :area, :effective_at, :expires_at, :updated_at,
                   :published_at, :urgency, :severity, :certainty,
@@ -11,11 +30,13 @@ module Gull
       self.geocode = Geocode.new
     end
 
+    # Fetches active alerts from the NWS API.
     def self.fetch(options = {})
       client = Client.new(options)
       client.fetch
     end
 
+    # Populates this alert from a GeoJSON feature hash.
     def parse(feature)
       props = feature['properties']
       parse_core_attributes(feature, props)
