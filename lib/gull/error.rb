@@ -3,6 +3,8 @@
 require 'English'
 
 module Gull
+  # Raised when the NWS API returns a non-success response or the
+  # connection fails. Wraps the original exception, if any.
   class HttpError < StandardError
     attr_reader :original
 
@@ -12,6 +14,7 @@ module Gull
     end
   end
 
+  # Raised when the NWS API request times out.
   class TimeoutError < HttpError
   end
 end

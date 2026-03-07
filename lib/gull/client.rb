@@ -1,16 +1,21 @@
 # frozen_string_literal: true
 
 module Gull
+  # Low-level HTTP client for the NWS alerts API. Handles
+  # fetching, parsing, and error wrapping. Most callers should
+  # use +Alert.fetch+ instead.
   class Client
     URL = 'https://api.weather.gov/alerts/active'
     USER_AGENT = "gull/#{VERSION} (Ruby #{RUBY_VERSION})".freeze
 
+    # Features that could not be parsed are collected here.
     attr_accessor :errors
 
     def initialize(options = {})
       @options = options
     end
 
+    # Fetches active alerts and returns an Array of Alert objects.
     def fetch
       self.errors = []
       json = response
